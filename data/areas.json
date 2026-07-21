@@ -1,0 +1,6985 @@
+{
+ "generatedAt": "2026-07-16T12:17:09.630Z",
+ "source": "https://dognavi.com/wp-json/wp/v2/review_category",
+ "count": 1163,
+ "areas": [
+  {
+   "id": 1246,
+   "slug": "musashikosugi",
+   "name": "武蔵小杉",
+   "parent": 1239
+  },
+  {
+   "id": 1274,
+   "slug": "shirakabe",
+   "name": "白壁",
+   "parent": 1257
+  },
+  {
+   "id": 1273,
+   "slug": "motoyama",
+   "name": "本山",
+   "parent": 1256
+  },
+  {
+   "id": 1272,
+   "slug": "kakuozan",
+   "name": "覚王山",
+   "parent": 1256
+  },
+  {
+   "id": 1271,
+   "slug": "tempaku-ku",
+   "name": "天白区",
+   "parent": 423
+  },
+  {
+   "id": 1270,
+   "slug": "meito-ku",
+   "name": "名東区",
+   "parent": 423
+  },
+  {
+   "id": 1269,
+   "slug": "midori-ku-nagoya-city",
+   "name": "緑区",
+   "parent": 423
+  },
+  {
+   "id": 1268,
+   "slug": "moriyama-ku",
+   "name": "守山区",
+   "parent": 423
+  },
+  {
+   "id": 1267,
+   "slug": "minami-ku-nagoya-city",
+   "name": "南区",
+   "parent": 423
+  },
+  {
+   "id": 1275,
+   "slug": "tokugawa",
+   "name": "徳川",
+   "parent": 1257
+  },
+  {
+   "id": 1276,
+   "slug": "ozone",
+   "name": "大曽根",
+   "parent": 1258
+  },
+  {
+   "id": 1284,
+   "slug": "yagoto",
+   "name": "八事",
+   "parent": 1262
+  },
+  {
+   "id": 1283,
+   "slug": "osu",
+   "name": "大須",
+   "parent": 1261
+  },
+  {
+   "id": 1282,
+   "slug": "sakae",
+   "name": "栄",
+   "parent": 1261
+  },
+  {
+   "id": 1281,
+   "slug": "nakamura-koen",
+   "name": "中村公園",
+   "parent": 1260
+  },
+  {
+   "id": 1280,
+   "slug": "meieki",
+   "name": "名駅",
+   "parent": 1260
+  },
+  {
+   "id": 1279,
+   "slug": "joshin",
+   "name": "浄心",
+   "parent": 1259
+  },
+  {
+   "id": 1278,
+   "slug": "endoji",
+   "name": "円頓寺",
+   "parent": 1259
+  },
+  {
+   "id": 1277,
+   "slug": "kurokawa",
+   "name": "黒川",
+   "parent": 1258
+  },
+  {
+   "id": 1266,
+   "slug": "minato-ku-nagoya-city",
+   "name": "港区",
+   "parent": 423
+  },
+  {
+   "id": 1265,
+   "slug": "nakagawa-ku",
+   "name": "中川区",
+   "parent": 423
+  },
+  {
+   "id": 1254,
+   "slug": "shinyurigaoka",
+   "name": "新百合ヶ丘",
+   "parent": 1234
+  },
+  {
+   "id": 1253,
+   "slug": "ikuta-ryokuchi",
+   "name": "生田緑地",
+   "parent": 1238
+  },
+  {
+   "id": 1252,
+   "slug": "noborito-mukogaokayuen",
+   "name": "登戸・向ヶ丘遊園",
+   "parent": 1238
+  },
+  {
+   "id": 1251,
+   "slug": "miyazakidai-miyamaedaira",
+   "name": "宮崎台・宮前平",
+   "parent": 1240
+  },
+  {
+   "id": 1250,
+   "slug": "saginuma",
+   "name": "鷺沼",
+   "parent": 1240
+  },
+  {
+   "id": 1249,
+   "slug": "futako-shinchi-tamagawa",
+   "name": "二子新地・多摩川",
+   "parent": 1237
+  },
+  {
+   "id": 1248,
+   "slug": "mizonokuchi",
+   "name": "溝の口",
+   "parent": 1237
+  },
+  {
+   "id": 1247,
+   "slug": "todoroki-motosumiyoshi",
+   "name": "等々力緑地・元住吉",
+   "parent": 1239
+  },
+  {
+   "id": 1255,
+   "slug": "kakio-kurokawa",
+   "name": "柿生・黒川",
+   "parent": 1234
+  },
+  {
+   "id": 1256,
+   "slug": "chikusa-ku",
+   "name": "千種区",
+   "parent": 423
+  },
+  {
+   "id": 1264,
+   "slug": "atsuta-ku",
+   "name": "熱田区",
+   "parent": 423
+  },
+  {
+   "id": 1263,
+   "slug": "mizuho-ku",
+   "name": "瑞穂区",
+   "parent": 423
+  },
+  {
+   "id": 1262,
+   "slug": "showa-ku",
+   "name": "昭和区",
+   "parent": 423
+  },
+  {
+   "id": 1261,
+   "slug": "naka-ku-nagoya-city",
+   "name": "中区",
+   "parent": 423
+  },
+  {
+   "id": 1260,
+   "slug": "nakamura-ku",
+   "name": "中村区",
+   "parent": 423
+  },
+  {
+   "id": 1259,
+   "slug": "nishi-ku-nagoya-city",
+   "name": "西区",
+   "parent": 423
+  },
+  {
+   "id": 1258,
+   "slug": "kita-ku-nagoya-city",
+   "name": "北区",
+   "parent": 423
+  },
+  {
+   "id": 1257,
+   "slug": "higashi-ku",
+   "name": "東区",
+   "parent": 423
+  },
+  {
+   "id": 1285,
+   "slug": "irinaka",
+   "name": "いりなか",
+   "parent": 1262
+  },
+  {
+   "id": 1286,
+   "slug": "sakurayama",
+   "name": "桜山",
+   "parent": 1263
+  },
+  {
+   "id": 1314,
+   "slug": "nishiyodogawa-ku",
+   "name": "西淀川区",
+   "parent": 359
+  },
+  {
+   "id": 1313,
+   "slug": "naniwa-ku",
+   "name": "浪速区",
+   "parent": 359
+  },
+  {
+   "id": 1312,
+   "slug": "tennoji-ku",
+   "name": "天王寺区",
+   "parent": 359
+  },
+  {
+   "id": 1311,
+   "slug": "taisho-ku",
+   "name": "大正区",
+   "parent": 359
+  },
+  {
+   "id": 1310,
+   "slug": "minato-ku-osaka-city",
+   "name": "港区",
+   "parent": 359
+  },
+  {
+   "id": 1309,
+   "slug": "nishi-ku-osaka-city",
+   "name": "西区",
+   "parent": 359
+  },
+  {
+   "id": 1308,
+   "slug": "chuo-ku-osaka-city",
+   "name": "中央区",
+   "parent": 359
+  },
+  {
+   "id": 1307,
+   "slug": "konohana-ku",
+   "name": "此花区",
+   "parent": 359
+  },
+  {
+   "id": 1315,
+   "slug": "yodogawa-ku",
+   "name": "淀川区",
+   "parent": 359
+  },
+  {
+   "id": 1316,
+   "slug": "higashiyodogawa-ku",
+   "name": "東淀川区",
+   "parent": 359
+  },
+  {
+   "id": 1324,
+   "slug": "sumiyoshi-ku",
+   "name": "住吉区",
+   "parent": 359
+  },
+  {
+   "id": 1323,
+   "slug": "suminoe-ku",
+   "name": "住之江区",
+   "parent": 359
+  },
+  {
+   "id": 1322,
+   "slug": "abeno-ku",
+   "name": "阿倍野区",
+   "parent": 359
+  },
+  {
+   "id": 1321,
+   "slug": "tsurumi-ku",
+   "name": "鶴見区",
+   "parent": 359
+  },
+  {
+   "id": 1320,
+   "slug": "joto-ku",
+   "name": "城東区",
+   "parent": 359
+  },
+  {
+   "id": 1319,
+   "slug": "asahi-ku-osaka-city",
+   "name": "旭区",
+   "parent": 359
+  },
+  {
+   "id": 1318,
+   "slug": "ikuno-ku",
+   "name": "生野区",
+   "parent": 359
+  },
+  {
+   "id": 1317,
+   "slug": "higashinari-ku",
+   "name": "東成区",
+   "parent": 359
+  },
+  {
+   "id": 1306,
+   "slug": "fukushima-ku",
+   "name": "福島区",
+   "parent": 359
+  },
+  {
+   "id": 1305,
+   "slug": "miyakojima-ku",
+   "name": "都島区",
+   "parent": 359
+  },
+  {
+   "id": 1294,
+   "slug": "kasadera",
+   "name": "笠寺",
+   "parent": 1267
+  },
+  {
+   "id": 1293,
+   "slug": "kohoku",
+   "name": "港北",
+   "parent": 1266
+  },
+  {
+   "id": 1292,
+   "slug": "tsukiguchi",
+   "name": "築地口",
+   "parent": 1266
+  },
+  {
+   "id": 1291,
+   "slug": "hatta",
+   "name": "八田",
+   "parent": 1265
+  },
+  {
+   "id": 1290,
+   "slug": "arako",
+   "name": "荒子",
+   "parent": 1265
+  },
+  {
+   "id": 1289,
+   "slug": "kanayama",
+   "name": "金山",
+   "parent": 1264
+  },
+  {
+   "id": 1288,
+   "slug": "jingumae",
+   "name": "神宮前",
+   "parent": 1264
+  },
+  {
+   "id": 1287,
+   "slug": "aratamabashi",
+   "name": "新瑞橋",
+   "parent": 1263
+  },
+  {
+   "id": 1295,
+   "slug": "yobitsugi",
+   "name": "呼続",
+   "parent": 1267
+  },
+  {
+   "id": 1296,
+   "slug": "obata",
+   "name": "小幡",
+   "parent": 1268
+  },
+  {
+   "id": 1304,
+   "slug": "kita-ku-osaka-city",
+   "name": "北区",
+   "parent": 359
+  },
+  {
+   "id": 1303,
+   "slug": "hara",
+   "name": "原",
+   "parent": 1271
+  },
+  {
+   "id": 1302,
+   "slug": "ueda",
+   "name": "植田",
+   "parent": 1271
+  },
+  {
+   "id": 1301,
+   "slug": "fujigaoka",
+   "name": "藤が丘",
+   "parent": 1270
+  },
+  {
+   "id": 1300,
+   "slug": "issha",
+   "name": "一社",
+   "parent": 1270
+  },
+  {
+   "id": 1299,
+   "slug": "arimatsu",
+   "name": "有松",
+   "parent": 1269
+  },
+  {
+   "id": 1298,
+   "slug": "tokushige",
+   "name": "徳重",
+   "parent": 1269
+  },
+  {
+   "id": 1297,
+   "slug": "omori-kinjo",
+   "name": "大森・金城学院前",
+   "parent": 1268
+  },
+  {
+   "id": 1325,
+   "slug": "higashisumiyoshi-ku",
+   "name": "東住吉区",
+   "parent": 359
+  },
+  {
+   "id": 1244,
+   "slug": "miyuki-park-tamagawa",
+   "name": "御幸公園・多摩川",
+   "parent": 1236
+  },
+  {
+   "id": 1164,
+   "slug": "gumyoji",
+   "name": "弘明寺",
+   "parent": 1138
+  },
+  {
+   "id": 1192,
+   "slug": "kitayamata-nakamachidai",
+   "name": "北山田・仲町台周辺",
+   "parent": 1147
+  },
+  {
+   "id": 1191,
+   "slug": "center-kita-minami",
+   "name": "センター北・センター南周辺",
+   "parent": 1147
+  },
+  {
+   "id": 1190,
+   "slug": "kodomonokuni-nara",
+   "name": "こどもの国・奈良周辺",
+   "parent": 1146
+  },
+  {
+   "id": 1189,
+   "slug": "aobadai-fujigaoka",
+   "name": "青葉台・藤が丘周辺",
+   "parent": 1146
+  },
+  {
+   "id": 1188,
+   "slug": "tamaplaza-azamino",
+   "name": "たまプラーザ・あざみ野周辺",
+   "parent": 1146
+  },
+  {
+   "id": 1187,
+   "slug": "kamoi-lalaport",
+   "name": "鴨居・ららぽーと横浜周辺",
+   "parent": 1145
+  },
+  {
+   "id": 1186,
+   "slug": "nagatsuta",
+   "name": "長津田",
+   "parent": 1145
+  },
+  {
+   "id": 1185,
+   "slug": "nakayama-shikinomori",
+   "name": "中山・四季の森公園周辺",
+   "parent": 1145
+  },
+  {
+   "id": 1193,
+   "slug": "tsuzuki-lalaport-kamoike",
+   "name": "ららぽーと横浜・鴨池公園周辺",
+   "parent": 1147
+  },
+  {
+   "id": 1194,
+   "slug": "totsuka-station",
+   "name": "戸塚駅周辺",
+   "parent": 1148
+  },
+  {
+   "id": 1202,
+   "slug": "izumi-chuo-izumigawa",
+   "name": "泉中央・和泉川周辺",
+   "parent": 1150
+  },
+  {
+   "id": 1201,
+   "slug": "izumino-yayoidai",
+   "name": "いずみ野・弥生台周辺",
+   "parent": 1150
+  },
+  {
+   "id": 1200,
+   "slug": "tateba-nakada",
+   "name": "立場・中田周辺",
+   "parent": 1150
+  },
+  {
+   "id": 1199,
+   "slug": "iijima-taya",
+   "name": "飯島・田谷周辺",
+   "parent": 1149
+  },
+  {
+   "id": 1198,
+   "slug": "kamigo-araisawa",
+   "name": "上郷・荒井沢周辺",
+   "parent": 1149
+  },
+  {
+   "id": 1197,
+   "slug": "hongodai-station",
+   "name": "本郷台駅周辺",
+   "parent": 1149
+  },
+  {
+   "id": 1196,
+   "slug": "maioka-tobu",
+   "name": "舞岡・東部周辺",
+   "parent": 1148
+  },
+  {
+   "id": 1195,
+   "slug": "higashi-totsuka",
+   "name": "東戸塚",
+   "parent": 1148
+  },
+  {
+   "id": 1184,
+   "slug": "okurayama-kikuna",
+   "name": "大倉山・菊名周辺",
+   "parent": 1144
+  },
+  {
+   "id": 1183,
+   "slug": "tsunashima-hiyoshi",
+   "name": "綱島・日吉周辺",
+   "parent": 1144
+  },
+  {
+   "id": 1172,
+   "slug": "gontazaka-sakaigi",
+   "name": "権太坂・境木周辺",
+   "parent": 1140
+  },
+  {
+   "id": 1171,
+   "slug": "tennocho-hoshikawa",
+   "name": "天王町・星川周辺",
+   "parent": 1140
+  },
+  {
+   "id": 1170,
+   "slug": "hodogaya-park",
+   "name": "保土ケ谷公園周辺",
+   "parent": 1140
+  },
+  {
+   "id": 1169,
+   "slug": "noba-kaminagaya",
+   "name": "野庭・上永谷周辺",
+   "parent": 1139
+  },
+  {
+   "id": 1168,
+   "slug": "konandai",
+   "name": "港南台",
+   "parent": 1139
+  },
+  {
+   "id": 1167,
+   "slug": "kamiooka",
+   "name": "上大岡",
+   "parent": 1139
+  },
+  {
+   "id": 1166,
+   "slug": "shimizugaoka-bessho",
+   "name": "清水ヶ丘・別所周辺",
+   "parent": 1138
+  },
+  {
+   "id": 1165,
+   "slug": "oogakagawa-koganecho",
+   "name": "大岡川・黄金町周辺",
+   "parent": 1138
+  },
+  {
+   "id": 1173,
+   "slug": "futamatagawa",
+   "name": "二俣川",
+   "parent": 1141
+  },
+  {
+   "id": 1174,
+   "slug": "tsurugamine",
+   "name": "鶴ヶ峰",
+   "parent": 1141
+  },
+  {
+   "id": 1182,
+   "slug": "shinyokohama",
+   "name": "新横浜",
+   "parent": 1144
+  },
+  {
+   "id": 1181,
+   "slug": "nokendai-tomioka",
+   "name": "能見台・富岡周辺",
+   "parent": 1143
+  },
+  {
+   "id": 1180,
+   "slug": "hakkeijima-uminokoen",
+   "name": "八景島・海の公園周辺",
+   "parent": 1143
+  },
+  {
+   "id": 1179,
+   "slug": "kanazawa-hakkei-bunko",
+   "name": "金沢八景・金沢文庫周辺",
+   "parent": 1143
+  },
+  {
+   "id": 1178,
+   "slug": "yokodai-sugita",
+   "name": "洋光台・杉田周辺",
+   "parent": 1142
+  },
+  {
+   "id": 1177,
+   "slug": "negishi-kuraki-park",
+   "name": "根岸・久良岐公園周辺",
+   "parent": 1142
+  },
+  {
+   "id": 1176,
+   "slug": "isogo-byobugaura",
+   "name": "磯子・屏風ヶ浦周辺",
+   "parent": 1142
+  },
+  {
+   "id": 1175,
+   "slug": "zoorasia-kamishirane",
+   "name": "ズーラシア・上白根周辺",
+   "parent": 1141
+  },
+  {
+   "id": 1203,
+   "slug": "mitsukyo",
+   "name": "三ツ境",
+   "parent": 1151
+  },
+  {
+   "id": 1204,
+   "slug": "seya-kaigun-doro",
+   "name": "瀬谷・海軍道路周辺",
+   "parent": 1151
+  },
+  {
+   "id": 1232,
+   "slug": "midori-higashiurawa",
+   "name": "東浦和・見沼代用水周辺",
+   "parent": 1214
+  },
+  {
+   "id": 1231,
+   "slug": "midori-stadium",
+   "name": "埼玉スタジアム周辺",
+   "parent": 1214
+  },
+  {
+   "id": 1230,
+   "slug": "minami-musashiurawa",
+   "name": "武蔵浦和周辺",
+   "parent": 1208
+  },
+  {
+   "id": 1229,
+   "slug": "minami-besshonuma",
+   "name": "別所沼公園周辺",
+   "parent": 1208
+  },
+  {
+   "id": 1228,
+   "slug": "urawa-station",
+   "name": "浦和駅周辺",
+   "parent": 1206
+  },
+  {
+   "id": 1227,
+   "slug": "urawa-kita-park",
+   "name": "北浦和公園周辺",
+   "parent": 1206
+  },
+  {
+   "id": 1226,
+   "slug": "sakura-tajima",
+   "name": "さくら草公園・田島周辺",
+   "parent": 1213
+  },
+  {
+   "id": 1225,
+   "slug": "sakura-akigase",
+   "name": "秋ヶ瀬公園周辺",
+   "parent": 1213
+  },
+  {
+   "id": 1234,
+   "slug": "asao-ku",
+   "name": "麻生区",
+   "parent": 738
+  },
+  {
+   "id": 1242,
+   "slug": "la-cittadella",
+   "name": "ラ チッタデッラ",
+   "parent": 1235
+  },
+  {
+   "id": 1241,
+   "slug": "kawasaki-daishi",
+   "name": "川崎大師",
+   "parent": 1235
+  },
+  {
+   "id": 1240,
+   "slug": "miyamae-ku",
+   "name": "宮前区",
+   "parent": 738
+  },
+  {
+   "id": 1239,
+   "slug": "nakahara-ku",
+   "name": "中原区",
+   "parent": 738
+  },
+  {
+   "id": 1238,
+   "slug": "tama-ku",
+   "name": "多摩区",
+   "parent": 738
+  },
+  {
+   "id": 1237,
+   "slug": "takatsu-ku",
+   "name": "高津区",
+   "parent": 738
+  },
+  {
+   "id": 1236,
+   "slug": "saiwai-ku",
+   "name": "幸区",
+   "parent": 738
+  },
+  {
+   "id": 1235,
+   "slug": "kawasaki-ku",
+   "name": "川崎区",
+   "parent": 738
+  },
+  {
+   "id": 1224,
+   "slug": "chuo-yono-park",
+   "name": "与野公園周辺",
+   "parent": 1207
+  },
+  {
+   "id": 1223,
+   "slug": "chuo-keyaki",
+   "name": "けやきひろば周辺",
+   "parent": 1207
+  },
+  {
+   "id": 1212,
+   "slug": "minuma-ku",
+   "name": "見沼区",
+   "parent": 698
+  },
+  {
+   "id": 1211,
+   "slug": "omiya-ku",
+   "name": "大宮区",
+   "parent": 698
+  },
+  {
+   "id": 1210,
+   "slug": "kita-ku-saitama-city",
+   "name": "北区",
+   "parent": 698
+  },
+  {
+   "id": 1209,
+   "slug": "nishi-ku-saitama-city",
+   "name": "西区",
+   "parent": 698
+  },
+  {
+   "id": 1208,
+   "slug": "minami-ku-saitama-city",
+   "name": "南区",
+   "parent": 698
+  },
+  {
+   "id": 1207,
+   "slug": "chuo-ku-saitama-city",
+   "name": "中央区",
+   "parent": 698
+  },
+  {
+   "id": 1206,
+   "slug": "urawa-ku",
+   "name": "浦和区",
+   "parent": 698
+  },
+  {
+   "id": 1205,
+   "slug": "akuwa-izumigawa",
+   "name": "阿久和・和泉川周辺",
+   "parent": 1151
+  },
+  {
+   "id": 1213,
+   "slug": "sakura-ku",
+   "name": "桜区",
+   "parent": 698
+  },
+  {
+   "id": 1214,
+   "slug": "midori-ku-saitama-city",
+   "name": "緑区",
+   "parent": 698
+  },
+  {
+   "id": 1222,
+   "slug": "minuma-nanasato",
+   "name": "七里周辺",
+   "parent": 1212
+  },
+  {
+   "id": 1221,
+   "slug": "minuma-owada",
+   "name": "大和田・見沼田んぼ周辺",
+   "parent": 1212
+  },
+  {
+   "id": 1220,
+   "slug": "omiya-shintoshin",
+   "name": "さいたま新都心・大宮駅周辺",
+   "parent": 1211
+  },
+  {
+   "id": 1219,
+   "slug": "omiya-park",
+   "name": "大宮公園周辺",
+   "parent": 1211
+  },
+  {
+   "id": 1218,
+   "slug": "kita-miyahara",
+   "name": "宮原周辺",
+   "parent": 1210
+  },
+  {
+   "id": 1217,
+   "slug": "kita-bonsaimura",
+   "name": "盆栽村・大宮公園北側",
+   "parent": 1210
+  },
+  {
+   "id": 1216,
+   "slug": "nishi-sashiogi",
+   "name": "指扇周辺",
+   "parent": 1209
+  },
+  {
+   "id": 1215,
+   "slug": "nishi-hananooka",
+   "name": "大宮花の丘周辺",
+   "parent": 1209
+  },
+  {
+   "id": 1243,
+   "slug": "kashimada-shinkawasaki",
+   "name": "鹿島田・新川崎",
+   "parent": 1236
+  },
+  {
+   "id": 1407,
+   "slug": "nishikyo-ku",
+   "name": "西京区",
+   "parent": 382
+  },
+  {
+   "id": 1435,
+   "slug": "tarumi-ku",
+   "name": "垂水区",
+   "parent": 340
+  },
+  {
+   "id": 1434,
+   "slug": "yamashina-station-area",
+   "name": "山科駅周辺",
+   "parent": 1411
+  },
+  {
+   "id": 1433,
+   "slug": "bishamon-do-area",
+   "name": "毘沙門堂周辺",
+   "parent": 1411
+  },
+  {
+   "id": 1432,
+   "slug": "kujo-minami-ku-kyoto-city",
+   "name": "九条",
+   "parent": 1410
+  },
+  {
+   "id": 1431,
+   "slug": "toji-area",
+   "name": "東寺周辺",
+   "parent": 1410
+  },
+  {
+   "id": 1430,
+   "slug": "fukakusa",
+   "name": "深草",
+   "parent": 1409
+  },
+  {
+   "id": 1429,
+   "slug": "fushimi-momoyama",
+   "name": "伏見桃山",
+   "parent": 1409
+  },
+  {
+   "id": 1428,
+   "slug": "kiyomizu-gojo",
+   "name": "清水・五条",
+   "parent": 1408
+  },
+  {
+   "id": 1436,
+   "slug": "suma-ku",
+   "name": "須磨区",
+   "parent": 340
+  },
+  {
+   "id": 1437,
+   "slug": "nagata-ku",
+   "name": "長田区",
+   "parent": 340
+  },
+  {
+   "id": 1445,
+   "slug": "tarumieki-shuhen",
+   "name": "垂水駅周辺",
+   "parent": 1435
+  },
+  {
+   "id": 1444,
+   "slug": "maiko",
+   "name": "舞子",
+   "parent": 1435
+  },
+  {
+   "id": 1443,
+   "slug": "nishi-ku-kobe-city",
+   "name": "西区",
+   "parent": 340
+  },
+  {
+   "id": 1442,
+   "slug": "kita-ku-kobe-city",
+   "name": "北区",
+   "parent": 340
+  },
+  {
+   "id": 1441,
+   "slug": "higashinada-ku",
+   "name": "東灘区",
+   "parent": 340
+  },
+  {
+   "id": 1440,
+   "slug": "nada-ku",
+   "name": "灘区",
+   "parent": 340
+  },
+  {
+   "id": 1439,
+   "slug": "chuo-ku-kobe-city",
+   "name": "中央区",
+   "parent": 340
+  },
+  {
+   "id": 1438,
+   "slug": "hyogo-ku",
+   "name": "兵庫区",
+   "parent": 340
+  },
+  {
+   "id": 1427,
+   "slug": "gion",
+   "name": "祇園",
+   "parent": 1408
+  },
+  {
+   "id": 1426,
+   "slug": "matsunoo-taisha-area",
+   "name": "松尾大社周辺",
+   "parent": 1407
+  },
+  {
+   "id": 1415,
+   "slug": "kyotogyoen-area",
+   "name": "京都御苑周辺",
+   "parent": 1402
+  },
+  {
+   "id": 1414,
+   "slug": "nishijin",
+   "name": "西陣",
+   "parent": 1402
+  },
+  {
+   "id": 1413,
+   "slug": "uzumasa",
+   "name": "太秦",
+   "parent": 1401
+  },
+  {
+   "id": 1412,
+   "slug": "arashiyama",
+   "name": "嵐山",
+   "parent": 1401
+  },
+  {
+   "id": 1411,
+   "slug": "yamashina-ku",
+   "name": "山科区",
+   "parent": 382
+  },
+  {
+   "id": 1410,
+   "slug": "minami-ku-kyoto-city",
+   "name": "南区",
+   "parent": 382
+  },
+  {
+   "id": 1409,
+   "slug": "fushimi-ku",
+   "name": "伏見区",
+   "parent": 382
+  },
+  {
+   "id": 1408,
+   "slug": "higashiyama-ku",
+   "name": "東山区",
+   "parent": 382
+  },
+  {
+   "id": 1416,
+   "slug": "kitayama",
+   "name": "北山",
+   "parent": 1403
+  },
+  {
+   "id": 1417,
+   "slug": "kinugasa",
+   "name": "衣笠",
+   "parent": 1403
+  },
+  {
+   "id": 1425,
+   "slug": "katsura",
+   "name": "桂",
+   "parent": 1407
+  },
+  {
+   "id": 1424,
+   "slug": "nijojo-area",
+   "name": "二条城周辺",
+   "parent": 1406
+  },
+  {
+   "id": 1423,
+   "slug": "kawaramachi",
+   "name": "河原町",
+   "parent": 1406
+  },
+  {
+   "id": 1421,
+   "slug": "shijo-karasuma",
+   "name": "四条烏丸",
+   "parent": 1405
+  },
+  {
+   "id": 1420,
+   "slug": "kyoto-station-area",
+   "name": "京都駅周辺",
+   "parent": 1405
+  },
+  {
+   "id": 1419,
+   "slug": "shimogamo",
+   "name": "下鴨",
+   "parent": 1404
+  },
+  {
+   "id": 1418,
+   "slug": "okazaki",
+   "name": "岡崎",
+   "parent": 1404
+  },
+  {
+   "id": 1446,
+   "slug": "suma-kaigan",
+   "name": "須磨海岸",
+   "parent": 1436
+  },
+  {
+   "id": 1447,
+   "slug": "sumarikyu-koen-shuhen",
+   "name": "須磨離宮公園周辺",
+   "parent": 1436
+  },
+  {
+   "id": 1476,
+   "slug": "ohashi",
+   "name": "大橋",
+   "parent": 1465
+  },
+  {
+   "id": 1475,
+   "slug": "yakuin",
+   "name": "薬院",
+   "parent": 1464
+  },
+  {
+   "id": 1474,
+   "slug": "tenjin-daimyo",
+   "name": "天神・大名",
+   "parent": 1464
+  },
+  {
+   "id": 1472,
+   "slug": "yoshizuka",
+   "name": "吉塚",
+   "parent": 1463
+  },
+  {
+   "id": 1471,
+   "slug": "nakasu",
+   "name": "中洲",
+   "parent": 1463
+  },
+  {
+   "id": 1470,
+   "slug": "uminonakamichi",
+   "name": "海の中道",
+   "parent": 1462
+  },
+  {
+   "id": 1469,
+   "slug": "kashii",
+   "name": "香椎",
+   "parent": 1462
+  },
+  {
+   "id": 1468,
+   "slug": "nishi-ku-fukuoka-city",
+   "name": "西区",
+   "parent": 179
+  },
+  {
+   "id": 1477,
+   "slug": "befu",
+   "name": "別府",
+   "parent": 1466
+  },
+  {
+   "id": 1478,
+   "slug": "nishijin-sawara-ku",
+   "name": "西新",
+   "parent": 1467
+  },
+  {
+   "id": 1485,
+   "slug": "nagakute-shi",
+   "name": "長久手市",
+   "parent": 1483
+  },
+  {
+   "id": 1484,
+   "slug": "nisshin-shi",
+   "name": "日進市",
+   "parent": 1483
+  },
+  {
+   "id": 1483,
+   "slug": "owari-east-south",
+   "name": "尾張東部・南部",
+   "parent": 48
+  },
+  {
+   "id": 1480,
+   "slug": "meinohama",
+   "name": "姪浜",
+   "parent": 1468
+  },
+  {
+   "id": 1479,
+   "slug": "momochihama",
+   "name": "百道浜",
+   "parent": 1467
+  },
+  {
+   "id": 1467,
+   "slug": "sawara-ku",
+   "name": "早良区",
+   "parent": 179
+  },
+  {
+   "id": 1466,
+   "slug": "jonan-ku",
+   "name": "城南区",
+   "parent": 179
+  },
+  {
+   "id": 1455,
+   "slug": "rokkomichi-rokko",
+   "name": "六甲道・六甲",
+   "parent": 1440
+  },
+  {
+   "id": 1454,
+   "slug": "ojikoen-maya",
+   "name": "王子公園・摩耶",
+   "parent": 1440
+  },
+  {
+   "id": 1453,
+   "slug": "kobe-harborland",
+   "name": "神戸ハーバーランド",
+   "parent": 1439
+  },
+  {
+   "id": 1452,
+   "slug": "sannomiya-motomachi",
+   "name": "三宮・元町",
+   "parent": 1439
+  },
+  {
+   "id": 1451,
+   "slug": "hyogo-unga-shuhen",
+   "name": "兵庫運河周辺",
+   "parent": 1438
+  },
+  {
+   "id": 1450,
+   "slug": "minatogawa-shinkaichi",
+   "name": "湊川・新開地",
+   "parent": 1438
+  },
+  {
+   "id": 1449,
+   "slug": "takatoriyama-shuhen",
+   "name": "高取山周辺",
+   "parent": 1437
+  },
+  {
+   "id": 1448,
+   "slug": "shin-nagata",
+   "name": "新長田",
+   "parent": 1437
+  },
+  {
+   "id": 1456,
+   "slug": "mikage-okamoto",
+   "name": "御影・岡本",
+   "parent": 1441
+  },
+  {
+   "id": 1457,
+   "slug": "rokko-island",
+   "name": "六甲アイランド",
+   "parent": 1441
+  },
+  {
+   "id": 1465,
+   "slug": "minami-ku-fukuoka-city",
+   "name": "南区",
+   "parent": 179
+  },
+  {
+   "id": 1464,
+   "slug": "chuo-ku-fukuoka-city",
+   "name": "中央区",
+   "parent": 179
+  },
+  {
+   "id": 1463,
+   "slug": "hakata-ku",
+   "name": "博多区",
+   "parent": 179
+  },
+  {
+   "id": 1462,
+   "slug": "higashi-ku-fukuoka-city",
+   "name": "東区",
+   "parent": 179
+  },
+  {
+   "id": 1461,
+   "slug": "ikawadani-gakuentoshi",
+   "name": "伊川谷・学園都市",
+   "parent": 1443
+  },
+  {
+   "id": 1460,
+   "slug": "seishin-chuo",
+   "name": "西神中央",
+   "parent": 1443
+  },
+  {
+   "id": 1459,
+   "slug": "suzurandai-kitasuzurandai",
+   "name": "鈴蘭台・北鈴蘭台",
+   "parent": 1442
+  },
+  {
+   "id": 1458,
+   "slug": "arima-onsen",
+   "name": "有馬温泉",
+   "parent": 1442
+  },
+  {
+   "id": 1406,
+   "slug": "nakagyo-ku",
+   "name": "中京区",
+   "parent": 382
+  },
+  {
+   "id": 1326,
+   "slug": "hirano-ku",
+   "name": "平野区",
+   "parent": 359
+  },
+  {
+   "id": 1354,
+   "slug": "tamatsukuri",
+   "name": "玉造",
+   "parent": 1312
+  },
+  {
+   "id": 1353,
+   "slug": "shitennoji",
+   "name": "四天王寺",
+   "parent": 1312
+  },
+  {
+   "id": 1352,
+   "slug": "chausuyama",
+   "name": "茶臼山（てんしば周辺）",
+   "parent": 1312
+  },
+  {
+   "id": 1351,
+   "slug": "hirao",
+   "name": "平尾（リトル沖縄）",
+   "parent": 1311
+  },
+  {
+   "id": 1350,
+   "slug": "izuo",
+   "name": "泉尾",
+   "parent": 1311
+  },
+  {
+   "id": 1349,
+   "slug": "sangenya",
+   "name": "三軒家（大正駅周辺）",
+   "parent": 1311
+  },
+  {
+   "id": 1348,
+   "slug": "asashiobashi",
+   "name": "朝潮橋",
+   "parent": 1310
+  },
+  {
+   "id": 1347,
+   "slug": "osakako",
+   "name": "大阪港（天保山）",
+   "parent": 1310
+  },
+  {
+   "id": 1355,
+   "slug": "namba-naniwa-ku",
+   "name": "難波",
+   "parent": 1313
+  },
+  {
+   "id": 1356,
+   "slug": "ebisu-naniwa-ku",
+   "name": "恵美須（新世界周辺）",
+   "parent": 1313
+  },
+  {
+   "id": 1364,
+   "slug": "awaji",
+   "name": "淡路",
+   "parent": 1316
+  },
+  {
+   "id": 1363,
+   "slug": "nishinakajima",
+   "name": "西中島",
+   "parent": 1315
+  },
+  {
+   "id": 1362,
+   "slug": "juso",
+   "name": "十三",
+   "parent": 1315
+  },
+  {
+   "id": 1361,
+   "slug": "shinosaka",
+   "name": "新大阪",
+   "parent": 1315
+  },
+  {
+   "id": 1360,
+   "slug": "tsukamoto",
+   "name": "塚本",
+   "parent": 1314
+  },
+  {
+   "id": 1359,
+   "slug": "himejima",
+   "name": "姫島",
+   "parent": 1314
+  },
+  {
+   "id": 1358,
+   "slug": "mitejima",
+   "name": "御幣島",
+   "parent": 1314
+  },
+  {
+   "id": 1357,
+   "slug": "sakuragawa",
+   "name": "桜川",
+   "parent": 1313
+  },
+  {
+   "id": 1346,
+   "slug": "bentencho",
+   "name": "弁天町",
+   "parent": 1310
+  },
+  {
+   "id": 1345,
+   "slug": "kujo",
+   "name": "九条",
+   "parent": 1309
+  },
+  {
+   "id": 1334,
+   "slug": "fukushima-fukushima-ku",
+   "name": "福島",
+   "parent": 1306
+  },
+  {
+   "id": 1333,
+   "slug": "sakuranomiya",
+   "name": "桜ノ宮",
+   "parent": 1305
+  },
+  {
+   "id": 1332,
+   "slug": "miyakojima",
+   "name": "都島",
+   "parent": 1305
+  },
+  {
+   "id": 1331,
+   "slug": "kyobashi",
+   "name": "京橋",
+   "parent": 1305
+  },
+  {
+   "id": 1330,
+   "slug": "temma",
+   "name": "天満",
+   "parent": 1304
+  },
+  {
+   "id": 1329,
+   "slug": "nakazakicho",
+   "name": "中崎町",
+   "parent": 1304
+  },
+  {
+   "id": 1328,
+   "slug": "umeda",
+   "name": "梅田",
+   "parent": 1304
+  },
+  {
+   "id": 1327,
+   "slug": "nishinari-ku",
+   "name": "西成区",
+   "parent": 359
+  },
+  {
+   "id": 1335,
+   "slug": "noda",
+   "name": "野田",
+   "parent": 1306
+  },
+  {
+   "id": 1336,
+   "slug": "ebie",
+   "name": "海老江",
+   "parent": 1306
+  },
+  {
+   "id": 1344,
+   "slug": "utsubohonmachi",
+   "name": "靭本町",
+   "parent": 1309
+  },
+  {
+   "id": 1343,
+   "slug": "horie",
+   "name": "堀江",
+   "parent": 1309
+  },
+  {
+   "id": 1342,
+   "slug": "honmachi",
+   "name": "本町",
+   "parent": 1308
+  },
+  {
+   "id": 1341,
+   "slug": "shinsaibashi",
+   "name": "心斎橋",
+   "parent": 1308
+  },
+  {
+   "id": 1340,
+   "slug": "namba",
+   "name": "難波",
+   "parent": 1308
+  },
+  {
+   "id": 1339,
+   "slug": "maishima",
+   "name": "舞洲",
+   "parent": 1307
+  },
+  {
+   "id": 1338,
+   "slug": "universal-city",
+   "name": "ユニバーサルシティ",
+   "parent": 1307
+  },
+  {
+   "id": 1337,
+   "slug": "nishikujo",
+   "name": "西九条",
+   "parent": 1307
+  },
+  {
+   "id": 1365,
+   "slug": "kamishinjo",
+   "name": "上新庄",
+   "parent": 1316
+  },
+  {
+   "id": 1366,
+   "slug": "shimoshinjo",
+   "name": "下新庄",
+   "parent": 1316
+  },
+  {
+   "id": 1394,
+   "slug": "kireuriwari",
+   "name": "喜連瓜破",
+   "parent": 1326
+  },
+  {
+   "id": 1393,
+   "slug": "yata",
+   "name": "矢田",
+   "parent": 1325
+  },
+  {
+   "id": 1392,
+   "slug": "harinakano",
+   "name": "針中野",
+   "parent": 1325
+  },
+  {
+   "id": 1391,
+   "slug": "komagawa",
+   "name": "駒川",
+   "parent": 1325
+  },
+  {
+   "id": 1390,
+   "slug": "abiko",
+   "name": "あびこ",
+   "parent": 1324
+  },
+  {
+   "id": 1389,
+   "slug": "nagai",
+   "name": "長居",
+   "parent": 1324
+  },
+  {
+   "id": 1388,
+   "slug": "sumiyoshitaisha",
+   "name": "住吉大社",
+   "parent": 1324
+  },
+  {
+   "id": 1387,
+   "slug": "nanko",
+   "name": "南港",
+   "parent": 1323
+  },
+  {
+   "id": 1395,
+   "slug": "kami",
+   "name": "加美",
+   "parent": 1326
+  },
+  {
+   "id": 1396,
+   "slug": "nagayoshi",
+   "name": "長吉",
+   "parent": 1326
+  },
+  {
+   "id": 1404,
+   "slug": "sakyo-ku",
+   "name": "左京区",
+   "parent": 382
+  },
+  {
+   "id": 1403,
+   "slug": "kita-ku-kyoto-city",
+   "name": "北区",
+   "parent": 382
+  },
+  {
+   "id": 1402,
+   "slug": "kamigyo-ku",
+   "name": "上京区",
+   "parent": 382
+  },
+  {
+   "id": 1401,
+   "slug": "ukyo-ku",
+   "name": "右京区",
+   "parent": 382
+  },
+  {
+   "id": 1399,
+   "slug": "tamade",
+   "name": "玉出",
+   "parent": 1327
+  },
+  {
+   "id": 1398,
+   "slug": "kishinosato",
+   "name": "岸里",
+   "parent": 1327
+  },
+  {
+   "id": 1397,
+   "slug": "tengachaya",
+   "name": "天下茶屋",
+   "parent": 1327
+  },
+  {
+   "id": 1386,
+   "slug": "kitakagaya",
+   "name": "北加賀屋",
+   "parent": 1323
+  },
+  {
+   "id": 1385,
+   "slug": "suminoekoen",
+   "name": "住之江公園",
+   "parent": 1323
+  },
+  {
+   "id": 1374,
+   "slug": "taishibashi",
+   "name": "太子橋",
+   "parent": 1319
+  },
+  {
+   "id": 1373,
+   "slug": "senbayashi",
+   "name": "千林",
+   "parent": 1319
+  },
+  {
+   "id": 1372,
+   "slug": "tatsumi",
+   "name": "巽",
+   "parent": 1318
+  },
+  {
+   "id": 1371,
+   "slug": "momodani",
+   "name": "桃谷",
+   "parent": 1318
+  },
+  {
+   "id": 1370,
+   "slug": "tsuruhashi",
+   "name": "鶴橋",
+   "parent": 1318
+  },
+  {
+   "id": 1369,
+   "slug": "fukaebashi",
+   "name": "深江橋",
+   "parent": 1317
+  },
+  {
+   "id": 1368,
+   "slug": "midoribashi",
+   "name": "緑橋",
+   "parent": 1317
+  },
+  {
+   "id": 1367,
+   "slug": "imazato",
+   "name": "今里",
+   "parent": 1317
+  },
+  {
+   "id": 1375,
+   "slug": "morishoji",
+   "name": "森小路",
+   "parent": 1319
+  },
+  {
+   "id": 1376,
+   "slug": "gamoyon",
+   "name": "蒲生",
+   "parent": 1320
+  },
+  {
+   "id": 1384,
+   "slug": "nishitanabe",
+   "name": "西田辺",
+   "parent": 1322
+  },
+  {
+   "id": 1383,
+   "slug": "showacho",
+   "name": "昭和町",
+   "parent": 1322
+  },
+  {
+   "id": 1382,
+   "slug": "abeno",
+   "name": "阿倍野",
+   "parent": 1322
+  },
+  {
+   "id": 1381,
+   "slug": "tokuan",
+   "name": "徳庵",
+   "parent": 1321
+  },
+  {
+   "id": 1380,
+   "slug": "yokozutsumi",
+   "name": "横堤",
+   "parent": 1321
+  },
+  {
+   "id": 1379,
+   "slug": "tsurumiryokuchi",
+   "name": "鶴見緑地",
+   "parent": 1321
+  },
+  {
+   "id": 1378,
+   "slug": "hanaten",
+   "name": "放出",
+   "parent": 1320
+  },
+  {
+   "id": 1377,
+   "slug": "noe",
+   "name": "野江",
+   "parent": 1320
+  },
+  {
+   "id": 1405,
+   "slug": "shimogyo-ku",
+   "name": "下京区",
+   "parent": 382
+  },
+  {
+   "id": 1163,
+   "slug": "honmoku-yamate",
+   "name": "本牧・山手",
+   "parent": 1137
+  },
+  {
+   "id": 1082,
+   "slug": "kameido",
+   "name": "亀戸",
+   "parent": 783
+  },
+  {
+   "id": 1111,
+   "slug": "koenji",
+   "name": "高円寺",
+   "parent": 775
+  },
+  {
+   "id": 1110,
+   "slug": "nakano-sakaue",
+   "name": "中野坂上",
+   "parent": 774
+  },
+  {
+   "id": 1109,
+   "slug": "nakano",
+   "name": "中野",
+   "parent": 774
+  },
+  {
+   "id": 1108,
+   "slug": "yoyogi",
+   "name": "代々木",
+   "parent": 770
+  },
+  {
+   "id": 1107,
+   "slug": "hatagaya",
+   "name": "幡ヶ谷",
+   "parent": 770
+  },
+  {
+   "id": 1106,
+   "slug": "yoyogiuehara",
+   "name": "代々木上原",
+   "parent": 770
+  },
+  {
+   "id": 1105,
+   "slug": "harajuku",
+   "name": "原宿",
+   "parent": 770
+  },
+  {
+   "id": 1103,
+   "slug": "hiroo",
+   "name": "広尾",
+   "parent": 770
+  },
+  {
+   "id": 1112,
+   "slug": "asagaya",
+   "name": "阿佐ヶ谷",
+   "parent": 775
+  },
+  {
+   "id": 1113,
+   "slug": "ogikubo",
+   "name": "荻窪",
+   "parent": 775
+  },
+  {
+   "id": 1121,
+   "slug": "tabata",
+   "name": "田端",
+   "parent": 786
+  },
+  {
+   "id": 1120,
+   "slug": "itabashi",
+   "name": "板橋",
+   "parent": 786
+  },
+  {
+   "id": 1119,
+   "slug": "oji",
+   "name": "王子",
+   "parent": 786
+  },
+  {
+   "id": 1118,
+   "slug": "akabane",
+   "name": "赤羽",
+   "parent": 786
+  },
+  {
+   "id": 1117,
+   "slug": "sugamo",
+   "name": "巣鴨",
+   "parent": 785
+  },
+  {
+   "id": 1116,
+   "slug": "otsuka",
+   "name": "大塚",
+   "parent": 785
+  },
+  {
+   "id": 1115,
+   "slug": "mejiro",
+   "name": "目白",
+   "parent": 785
+  },
+  {
+   "id": 1114,
+   "slug": "ikebukuro",
+   "name": "池袋",
+   "parent": 785
+  },
+  {
+   "id": 1102,
+   "slug": "daikanyama",
+   "name": "代官山",
+   "parent": 770
+  },
+  {
+   "id": 1101,
+   "slug": "ebisu",
+   "name": "恵比寿",
+   "parent": 770
+  },
+  {
+   "id": 1090,
+   "slug": "toritsudaigaku",
+   "name": "都立大学",
+   "parent": 772
+  },
+  {
+   "id": 1089,
+   "slug": "gakugeidaigaku",
+   "name": "学芸大学",
+   "parent": 772
+  },
+  {
+   "id": 1088,
+   "slug": "jiyugaoka",
+   "name": "自由が丘",
+   "parent": 772
+  },
+  {
+   "id": 1087,
+   "slug": "nakameguro",
+   "name": "中目黒",
+   "parent": 772
+  },
+  {
+   "id": 1086,
+   "slug": "gotanda",
+   "name": "五反田",
+   "parent": 771
+  },
+  {
+   "id": 1085,
+   "slug": "tennoz-isle",
+   "name": "天王洲アイル",
+   "parent": 771
+  },
+  {
+   "id": 1083,
+   "slug": "ooimachi",
+   "name": "大井町",
+   "parent": 771
+  },
+  {
+   "id": 1091,
+   "slug": "komazawadaigaku",
+   "name": "駒沢大学",
+   "parent": 772
+  },
+  {
+   "id": 1092,
+   "slug": "kamata",
+   "name": "蒲田",
+   "parent": 784
+  },
+  {
+   "id": 1100,
+   "slug": "shibuya",
+   "name": "渋谷",
+   "parent": 770
+  },
+  {
+   "id": 1099,
+   "slug": "yoyogikoen",
+   "name": "代々木公園",
+   "parent": 770
+  },
+  {
+   "id": 1098,
+   "slug": "komazawa",
+   "name": "駒沢",
+   "parent": 773
+  },
+  {
+   "id": 1097,
+   "slug": "sangenjaya",
+   "name": "三軒茶屋",
+   "parent": 773
+  },
+  {
+   "id": 1096,
+   "slug": "shimokitazawa",
+   "name": "下北沢",
+   "parent": 773
+  },
+  {
+   "id": 1095,
+   "slug": "futakotamagawa",
+   "name": "二子玉川",
+   "parent": 773
+  },
+  {
+   "id": 1094,
+   "slug": "tamagawa",
+   "name": "多摩川",
+   "parent": 784
+  },
+  {
+   "id": 1093,
+   "slug": "denenchofu",
+   "name": "田園調布",
+   "parent": 784
+  },
+  {
+   "id": 1122,
+   "slug": "nippori",
+   "name": "日暮里",
+   "parent": 787
+  },
+  {
+   "id": 1123,
+   "slug": "minami-senju",
+   "name": "南千住",
+   "parent": 787
+  },
+  {
+   "id": 1151,
+   "slug": "seya-ku",
+   "name": "瀬谷区",
+   "parent": 737
+  },
+  {
+   "id": 1150,
+   "slug": "izumi-ku",
+   "name": "泉区",
+   "parent": 737
+  },
+  {
+   "id": 1149,
+   "slug": "sakae-ku",
+   "name": "栄区",
+   "parent": 737
+  },
+  {
+   "id": 1148,
+   "slug": "totsuka-ku",
+   "name": "戸塚区",
+   "parent": 737
+  },
+  {
+   "id": 1147,
+   "slug": "tsuzuki-ku",
+   "name": "都筑区",
+   "parent": 737
+  },
+  {
+   "id": 1146,
+   "slug": "aoba-ku",
+   "name": "青葉区",
+   "parent": 737
+  },
+  {
+   "id": 1145,
+   "slug": "midori-ku",
+   "name": "緑区",
+   "parent": 737
+  },
+  {
+   "id": 1144,
+   "slug": "kouhoku-ku",
+   "name": "港北区",
+   "parent": 737
+  },
+  {
+   "id": 1152,
+   "slug": "tsurumi-station",
+   "name": "鶴見駅周辺",
+   "parent": 1134
+  },
+  {
+   "id": 1153,
+   "slug": "mitsuike-park",
+   "name": "三ツ池公園周辺",
+   "parent": 1134
+  },
+  {
+   "id": 1161,
+   "slug": "motomachi-chukagai",
+   "name": "元町・中華街",
+   "parent": 1137
+  },
+  {
+   "id": 1160,
+   "slug": "nogeyama-tobe",
+   "name": "野毛山・戸部周辺",
+   "parent": 1136
+  },
+  {
+   "id": 1159,
+   "slug": "yokohama-station",
+   "name": "横浜駅周辺",
+   "parent": 1136
+  },
+  {
+   "id": 1158,
+   "slug": "minatomirai",
+   "name": "みなとみらい",
+   "parent": 1136
+  },
+  {
+   "id": 1157,
+   "slug": "oguchi-koyasu",
+   "name": "大口・子安周辺",
+   "parent": 1135
+  },
+  {
+   "id": 1156,
+   "slug": "tanmachi-mitsuzawa",
+   "name": "反町・三ツ沢公園周辺",
+   "parent": 1135
+  },
+  {
+   "id": 1155,
+   "slug": "yokohama-bay-quarter",
+   "name": "横浜駅東口・ベイクォーター周辺",
+   "parent": 1135
+  },
+  {
+   "id": 1154,
+   "slug": "namamugi",
+   "name": "生麦",
+   "parent": 1134
+  },
+  {
+   "id": 1143,
+   "slug": "kanazawa-ku",
+   "name": "金沢区",
+   "parent": 737
+  },
+  {
+   "id": 1142,
+   "slug": "isogo-ku",
+   "name": "磯子区",
+   "parent": 737
+  },
+  {
+   "id": 1131,
+   "slug": "shibamata",
+   "name": "柴又",
+   "parent": 789
+  },
+  {
+   "id": 1130,
+   "slug": "kameari",
+   "name": "亀有",
+   "parent": 789
+  },
+  {
+   "id": 1129,
+   "slug": "nishiarai",
+   "name": "西新井",
+   "parent": 777
+  },
+  {
+   "id": 1128,
+   "slug": "kita-senju",
+   "name": "北千住",
+   "parent": 777
+  },
+  {
+   "id": 1127,
+   "slug": "hikarigaoka",
+   "name": "光が丘",
+   "parent": 788
+  },
+  {
+   "id": 1126,
+   "slug": "nerima",
+   "name": "練馬",
+   "parent": 788
+  },
+  {
+   "id": 1125,
+   "slug": "narimasu",
+   "name": "成増",
+   "parent": 776
+  },
+  {
+   "id": 1124,
+   "slug": "oyama",
+   "name": "大山",
+   "parent": 776
+  },
+  {
+   "id": 1132,
+   "slug": "kasai",
+   "name": "葛西",
+   "parent": 778
+  },
+  {
+   "id": 1133,
+   "slug": "koiwa",
+   "name": "小岩",
+   "parent": 778
+  },
+  {
+   "id": 1141,
+   "slug": "asahi-ku",
+   "name": "旭区",
+   "parent": 737
+  },
+  {
+   "id": 1140,
+   "slug": "hodogaya-ku",
+   "name": "保土ケ谷区",
+   "parent": 737
+  },
+  {
+   "id": 1139,
+   "slug": "kounan-ku",
+   "name": "港南区",
+   "parent": 737
+  },
+  {
+   "id": 1138,
+   "slug": "minami-ku",
+   "name": "南区",
+   "parent": 737
+  },
+  {
+   "id": 1137,
+   "slug": "naka-ku",
+   "name": "中区",
+   "parent": 737
+  },
+  {
+   "id": 1136,
+   "slug": "nishi-ku",
+   "name": "西区",
+   "parent": 737
+  },
+  {
+   "id": 1135,
+   "slug": "kanagawa-ku",
+   "name": "神奈川区",
+   "parent": 737
+  },
+  {
+   "id": 1134,
+   "slug": "tsurumiku-ku",
+   "name": "鶴見区",
+   "parent": 737
+  },
+  {
+   "id": 1162,
+   "slug": "kannai-nihon-odori",
+   "name": "関内・日本大通り",
+   "parent": 1137
+  },
+  {
+   "id": 1081,
+   "slug": "toyosu",
+   "name": "豊洲",
+   "parent": 783
+  },
+  {
+   "id": 1069,
+   "slug": "daimon",
+   "name": "大門",
+   "parent": 769
+  },
+  {
+   "id": 1068,
+   "slug": "hamamatsucho",
+   "name": "浜松町",
+   "parent": 769
+  },
+  {
+   "id": 1067,
+   "slug": "shiodome",
+   "name": "汐留",
+   "parent": 769
+  },
+  {
+   "id": 1066,
+   "slug": "shimbashi",
+   "name": "新橋",
+   "parent": 769
+  },
+  {
+   "id": 1065,
+   "slug": "azabujuban",
+   "name": "麻布十番",
+   "parent": 769
+  },
+  {
+   "id": 1064,
+   "slug": "omotesando",
+   "name": "表参道",
+   "parent": 769
+  },
+  {
+   "id": 1063,
+   "slug": "aoyama",
+   "name": "青山",
+   "parent": 769
+  },
+  {
+   "id": 1062,
+   "slug": "akasaka",
+   "name": "赤坂",
+   "parent": 769
+  },
+  {
+   "id": 1070,
+   "slug": "shinagawa",
+   "name": "品川",
+   "parent": 769
+  },
+  {
+   "id": 1071,
+   "slug": "shinjuku",
+   "name": "新宿",
+   "parent": 779
+  },
+  {
+   "id": 1079,
+   "slug": "ryogoku",
+   "name": "両国",
+   "parent": 782
+  },
+  {
+   "id": 1078,
+   "slug": "kinshicho",
+   "name": "錦糸町",
+   "parent": 782
+  },
+  {
+   "id": 1077,
+   "slug": "odaiba",
+   "name": "お台場",
+   "parent": 769
+  },
+  {
+   "id": 1076,
+   "slug": "okachimachi",
+   "name": "御徒町",
+   "parent": 781
+  },
+  {
+   "id": 1075,
+   "slug": "asakusa",
+   "name": "浅草",
+   "parent": 781
+  },
+  {
+   "id": 1074,
+   "slug": "ueno",
+   "name": "上野",
+   "parent": 781
+  },
+  {
+   "id": 1073,
+   "slug": "takadanobaba",
+   "name": "高田馬場",
+   "parent": 779
+  },
+  {
+   "id": 1072,
+   "slug": "okubo",
+   "name": "大久保",
+   "parent": 779
+  },
+  {
+   "id": 1061,
+   "slug": "nishiazabu",
+   "name": "西麻布",
+   "parent": 769
+  },
+  {
+   "id": 1060,
+   "slug": "roppongi",
+   "name": "六本木",
+   "parent": 769
+  },
+  {
+   "id": 1049,
+   "slug": "kanda",
+   "name": "神田",
+   "parent": 767
+  },
+  {
+   "id": 1048,
+   "slug": "jimbocho",
+   "name": "神保町",
+   "parent": 767
+  },
+  {
+   "id": 1047,
+   "slug": "akihabara",
+   "name": "秋葉原",
+   "parent": 767
+  },
+  {
+   "id": 1050,
+   "slug": "marunouchi-yurakucho",
+   "name": "丸の内・有楽町",
+   "parent": 767
+  },
+  {
+   "id": 1051,
+   "slug": "otemachi",
+   "name": "大手町",
+   "parent": 767
+  },
+  {
+   "id": 1059,
+   "slug": "hatchobori-kyobashi",
+   "name": "八丁堀・京橋",
+   "parent": 768
+  },
+  {
+   "id": 1058,
+   "slug": "ningyocho-kayabacho",
+   "name": "人形町・茅場町",
+   "parent": 768
+  },
+  {
+   "id": 1057,
+   "slug": "tsukishima-kachidoki",
+   "name": "月島・勝どき",
+   "parent": 768
+  },
+  {
+   "id": 1056,
+   "slug": "tsukiji",
+   "name": "築地",
+   "parent": 768
+  },
+  {
+   "id": 1055,
+   "slug": "nihonbashi",
+   "name": "日本橋",
+   "parent": 768
+  },
+  {
+   "id": 1054,
+   "slug": "ginza",
+   "name": "銀座",
+   "parent": 768
+  },
+  {
+   "id": 1053,
+   "slug": "kojimachi-nagatacho",
+   "name": "麹町・永田町",
+   "parent": 767
+  },
+  {
+   "id": 1052,
+   "slug": "iidabashi-kudanshita",
+   "name": "飯田橋・九段下",
+   "parent": 767
+  },
+  {
+   "id": 1080,
+   "slug": "oshiage-skytree",
+   "name": "押上（スカイツリー前）",
+   "parent": 782
+  },
+  {
+   "id": 236,
+   "slug": "mitoyo-shi",
+   "name": "三豊市",
+   "parent": 228
+  },
+  {
+   "id": 239,
+   "slug": "anan-kaifu-south",
+   "name": "阿南・海部（南部）",
+   "parent": 73
+  },
+  {
+   "id": 530,
+   "slug": "takaoka-imizul-shi",
+   "name": "高岡市・射水市",
+   "parent": 525
+  },
+  {
+   "id": 548,
+   "slug": "sado-shi",
+   "name": "佐渡市",
+   "parent": 537
+  },
+  {
+   "id": 528,
+   "slug": "uozu-kurobe-shi",
+   "name": "魚津市・黒部市",
+   "parent": 524
+  },
+  {
+   "id": 537,
+   "slug": "sado-island",
+   "name": "佐渡",
+   "parent": 50
+  },
+  {
+   "id": 234,
+   "slug": "kotohira-ayagawa",
+   "name": "こんぴら・綾川周辺",
+   "parent": 227
+  },
+  {
+   "id": 541,
+   "slug": "shibata-tainai-murakami",
+   "name": "新発田市・胎内市・村上市",
+   "parent": 534
+  },
+  {
+   "id": 231,
+   "slug": "shodoshima-naoshima",
+   "name": "小豆島・直島",
+   "parent": 226
+  },
+  {
+   "id": 553,
+   "slug": "sapporo-doou-central",
+   "name": "札幌市・道央",
+   "parent": 31
+  },
+  {
+   "id": 542,
+   "slug": "nagaoka-shi",
+   "name": "長岡市",
+   "parent": 535
+  },
+  {
+   "id": 228,
+   "slug": "kanonji-seisan",
+   "name": "観音寺・三豊（西讃）",
+   "parent": 72
+  },
+  {
+   "id": 547,
+   "slug": "myoko-itoigawa-shi",
+   "name": "妙高市・糸魚川市",
+   "parent": 536
+  },
+  {
+   "id": 242,
+   "slug": "komatsushima-katsura",
+   "name": "小松島市・勝浦郡",
+   "parent": 237
+  },
+  {
+   "id": 243,
+   "slug": "yoshinogawa-awa",
+   "name": "吉野川市・阿波市",
+   "parent": 238
+  },
+  {
+   "id": 525,
+   "slug": "takaoka-gosei-west",
+   "name": "高岡市・県西部（呉西）",
+   "parent": 51
+  },
+  {
+   "id": 261,
+   "slug": "suo-oshima-cho",
+   "name": "周防大島町",
+   "parent": 251
+  },
+  {
+   "id": 264,
+   "slug": "kure-higashihiroshima",
+   "name": "呉・東広島・三次（芸北）",
+   "parent": 67
+  },
+  {
+   "id": 502,
+   "slug": "otsuki-kitatsuru-gun",
+   "name": "大月市・北都留郡",
+   "parent": 493
+  },
+  {
+   "id": 505,
+   "slug": "fukui-eiheiji",
+   "name": "福井市・永平寺町",
+   "parent": 503
+  },
+  {
+   "id": 512,
+   "slug": "takahama-oi-cho",
+   "name": "高浜町・おおい町",
+   "parent": 504
+  },
+  {
+   "id": 256,
+   "slug": "hofu-shi",
+   "name": "防府市",
+   "parent": 250
+  },
+  {
+   "id": 254,
+   "slug": "mine-shi",
+   "name": "美祢市",
+   "parent": 249
+  },
+  {
+   "id": 514,
+   "slug": "noto-area-north",
+   "name": "能登地方",
+   "parent": 52
+  },
+  {
+   "id": 251,
+   "slug": "shunan-iwakuni-east",
+   "name": "周南・岩国（東部）",
+   "parent": 70
+  },
+  {
+   "id": 519,
+   "slug": "kaga-shi",
+   "name": "加賀市",
+   "parent": 513
+  },
+  {
+   "id": 523,
+   "slug": "suzu-noto-cho",
+   "name": "珠洲市・能登町",
+   "parent": 514
+  },
+  {
+   "id": 246,
+   "slug": "anan-shi",
+   "name": "阿南市",
+   "parent": 239
+  },
+  {
+   "id": 504,
+   "slug": "tsuruga-reinan-south",
+   "name": "敦賀・嶺南地方",
+   "parent": 53
+  },
+  {
+   "id": 222,
+   "slug": "uwajima-kihoku",
+   "name": "宇和島市・鬼北町",
+   "parent": 215
+  },
+  {
+   "id": 556,
+   "slug": "sapporo-chuo-kita-higashi",
+   "name": "札幌市中央区・北区・東区",
+   "parent": 553
+  },
+  {
+   "id": 197,
+   "slug": "iizuka-kama-shi",
+   "name": "飯塚市・嘉麻市",
+   "parent": 183
+  },
+  {
+   "id": 320,
+   "slug": "hashimoto-koyasan",
+   "name": "橋本市・高野山周辺",
+   "parent": 315
+  },
+  {
+   "id": 195,
+   "slug": "yame-hirokawa",
+   "name": "八女市・広川町",
+   "parent": 182
+  },
+  {
+   "id": 592,
+   "slug": "tono-shi",
+   "name": "遠野市",
+   "parent": 584
+  },
+  {
+   "id": 193,
+   "slug": "munakata-fukutsu",
+   "name": "宗像市・福津市",
+   "parent": 181
+  },
+  {
+   "id": 593,
+   "slug": "miyako-otsuchi",
+   "name": "宮古市・大槌町",
+   "parent": 585
+  },
+  {
+   "id": 189,
+   "slug": "moji-wakamatsu-tobata-ku",
+   "name": "門司区・若松区・戸畑区",
+   "parent": 180
+  },
+  {
+   "id": 599,
+   "slug": "osaki-sanriku-coastal",
+   "name": "大崎・三陸沿岸",
+   "parent": 36
+  },
+  {
+   "id": 183,
+   "slug": "chikuhou-kitakyushu-area",
+   "name": "筑豊・北九州周辺",
+   "parent": 77
+  },
+  {
+   "id": 602,
+   "slug": "miyagino-tagajo-shiogama",
+   "name": "宮城野区・多賀城市・塩竈市",
+   "parent": 597
+  },
+  {
+   "id": 604,
+   "slug": "tomiya-kurokawa-gun",
+   "name": "富谷市・黒川郡",
+   "parent": 598
+  },
+  {
+   "id": 607,
+   "slug": "osaki-kami-gun",
+   "name": "大崎市・加美郡",
+   "parent": 599
+  },
+  {
+   "id": 589,
+   "slug": "hachimantai-nishiwaga",
+   "name": "八幡平市・西和賀町",
+   "parent": 583
+  },
+  {
+   "id": 583,
+   "slug": "morioka-central",
+   "name": "盛岡・内陸中央",
+   "parent": 34
+  },
+  {
+   "id": 202,
+   "slug": "shimanto-sukumo-west",
+   "name": "四万十・宿毛（西部）",
+   "parent": 75
+  },
+  {
+   "id": 219,
+   "slug": "imabari-kamijima",
+   "name": "今治市・上島町",
+   "parent": 214
+  },
+  {
+   "id": 218,
+   "slug": "kuma-uchiko",
+   "name": "久万高原町・内子町",
+   "parent": 213
+  },
+  {
+   "id": 566,
+   "slug": "wakkanai-soya-area",
+   "name": "稚内市・宗谷地方",
+   "parent": 554
+  },
+  {
+   "id": 215,
+   "slug": "uwajima-nanyo",
+   "name": "宇和島・南予",
+   "parent": 74
+  },
+  {
+   "id": 570,
+   "slug": "shiretoko-nemuro",
+   "name": "知床・根室",
+   "parent": 555
+  },
+  {
+   "id": 573,
+   "slug": "shimokita-peninsula",
+   "name": "下北地方",
+   "parent": 33
+  },
+  {
+   "id": 209,
+   "slug": "shimanto-area",
+   "name": "四万十市・四万十町",
+   "parent": 202
+  },
+  {
+   "id": 208,
+   "slug": "muroto-toyo-cho",
+   "name": "室戸市・東洋町",
+   "parent": 201
+  },
+  {
+   "id": 577,
+   "slug": "nishitsugaru-nakatsugaru-gun",
+   "name": "西津軽郡・中津軽郡",
+   "parent": 571
+  },
+  {
+   "id": 206,
+   "slug": "reihoku-area",
+   "name": "嶺北地域",
+   "parent": 200
+  },
+  {
+   "id": 580,
+   "slug": "kamikita-oirase",
+   "name": "上北郡・おいらせ町",
+   "parent": 572
+  },
+  {
+   "id": 582,
+   "slug": "mutsu-shimokita-gun",
+   "name": "むつ市・下北郡",
+   "parent": 573
+  },
+  {
+   "id": 178,
+   "slug": "ureshino-kashima-area",
+   "name": "嬉野市・鹿島市・藤津郡",
+   "parent": 171
+  },
+  {
+   "id": 267,
+   "slug": "asaminami-asaita-ku",
+   "name": "安佐南区・安佐北区",
+   "parent": 262
+  },
+  {
+   "id": 372,
+   "slug": "ibaraki-toyono-gun",
+   "name": "茨木市・豊能郡",
+   "parent": 360
+  },
+  {
+   "id": 336,
+   "slug": "kitakatsuragi-gosho",
+   "name": "北葛城郡・御所市",
+   "parent": 328
+  },
+  {
+   "id": 409,
+   "slug": "takashima-shi",
+   "name": "高島市",
+   "parent": 399
+  },
+  {
+   "id": 410,
+   "slug": "kuwana-yokkaichi-hokusei",
+   "name": "桑名・四日市（北勢）",
+   "parent": 64
+  },
+  {
+   "id": 332,
+   "slug": "yamatokoriyama-tenri",
+   "name": "大和郡山市・天理市",
+   "parent": 327
+  },
+  {
+   "id": 415,
+   "slug": "suzuka-kameyama-shi",
+   "name": "鈴鹿市・亀山市",
+   "parent": 410
+  },
+  {
+   "id": 329,
+   "slug": "yoshino-uda-mountains",
+   "name": "吉野・宇陀（山間部）",
+   "parent": 63
+  },
+  {
+   "id": 418,
+   "slug": "iga-nabari-shi",
+   "name": "伊賀市・名張市",
+   "parent": 411
+  },
+  {
+   "id": 326,
+   "slug": "kushimoto-kozagawa",
+   "name": "串本町・古座川町",
+   "parent": 317
+  },
+  {
+   "id": 422,
+   "slug": "kumano-mihama-kiho",
+   "name": "熊野市・御浜町・紀宝町",
+   "parent": 412
+  },
+  {
+   "id": 322,
+   "slug": "gobo-hidaka-area",
+   "name": "御坊市・日高町周辺",
+   "parent": 316
+  },
+  {
+   "id": 433,
+   "slug": "ichinomiya-inazawa",
+   "name": "一宮市・稲沢市",
+   "parent": 424
+  },
+  {
+   "id": 426,
+   "slug": "higashi-mikawa-chita",
+   "name": "東三河・知多半島",
+   "parent": 48
+  },
+  {
+   "id": 315,
+   "slug": "wakayama-kioku-north",
+   "name": "和歌山・紀北",
+   "parent": 62
+  },
+  {
+   "id": 338,
+   "slug": "uda-gun",
+   "name": "宇陀市・宇陀郡",
+   "parent": 329
+  },
+  {
+   "id": 407,
+   "slug": "taga-toyosato-kora",
+   "name": "多賀町・豊郷町・甲良町",
+   "parent": 398
+  },
+  {
+   "id": 376,
+   "slug": "izumiotsu-izumi-takaishi",
+   "name": "泉大津市・和泉市・高石市",
+   "parent": 361
+  },
+  {
+   "id": 362,
+   "slug": "tobu-kawachi-area",
+   "name": "東部・河内",
+   "parent": 58
+  },
+  {
+   "id": 381,
+   "slug": "minamikawachi-kawachinagano",
+   "name": "南河内郡・河内長野市",
+   "parent": 362
+  },
+  {
+   "id": 358,
+   "slug": "awaji-shoto-city",
+   "name": "淡路市・洲本市・南あわじ市",
+   "parent": 344
+  },
+  {
+   "id": 357,
+   "slug": "tanba-sasayama-shi",
+   "name": "丹波市・丹波篠山市",
+   "parent": 343
+  },
+  {
+   "id": 384,
+   "slug": "fukuchiyama-tango-north",
+   "name": "福知山・丹後（北部）",
+   "parent": 60
+  },
+  {
+   "id": 392,
+   "slug": "nagaokakyo-mukou-shi",
+   "name": "長岡京市・向日市",
+   "parent": 383
+  },
+  {
+   "id": 352,
+   "slug": "himeji-shi",
+   "name": "姫路市",
+   "parent": 342
+  },
+  {
+   "id": 351,
+   "slug": "takarazuka-sanda-kawanishi",
+   "name": "宝塚市・三田市・川西市",
+   "parent": 341
+  },
+  {
+   "id": 396,
+   "slug": "kameoka-nantan",
+   "name": "亀岡市・南丹市",
+   "parent": 384
+  },
+  {
+   "id": 399,
+   "slug": "nagahama-takashima",
+   "name": "長浜・高島（湖北・湖西）",
+   "parent": 61
+  },
+  {
+   "id": 403,
+   "slug": "koga-konan-shi",
+   "name": "甲賀市・湖南市",
+   "parent": 397
+  },
+  {
+   "id": 340,
+   "slug": "kobe-city",
+   "name": "神戸市",
+   "parent": 59
+  },
+  {
+   "id": 314,
+   "slug": "hino-gun",
+   "name": "日野郡",
+   "parent": 306
+  },
+  {
+   "id": 440,
+   "slug": "anjo-hekinan-takahama",
+   "name": "安城市・碧南市・高浜市",
+   "parent": 425
+  },
+  {
+   "id": 471,
+   "slug": "minokamo-kani-shi",
+   "name": "美濃加茂市・可児市",
+   "parent": 462
+  },
+  {
+   "id": 287,
+   "slug": "takahashi-niimi-shi",
+   "name": "高梁市・新見市",
+   "parent": 278
+  },
+  {
+   "id": 474,
+   "slug": "gujo-shi",
+   "name": "郡上市",
+   "parent": 463
+  },
+  {
+   "id": 478,
+   "slug": "suwa-ina-nanshin-south",
+   "name": "諏訪・伊那（南信）",
+   "parent": 55
+  },
+  {
+   "id": 283,
+   "slug": "tamano-shi",
+   "name": "玉野市",
+   "parent": 277
+  },
+  {
+   "id": 481,
+   "slug": "suzaka-obuse",
+   "name": "須坂市・小布施",
+   "parent": 475
+  },
+  {
+   "id": 482,
+   "slug": "karuizawa-saku-area",
+   "name": "軽井沢・佐久",
+   "parent": 476
+  },
+  {
+   "id": 279,
+   "slug": "tsuyama-mimasaka",
+   "name": "津山・美作",
+   "parent": 66
+  },
+  {
+   "id": 276,
+   "slug": "akitakata-yamagata-gun",
+   "name": "安芸高田市・山県郡",
+   "parent": 264
+  },
+  {
+   "id": 488,
+   "slug": "kiso-gun",
+   "name": "木曽郡",
+   "parent": 477
+  },
+  {
+   "id": 491,
+   "slug": "iida-nanshinano",
+   "name": "飯田市・南信濃",
+   "parent": 478
+  },
+  {
+   "id": 493,
+   "slug": "fujiyoshida-gunnai",
+   "name": "富士吉田・郡内地方",
+   "parent": 54
+  },
+  {
+   "id": 270,
+   "slug": "fukuyama-fuchu-shi",
+   "name": "福山市・府中市",
+   "parent": 263
+  },
+  {
+   "id": 291,
+   "slug": "kume-kibi-gun",
+   "name": "久米郡・吉備中央町",
+   "parent": 279
+  },
+  {
+   "id": 292,
+   "slug": "matsue-izumo",
+   "name": "松江・出雲（出雲地方）",
+   "parent": 68
+  },
+  {
+   "id": 311,
+   "slug": "kotoura-hokuei",
+   "name": "琴浦町・北栄町",
+   "parent": 305
+  },
+  {
+   "id": 444,
+   "slug": "tokoname-minamichita",
+   "name": "常滑市・美浜町・南知多町",
+   "parent": 426
+  },
+  {
+   "id": 308,
+   "slug": "iwami-yazu-gun",
+   "name": "岩美町・八頭郡",
+   "parent": 304
+  },
+  {
+   "id": 446,
+   "slug": "shizuoka-city-central",
+   "name": "静岡市・中西部",
+   "parent": 49
+  },
+  {
+   "id": 306,
+   "slug": "yonago-sakaiminato-west",
+   "name": "米子・境港（西部）",
+   "parent": 69
+  },
+  {
+   "id": 451,
+   "slug": "kakegawa-kosai-shi",
+   "name": "掛川市・湖西市",
+   "parent": 445
+  },
+  {
+   "id": 303,
+   "slug": "ama-nishinoshima-chibu",
+   "name": "海士町・西ノ島町・知夫村",
+   "parent": 294
+  },
+  {
+   "id": 301,
+   "slug": "misato-kawamoto-onan",
+   "name": "美郷町・川本町・邑南町",
+   "parent": 293
+  },
+  {
+   "id": 455,
+   "slug": "shimada-makinohara-shi",
+   "name": "島田市・牧之原市",
+   "parent": 446
+  },
+  {
+   "id": 298,
+   "slug": "ota-iinan",
+   "name": "大田市・飯南町",
+   "parent": 292
+  },
+  {
+   "id": 457,
+   "slug": "numazu-mishima-shi",
+   "name": "沼津市・三島市",
+   "parent": 447
+  },
+  {
+   "id": 463,
+   "slug": "hida-okumino-north",
+   "name": "飛騨・奥美濃",
+   "parent": 56
+  },
+  {
+   "id": 467,
+   "slug": "kaizu-yoro-gun",
+   "name": "海津市・養老郡",
+   "parent": 461
+  },
+  {
+   "id": 499,
+   "slug": "minamikoma-gun",
+   "name": "南巨摩郡",
+   "parent": 492
+  },
+  {
+   "id": 176,
+   "slug": "imari-nishimatsuura",
+   "name": "伊万里市・西松浦郡",
+   "parent": 170
+  },
+  {
+   "id": 761,
+   "slug": "yokosuka-miura-shi",
+   "name": "横須賀市・三浦市",
+   "parent": 741
+  },
+  {
+   "id": 666,
+   "slug": "chikusei-yuki-sakuragawa-shi",
+   "name": "筑西市・結城市・桜川市",
+   "parent": 655
+  },
+  {
+   "id": 669,
+   "slug": "inashiki-inashiki-gun",
+   "name": "稲敷市・稲敷郡",
+   "parent": 656
+  },
+  {
+   "id": 699,
+   "slug": "kawaguchi-koshigaya-south",
+   "name": "川口・越谷（県南）",
+   "parent": 43
+  },
+  {
+   "id": 126,
+   "slug": "miyako-no-jo",
+   "name": "都城市",
+   "parent": 119
+  },
+  {
+   "id": 737,
+   "slug": "yokohama-city",
+   "name": "横浜市",
+   "parent": 41
+  },
+  {
+   "id": 672,
+   "slug": "oyama-kennan-south",
+   "name": "小山・県南",
+   "parent": 45
+  },
+  {
+   "id": 123,
+   "slug": "hyuga-shi",
+   "name": "日向市",
+   "parent": 118
+  },
+  {
+   "id": 736,
+   "slug": "mobara-isumi-choseigun",
+   "name": "茂原市・いすみ市・長生郡",
+   "parent": 722
+  },
+  {
+   "id": 121,
+   "slug": "higashimorokata-gun",
+   "name": "東諸県郡",
+   "parent": 117
+  },
+  {
+   "id": 77,
+   "slug": "fukuoka",
+   "name": "福岡",
+   "parent": 76
+  },
+  {
+   "id": 661,
+   "slug": "oarai-tokai-mura",
+   "name": "大洗町・東海村周辺",
+   "parent": 654
+  },
+  {
+   "id": 132,
+   "slug": "hita-yufu-saiki",
+   "name": "日田・由布・佐伯",
+   "parent": 81
+  },
+  {
+   "id": 760,
+   "slug": "hiratsuka-oiso-ninomiya",
+   "name": "平塚市・大磯町・二宮町",
+   "parent": 740
+  },
+  {
+   "id": 650,
+   "slug": "minamiaizu-okuizu",
+   "name": "南会津郡・奥会津",
+   "parent": 640
+  },
+  {
+   "id": 138,
+   "slug": "kunisaki-area",
+   "name": "国東市・姫島村",
+   "parent": 131
+  },
+  {
+   "id": 652,
+   "slug": "soma-minamisoma-shi",
+   "name": "相馬市・南相馬市",
+   "parent": 641
+  },
+  {
+   "id": 654,
+   "slug": "mito-kenpoku-central",
+   "name": "水戸・県央・県北",
+   "parent": 44
+  },
+  {
+   "id": 135,
+   "slug": "hiji-kitsuki",
+   "name": "日出町・杵築市",
+   "parent": 130
+  },
+  {
+   "id": 74,
+   "slug": "ehime",
+   "name": "愛媛",
+   "parent": 71
+  },
+  {
+   "id": 709,
+   "slug": "kasukabe-miyashiro-sugito",
+   "name": "春日部市・宮代町・杉戸町",
+   "parent": 699
+  },
+  {
+   "id": 757,
+   "slug": "yamato-ayase-shi",
+   "name": "大和市・綾瀬市",
+   "parent": 739
+  },
+  {
+   "id": 675,
+   "slug": "moka-haga-gun",
+   "name": "真岡市・芳賀郡",
+   "parent": 670
+  },
+  {
+   "id": 119,
+   "slug": "miyazaki-south",
+   "name": "都城・県南",
+   "parent": 82
+  },
+  {
+   "id": 107,
+   "slug": "satsumasendai-shi",
+   "name": "薩摩川内市",
+   "parent": 101
+  },
+  {
+   "id": 690,
+   "slug": "kanra-tano-gun",
+   "name": "甘楽郡・多野郡",
+   "parent": 684
+  },
+  {
+   "id": 719,
+   "slug": "chichibu-chichibu-gun",
+   "name": "秩父市・秩父郡",
+   "parent": 701
+  },
+  {
+   "id": 694,
+   "slug": "ora-gun",
+   "name": "邑楽郡",
+   "parent": 685
+  },
+  {
+   "id": 697,
+   "slug": "shibukawa-higashiagatsuma",
+   "name": "渋川市・東吾妻町",
+   "parent": 686
+  },
+  {
+   "id": 92,
+   "slug": "uruma-shi",
+   "name": "うるま市",
+   "parent": 85
+  },
+  {
+   "id": 101,
+   "slug": "kagoshima-city-area",
+   "name": "鹿児島市・薩摩川内",
+   "parent": 83
+  },
+  {
+   "id": 100,
+   "slug": "remote-islands",
+   "name": "その他離島",
+   "parent": 87
+  },
+  {
+   "id": 714,
+   "slug": "sakado-tsurugashima-hidaka",
+   "name": "坂戸市・鶴ヶ島市・日高市",
+   "parent": 700
+  },
+  {
+   "id": 722,
+   "slug": "boso-south-east",
+   "name": "房総（南部・東部）",
+   "parent": 42
+  },
+  {
+   "id": 87,
+   "slug": "okinawa-south-remote",
+   "name": "南部・離島",
+   "parent": 84
+  },
+  {
+   "id": 109,
+   "slug": "minamisatsuma-makurazaki",
+   "name": "南さつま市・枕崎市",
+   "parent": 102
+  },
+  {
+   "id": 676,
+   "slug": "nikko-shi",
+   "name": "日光市",
+   "parent": 671
+  },
+  {
+   "id": 31,
+   "slug": "hokkaido",
+   "name": "北海道",
+   "parent": 0
+  },
+  {
+   "id": 116,
+   "slug": "kagoshima-other-remote",
+   "name": "その他離島",
+   "parent": 105
+  },
+  {
+   "id": 731,
+   "slug": "sakura-yachiyo-inzai-shiroi",
+   "name": "佐倉市・八千代市・印西市・白井市",
+   "parent": 721
+  },
+  {
+   "id": 683,
+   "slug": "kanuma-shi",
+   "name": "鹿沼市",
+   "parent": 672
+  },
+  {
+   "id": 113,
+   "slug": "shibushi-soo",
+   "name": "志布志市・曽於市",
+   "parent": 104
+  },
+  {
+   "id": 111,
+   "slug": "aira-shi",
+   "name": "姶良市",
+   "parent": 103
+  },
+  {
+   "id": 723,
+   "slug": "chiba-chuo-mihama-ku",
+   "name": "千葉市中央区・美浜区",
+   "parent": 720
+  },
+  {
+   "id": 686,
+   "slug": "numata-agatsuma-north",
+   "name": "沼田・吾妻（北部）",
+   "parent": 46
+  },
+  {
+   "id": 95,
+   "slug": "north-other",
+   "name": "北部その他",
+   "parent": 86
+  },
+  {
+   "id": 70,
+   "slug": "yamaguchi",
+   "name": "山口",
+   "parent": 65
+  },
+  {
+   "id": 623,
+   "slug": "semboku-tazawa-ko",
+   "name": "仙北市・田沢湖周辺",
+   "parent": 613
+  },
+  {
+   "id": 153,
+   "slug": "yamaga-kikuchi-shi",
+   "name": "山鹿市・菊池市",
+   "parent": 145
+  },
+  {
+   "id": 40,
+   "slug": "tokyo",
+   "name": "東京",
+   "parent": 39
+  },
+  {
+   "id": 155,
+   "slug": "yatsushiro-hikawa",
+   "name": "八代市・氷川町",
+   "parent": 146
+  },
+  {
+   "id": 631,
+   "slug": "yonezawa-higashiokitama-gun",
+   "name": "米沢市・東置賜郡",
+   "parent": 625
+  },
+  {
+   "id": 799,
+   "slug": "ome-akiruno-musashimurayama",
+   "name": "青梅・あきる野・武蔵村山",
+   "parent": 765
+  },
+  {
+   "id": 617,
+   "slug": "minamiakita-gun",
+   "name": "南秋田郡・八郎潟周辺",
+   "parent": 611
+  },
+  {
+   "id": 157,
+   "slug": "minamata-ashikita",
+   "name": "水俣市・芦北町",
+   "parent": 147
+  },
+  {
+   "id": 33,
+   "slug": "aomori",
+   "name": "青森",
+   "parent": 32
+  },
+  {
+   "id": 50,
+   "slug": "niigata",
+   "name": "新潟",
+   "parent": 47
+  },
+  {
+   "id": 628,
+   "slug": "yamagata-kaminoyama-shi",
+   "name": "山形市・上山市",
+   "parent": 624
+  },
+  {
+   "id": 168,
+   "slug": "goto-area",
+   "name": "五島市・新上五島町",
+   "parent": 160
+  },
+  {
+   "id": 620,
+   "slug": "kitaakita-kamikoani",
+   "name": "北秋田市・上小阿仁村",
+   "parent": 612
+  },
+  {
+   "id": 806,
+   "slug": "ogasawara-islands",
+   "name": "小笠原諸島",
+   "parent": 766
+  },
+  {
+   "id": 161,
+   "slug": "nagasaki-shi",
+   "name": "長崎市",
+   "parent": 158
+  },
+  {
+   "id": 58,
+   "slug": "osaka",
+   "name": "大阪",
+   "parent": 57
+  },
+  {
+   "id": 627,
+   "slug": "tsuruoka-shonai-coastal",
+   "name": "鶴岡・庄内地方",
+   "parent": 37
+  },
+  {
+   "id": 165,
+   "slug": "matsuura-hirado-shi",
+   "name": "松浦市・平戸市",
+   "parent": 159
+  },
+  {
+   "id": 171,
+   "slug": "takeo-ureshino-area",
+   "name": "武雄・嬉野・鹿島",
+   "parent": 78
+  },
+  {
+   "id": 172,
+   "slug": "saga-shi",
+   "name": "佐賀市",
+   "parent": 169
+  },
+  {
+   "id": 147,
+   "slug": "hitoyoshi-kuma-minamata",
+   "name": "人吉・球磨・水俣",
+   "parent": 80
+  },
+  {
+   "id": 641,
+   "slug": "hamadori-east",
+   "name": "浜通り",
+   "parent": 38
+  },
+  {
+   "id": 613,
+   "slug": "kennan-south",
+   "name": "県南（横手・湯沢）",
+   "parent": 35
+  },
+  {
+   "id": 638,
+   "slug": "shonai-machi",
+   "name": "庄内町",
+   "parent": 627
+  },
+  {
+   "id": 766,
+   "slug": "izu-ogasawara-islands",
+   "name": "伊豆・小笠原諸島",
+   "parent": 40
+  },
+  {
+   "id": 763,
+   "slug": "hakone-yugawara-hadano",
+   "name": "箱根・湯河原・秦野周辺",
+   "parent": 742
+  },
+  {
+   "id": 642,
+   "slug": "fukushima-date-shi",
+   "name": "福島市・伊達市",
+   "parent": 639
+  },
+  {
+   "id": 143,
+   "slug": "bungoono-taketa",
+   "name": "豊後大野市・竹田市",
+   "parent": 132
+  },
+  {
+   "id": 635,
+   "slug": "obanazawa-oishida",
+   "name": "尾花沢市・大石田町",
+   "parent": 626
+  },
+  {
+   "id": 767,
+   "slug": "chiyoda-ku",
+   "name": "千代田区",
+   "parent": 764
+  },
+  {
+   "id": 148,
+   "slug": "kumamoto-shi",
+   "name": "熊本市",
+   "parent": 144
+  },
+  {
+   "id": 160,
+   "slug": "shimabara-islands",
+   "name": "島原・島嶼部",
+   "parent": 79
+  },
+  {
+   "id": 456,
+   "slug": "fuji-fujinomiya-shi",
+   "name": "富士市・富士宮市",
+   "parent": 447
+  },
+  {
+   "id": 713,
+   "slug": "fujimi-fujimino-miyoshi",
+   "name": "富士見市・ふじみ野市・三芳町",
+   "parent": 700
+  },
+  {
+   "id": 439,
+   "slug": "kariya-chiryu-shi",
+   "name": "刈谷市・知立市",
+   "parent": 425
+  },
+  {
+   "id": 383,
+   "slug": "uji-yamashiro-south",
+   "name": "宇治・山城（南部）",
+   "parent": 60
+  },
+  {
+   "id": 445,
+   "slug": "hamamatsu-enshu-west",
+   "name": "浜松・遠州（西部）",
+   "parent": 49
+  },
+  {
+   "id": 718,
+   "slug": "honjo-kazo-hanyu-shi",
+   "name": "本庄市・加須市・羽生市",
+   "parent": 701
+  },
+  {
+   "id": 721,
+   "slug": "tokatsu-inba-north",
+   "name": "東葛飾・印旛（北部）",
+   "parent": 42
+  },
+  {
+   "id": 454,
+   "slug": "fujieda-yaizu-shi",
+   "name": "藤枝市・焼津市",
+   "parent": 446
+  },
+  {
+   "id": 375,
+   "slug": "senshu-north",
+   "name": "泉州北部",
+   "parent": 361
+  },
+  {
+   "id": 414,
+   "slug": "yokkaichi-mie-gun",
+   "name": "四日市市・三重郡",
+   "parent": 410
+  },
+  {
+   "id": 380,
+   "slug": "katano-shijonawate",
+   "name": "交野市・四條畷市",
+   "parent": 362
+  },
+  {
+   "id": 450,
+   "slug": "iwata-fukuroi-mori",
+   "name": "磐田市・袋井市・森町",
+   "parent": 445
+  },
+  {
+   "id": 443,
+   "slug": "tokai-obu-chita-shi",
+   "name": "東海市・大府市・知多市",
+   "parent": 426
+  },
+  {
+   "id": 724,
+   "slug": "chiba-east-inage-wakaba",
+   "name": "千葉市東部（稲毛・若葉・緑・花見川）",
+   "parent": 720
+  },
+  {
+   "id": 421,
+   "slug": "owase-kihoku-cho",
+   "name": "尾鷲市・紀北町",
+   "parent": 412
+  },
+  {
+   "id": 742,
+   "slug": "odawara-hakone-seisho",
+   "name": "小田原・箱根（西湘）",
+   "parent": 41
+  },
+  {
+   "id": 417,
+   "slug": "matsusaka-taki-gun",
+   "name": "松阪市・多気郡",
+   "parent": 411
+  },
+  {
+   "id": 398,
+   "slug": "hachiman-higashiomi-koto",
+   "name": "近江八幡・東近江（湖東）",
+   "parent": 61
+  },
+  {
+   "id": 756,
+   "slug": "atsugi-ebina-zama-shi",
+   "name": "厚木市・海老名市・座間市",
+   "parent": 739
+  },
+  {
+   "id": 402,
+   "slug": "moriyama-yasu-shi",
+   "name": "守山市・野洲市",
+   "parent": 397
+  },
+  {
+   "id": 406,
+   "slug": "hikone-aisho",
+   "name": "彦根市・愛荘町",
+   "parent": 398
+  },
+  {
+   "id": 411,
+   "slug": "tsu-matsusaka-iga",
+   "name": "津・松阪・伊賀（中勢）",
+   "parent": 64
+  },
+  {
+   "id": 759,
+   "slug": "kamakura-zushi-hayama",
+   "name": "鎌倉市・逗子市・葉山町",
+   "parent": 740
+  },
+  {
+   "id": 762,
+   "slug": "odawara-minamiashigara",
+   "name": "小田原市・南足柄市",
+   "parent": 742
+  },
+  {
+   "id": 768,
+   "slug": "chuo-ku",
+   "name": "中央区",
+   "parent": 764
+  },
+  {
+   "id": 798,
+   "slug": "kodaira-higashimurayama",
+   "name": "小平・東村山・東大和",
+   "parent": 765
+  },
+  {
+   "id": 395,
+   "slug": "kyotango-yosa-gun",
+   "name": "京丹後市・与謝郡",
+   "parent": 384
+  },
+  {
+   "id": 626,
+   "slug": "shinjo-mogami-north",
+   "name": "新庄・最上地方",
+   "parent": 37
+  },
+  {
+   "id": 730,
+   "slug": "narita-tomisato-inbagun",
+   "name": "成田市・富里市・印旛郡",
+   "parent": 721
+  },
+  {
+   "id": 805,
+   "slug": "hachijojima-aogashima",
+   "name": "八丈島・青ヶ島",
+   "parent": 766
+  },
+  {
+   "id": 434,
+   "slug": "kasugai-komaki-shi",
+   "name": "春日井市・小牧市",
+   "parent": 424
+  },
+  {
+   "id": 765,
+   "slug": "tama-area",
+   "name": "多摩地域",
+   "parent": 40
+  },
+  {
+   "id": 391,
+   "slug": "kizugawa-sagara-gun",
+   "name": "木津川市・相楽郡",
+   "parent": 383
+  },
+  {
+   "id": 735,
+   "slug": "togane-sanmu-kujukuri",
+   "name": "東金市・山武市・九十九里",
+   "parent": 722
+  },
+  {
+   "id": 591,
+   "slug": "ichinoseki-hiraizumi",
+   "name": "一関市・平泉町",
+   "parent": 584
+  },
+  {
+   "id": 316,
+   "slug": "arida-gobo-central",
+   "name": "有田・御坊（紀中）",
+   "parent": 62
+  },
+  {
+   "id": 425,
+   "slug": "nishi-mikawa",
+   "name": "西三河",
+   "parent": 48
+  },
+  {
+   "id": 408,
+   "slug": "nagahama-maibara-shi",
+   "name": "長浜市・米原市",
+   "parent": 399
+  },
+  {
+   "id": 612,
+   "slug": "kenhoku-north",
+   "name": "県北（能代・大館）",
+   "parent": 35
+  },
+  {
+   "id": 637,
+   "slug": "sakata-yuza-cho",
+   "name": "酒田市・遊佐町",
+   "parent": 627
+  },
+  {
+   "id": 565,
+   "slug": "shibetsu-nayoro-rumoi",
+   "name": "士別市・名寄市・留萌市",
+   "parent": 554
+  },
+  {
+   "id": 557,
+   "slug": "sapporo-south",
+   "name": "札幌市南部（豊平・清田・南区）",
+   "parent": 553
+  },
+  {
+   "id": 640,
+   "slug": "aizu-west",
+   "name": "会津地方",
+   "parent": 38
+  },
+  {
+   "id": 555,
+   "slug": "doutou-east",
+   "name": "道東",
+   "parent": 31
+  },
+  {
+   "id": 610,
+   "slug": "kesennuma-minamisanriku",
+   "name": "気仙沼市・南三陸町",
+   "parent": 599
+  },
+  {
+   "id": 647,
+   "slug": "ishikawa-higashishirakawa",
+   "name": "石川郡・東白川郡",
+   "parent": 639
+  },
+  {
+   "id": 546,
+   "slug": "joetsu-shi",
+   "name": "上越市",
+   "parent": 536
+  },
+  {
+   "id": 649,
+   "slug": "inawashiro-lake",
+   "name": "猪苗代湖周辺",
+   "parent": 640
+  },
+  {
+   "id": 545,
+   "slug": "tokamachi-ojiya-tsunan",
+   "name": "十日町市・小千谷市・津南町",
+   "parent": 535
+  },
+  {
+   "id": 651,
+   "slug": "iwaki-shi",
+   "name": "いわき市",
+   "parent": 641
+  },
+  {
+   "id": 540,
+   "slug": "akiha-konan-minami-ku",
+   "name": "秋葉区・江南区・南区",
+   "parent": 534
+  },
+  {
+   "id": 536,
+   "slug": "joetsu-kubiki-south",
+   "name": "上越・頸城",
+   "parent": 50
+  },
+  {
+   "id": 531,
+   "slug": "tonami-oyabe-shi",
+   "name": "砺波市・小矢部市",
+   "parent": 525
+  },
+  {
+   "id": 569,
+   "slug": "kitami-abashiri-monbetsu",
+   "name": "北見市・網走市・紋別市",
+   "parent": 555
+  },
+  {
+   "id": 572,
+   "slug": "hachinohe-nanbu-east",
+   "name": "八戸・南部地方",
+   "parent": 33
+  },
+  {
+   "id": 616,
+   "slug": "oga-katagami-shi",
+   "name": "男鹿市・潟上市",
+   "parent": 611
+  },
+  {
+   "id": 603,
+   "slug": "natori-iwanuma-watari-gun",
+   "name": "名取市・岩沼市・亘理郡",
+   "parent": 598
+  },
+  {
+   "id": 601,
+   "slug": "taihaku-wakabayashi-ku",
+   "name": "太白区・若林区",
+   "parent": 597
+  },
+  {
+   "id": 619,
+   "slug": "noshiro-yamamoto-gun",
+   "name": "能代市・山本郡",
+   "parent": 612
+  },
+  {
+   "id": 598,
+   "slug": "sennan-kenou-area",
+   "name": "仙南・県央",
+   "parent": 36
+  },
+  {
+   "id": 594,
+   "slug": "kamaishi-ofunato-rikuzentakata",
+   "name": "釜石市・大船渡市・陸前高田市",
+   "parent": 585
+  },
+  {
+   "id": 622,
+   "slug": "daisen-misato-cho",
+   "name": "大仙市・美郷町",
+   "parent": 613
+  },
+  {
+   "id": 588,
+   "slug": "iwate-shiba-gun",
+   "name": "岩手郡・紫波郡",
+   "parent": 583
+  },
+  {
+   "id": 585,
+   "slug": "sanriku-kuji-coastal",
+   "name": "三陸海岸・久慈",
+   "parent": 34
+  },
+  {
+   "id": 629,
+   "slug": "tendo-higashine-murayama-shi",
+   "name": "天童市・東根市・村山市",
+   "parent": 624
+  },
+  {
+   "id": 579,
+   "slug": "towada-misawa-shi",
+   "name": "十和田市・三沢市",
+   "parent": 572
+  },
+  {
+   "id": 633,
+   "slug": "nanyo-shi",
+   "name": "南陽市",
+   "parent": 625
+  },
+  {
+   "id": 576,
+   "slug": "gosyogawara-tsugaru-shi",
+   "name": "五所川原市・つがる市",
+   "parent": 571
+  },
+  {
+   "id": 634,
+   "slug": "shinjo-mogami-gun",
+   "name": "新庄市・最上郡",
+   "parent": 626
+  },
+  {
+   "id": 655,
+   "slug": "tsukuba-kennan-west",
+   "name": "つくば・県南・県西",
+   "parent": 44
+  },
+  {
+   "id": 660,
+   "slug": "hitachiota-daigo-cho",
+   "name": "常陸太田市・大子町",
+   "parent": 654
+  },
+  {
+   "id": 665,
+   "slug": "koga-bando-sarushima",
+   "name": "古河市・坂東市・猿島郡",
+   "parent": 655
+  },
+  {
+   "id": 490,
+   "slug": "ina-komagane-shi",
+   "name": "伊那市・駒ヶ根市",
+   "parent": 478
+  },
+  {
+   "id": 487,
+   "slug": "hakuba-otari",
+   "name": "白馬・小谷（北安曇郡）",
+   "parent": 477
+  },
+  {
+   "id": 483,
+   "slug": "ueda-tomi-shi",
+   "name": "上田市・東御市",
+   "parent": 476
+  },
+  {
+   "id": 689,
+   "slug": "fujioka-tomioka-shi",
+   "name": "藤岡市・富岡市",
+   "parent": 684
+  },
+  {
+   "id": 480,
+   "slug": "nakano-iiyama-shi",
+   "name": "中野市・飯山市",
+   "parent": 475
+  },
+  {
+   "id": 693,
+   "slug": "kiryu-midori-shi",
+   "name": "桐生市・みどり市",
+   "parent": 685
+  },
+  {
+   "id": 477,
+   "slug": "matsumoto-azumino-chushin",
+   "name": "松本・安曇野（中信）",
+   "parent": 55
+  },
+  {
+   "id": 696,
+   "slug": "agatsuma-kusatsu",
+   "name": "吾妻郡（草津・嬬恋）",
+   "parent": 686
+  },
+  {
+   "id": 473,
+   "slug": "gero-shi",
+   "name": "下呂市",
+   "parent": 463
+  },
+  {
+   "id": 470,
+   "slug": "nakatsugawa-ena-shi",
+   "name": "中津川市・恵那市",
+   "parent": 462
+  },
+  {
+   "id": 698,
+   "slug": "saitama-city",
+   "name": "さいたま市",
+   "parent": 43
+  },
+  {
+   "id": 522,
+   "slug": "wajima-anamizu-cho",
+   "name": "輪島市・穴水町",
+   "parent": 514
+  },
+  {
+   "id": 466,
+   "slug": "ogaki-ibi-gun",
+   "name": "大垣市・揖斐郡",
+   "parent": 461
+  },
+  {
+   "id": 708,
+   "slug": "koshigaya-yoshikawa-matsubushi",
+   "name": "越谷市・吉川市・松伏町",
+   "parent": 699
+  },
+  {
+   "id": 492,
+   "slug": "kofu-kokuchu-area",
+   "name": "甲府・国中地方",
+   "parent": 54
+  },
+  {
+   "id": 685,
+   "slug": "ota-kiryu-east",
+   "name": "太田・桐生（東部）",
+   "parent": 46
+  },
+  {
+   "id": 527,
+   "slug": "namerikawa-tateyama",
+   "name": "滑川市・上市町・立山町",
+   "parent": 524
+  },
+  {
+   "id": 668,
+   "slug": "hokota-namegata-itako-shi",
+   "name": "鉾田市・行方市・潮来市",
+   "parent": 656
+  },
+  {
+   "id": 524,
+   "slug": "toyama-goto-east",
+   "name": "富山市・県東部（呉東）",
+   "parent": 51
+  },
+  {
+   "id": 671,
+   "slug": "nikko-nasu-north",
+   "name": "日光・那須（県北）",
+   "parent": 45
+  },
+  {
+   "id": 518,
+   "slug": "komatsu-nomi-shi",
+   "name": "小松市・能美市",
+   "parent": 513
+  },
+  {
+   "id": 513,
+   "slug": "kanazawa-kaga-south",
+   "name": "金沢・加賀地方",
+   "parent": 52
+  },
+  {
+   "id": 674,
+   "slug": "sakura-yaita-shi",
+   "name": "さくら市・矢板市",
+   "parent": 670
+  },
+  {
+   "id": 511,
+   "slug": "obama-wakasa-cho",
+   "name": "小浜市・若狭町",
+   "parent": 504
+  },
+  {
+   "id": 506,
+   "slug": "sakai-awara-shi",
+   "name": "坂井市・あわら市",
+   "parent": 503
+  },
+  {
+   "id": 503,
+   "slug": "fukui-reihoku-north",
+   "name": "福井・嶺北地方",
+   "parent": 53
+  },
+  {
+   "id": 677,
+   "slug": "nasushiobara-otawara",
+   "name": "那須塩原市・大田原市",
+   "parent": 671
+  },
+  {
+   "id": 501,
+   "slug": "tsuru-uenohara-shi",
+   "name": "都留市・上野原市",
+   "parent": 493
+  },
+  {
+   "id": 682,
+   "slug": "ashikaga-sano-shi",
+   "name": "足利市・佐野市",
+   "parent": 672
+  },
+  {
+   "id": 498,
+   "slug": "hokuto-shi",
+   "name": "北杜市",
+   "parent": 492
+  },
+  {
+   "id": 462,
+   "slug": "chuno-tono-central",
+   "name": "中濃・東濃",
+   "parent": 56
+  },
+  {
+   "id": 110,
+   "slug": "kirishima-shi",
+   "name": "霧島市",
+   "parent": 103
+  },
+  {
+   "id": 137,
+   "slug": "usa-bungotakada",
+   "name": "宇佐市・豊後高田市",
+   "parent": 131
+  },
+  {
+   "id": 282,
+   "slug": "setouchi-akaiwa-shi",
+   "name": "瀬戸内市・赤磐市",
+   "parent": 277
+  },
+  {
+   "id": 278,
+   "slug": "kurashiki-bicchu",
+   "name": "倉敷・備中",
+   "parent": 66
+  },
+  {
+   "id": 142,
+   "slug": "usuki-tsukumi",
+   "name": "臼杵市・津久見市",
+   "parent": 132
+  },
+  {
+   "id": 146,
+   "slug": "amakusa-yatsushiro",
+   "name": "天草・八代・宇城",
+   "parent": 80
+  },
+  {
+   "id": 275,
+   "slug": "miyoshi-shobara-shi",
+   "name": "三次市・庄原市",
+   "parent": 264
+  },
+  {
+   "id": 149,
+   "slug": "koshi-kikuyo",
+   "name": "合志市・菊陽町",
+   "parent": 144
+  },
+  {
+   "id": 272,
+   "slug": "jinsekikogen-sera",
+   "name": "神石高原町・世羅町",
+   "parent": 263
+  },
+  {
+   "id": 152,
+   "slug": "aso-area",
+   "name": "阿蘇地域",
+   "parent": 145
+  },
+  {
+   "id": 154,
+   "slug": "amakusa-reihoku",
+   "name": "天草市・苓北町",
+   "parent": 146
+  },
+  {
+   "id": 156,
+   "slug": "hitoyoshi-kuma-gun",
+   "name": "人吉市・球磨郡",
+   "parent": 147
+  },
+  {
+   "id": 159,
+   "slug": "sasebo-north",
+   "name": "佐世保・北部",
+   "parent": 79
+  },
+  {
+   "id": 266,
+   "slug": "higashi-nishi-ku",
+   "name": "東区・西区",
+   "parent": 262
+  },
+  {
+   "id": 230,
+   "slug": "tosan-area",
+   "name": "東讃エリア",
+   "parent": 226
+  },
+  {
+   "id": 131,
+   "slug": "nakatsu-usa-kunisaki",
+   "name": "中津・宇佐・国東",
+   "parent": 81
+  },
+  {
+   "id": 290,
+   "slug": "mimasaka-shoei-area",
+   "name": "美作市・勝英地域",
+   "parent": 279
+  },
+  {
+   "id": 307,
+   "slug": "tottori-shi",
+   "name": "鳥取市",
+   "parent": 304
+  },
+  {
+   "id": 112,
+   "slug": "kanoya-shi",
+   "name": "鹿屋市",
+   "parent": 104
+  },
+  {
+   "id": 305,
+   "slug": "kurayoshi-tohaku-central",
+   "name": "倉吉・東伯（中部）",
+   "parent": 69
+  },
+  {
+   "id": 115,
+   "slug": "yakushima-tanegashima",
+   "name": "屋久島・種子島",
+   "parent": 105
+  },
+  {
+   "id": 286,
+   "slug": "kasaoka-asakuchi-shi",
+   "name": "笠岡市・浅口市",
+   "parent": 278
+  },
+  {
+   "id": 302,
+   "slug": "okinoshima-cho",
+   "name": "隠岐の島町",
+   "parent": 294
+  },
+  {
+   "id": 300,
+   "slug": "masuda-tsuwano-cho",
+   "name": "益田市・津和野町",
+   "parent": 293
+  },
+  {
+   "id": 297,
+   "slug": "yasugi-unnan-shi",
+   "name": "安来市・雲南市",
+   "parent": 292
+  },
+  {
+   "id": 118,
+   "slug": "miyazaki-north",
+   "name": "延岡・県北",
+   "parent": 82
+  },
+  {
+   "id": 120,
+   "slug": "miyazaki-shi",
+   "name": "宮崎市",
+   "parent": 117
+  },
+  {
+   "id": 122,
+   "slug": "nobeoka-shi",
+   "name": "延岡市",
+   "parent": 118
+  },
+  {
+   "id": 129,
+   "slug": "morokata-gun",
+   "name": "北諸県郡・西諸県郡",
+   "parent": 119
+  },
+  {
+   "id": 293,
+   "slug": "hamada-masuda-iwami",
+   "name": "浜田・益田（石見地方）",
+   "parent": 68
+  },
+  {
+   "id": 162,
+   "slug": "saikai-nishi-sonogi",
+   "name": "西海市・西彼杵郡",
+   "parent": 158
+  },
+  {
+   "id": 263,
+   "slug": "fukuyama-onomichi-bingo",
+   "name": "福山・尾道（備後）",
+   "parent": 67
+  },
+  {
+   "id": 192,
+   "slug": "itoshima-shi",
+   "name": "糸島市",
+   "parent": 181
+  },
+  {
+   "id": 194,
+   "slug": "kurume-shi",
+   "name": "久留米市",
+   "parent": 182
+  },
+  {
+   "id": 233,
+   "slug": "sakaide-utazu",
+   "name": "坂出・宇多津",
+   "parent": 227
+  },
+  {
+   "id": 198,
+   "slug": "tagawa-gun",
+   "name": "田川市・郡",
+   "parent": 183
+  },
+  {
+   "id": 134,
+   "slug": "beppu-shi",
+   "name": "別府市",
+   "parent": 130
+  },
+  {
+   "id": 227,
+   "slug": "marugame-chusan",
+   "name": "丸亀・中讃",
+   "parent": 72
+  },
+  {
+   "id": 225,
+   "slug": "ainan-matsuno",
+   "name": "愛南町・松野町",
+   "parent": 215
+  },
+  {
+   "id": 201,
+   "slug": "aki-muroto-east",
+   "name": "安芸・室戸（東部）",
+   "parent": 75
+  },
+  {
+   "id": 220,
+   "slug": "niihama-saijo",
+   "name": "新居浜市・西条市",
+   "parent": 214
+  },
+  {
+   "id": 205,
+   "slug": "ino-niyodogawa",
+   "name": "いの町・仁淀川町",
+   "parent": 200
+  },
+  {
+   "id": 207,
+   "slug": "aki-geisei",
+   "name": "安芸市・芸西村",
+   "parent": 201
+  },
+  {
+   "id": 212,
+   "slug": "sagaochi-area",
+   "name": "佐川町・越知町",
+   "parent": 202
+  },
+  {
+   "id": 217,
+   "slug": "iyo-toon-area",
+   "name": "伊予市・東温市・周辺",
+   "parent": 213
+  },
+  {
+   "id": 235,
+   "slug": "kanonji-shi",
+   "name": "観音寺市",
+   "parent": 228
+  },
+  {
+   "id": 188,
+   "slug": "yawata-higashi-nishi-ku",
+   "name": "八幡東区・西区",
+   "parent": 180
+  },
+  {
+   "id": 238,
+   "slug": "awa-yoshinogawa",
+   "name": "阿波・吉野川・三好",
+   "parent": 73
+  },
+  {
+   "id": 260,
+   "slug": "yanai-kumage-gun",
+   "name": "柳井市・熊毛郡",
+   "parent": 251
+  },
+  {
+   "id": 164,
+   "slug": "omura-isahaya-shi",
+   "name": "大村市・諫早市",
+   "parent": 159
+  },
+  {
+   "id": 167,
+   "slug": "tsushima-iki-shi",
+   "name": "対馬市・壱岐市",
+   "parent": 160
+  },
+  {
+   "id": 255,
+   "slug": "yamaguchi-shi",
+   "name": "山口市",
+   "parent": 250
+  },
+  {
+   "id": 253,
+   "slug": "ube-sanyo-onoda",
+   "name": "宇部市・山陽小野田市",
+   "parent": 249
+  },
+  {
+   "id": 170,
+   "slug": "karatsu-imari",
+   "name": "唐津・伊万里",
+   "parent": 78
+  },
+  {
+   "id": 173,
+   "slug": "tosu-miyaki-gun",
+   "name": "鳥栖市・三養基郡",
+   "parent": 169
+  },
+  {
+   "id": 250,
+   "slug": "yamaguchi-hofu-central",
+   "name": "山口・萩・防府（県央）",
+   "parent": 70
+  },
+  {
+   "id": 175,
+   "slug": "karatsu-higashimatsuura",
+   "name": "唐津市・東松浦郡",
+   "parent": 170
+  },
+  {
+   "id": 177,
+   "slug": "takeo-kishima",
+   "name": "武雄市・杵島郡",
+   "parent": 171
+  },
+  {
+   "id": 248,
+   "slug": "minami-mugi",
+   "name": "美波町・牟岐町",
+   "parent": 239
+  },
+  {
+   "id": 244,
+   "slug": "mima-tsurugi",
+   "name": "美馬市・つるぎ町",
+   "parent": 238
+  },
+  {
+   "id": 241,
+   "slug": "naruto-itano-gun",
+   "name": "鳴門市・板野郡",
+   "parent": 237
+  },
+  {
+   "id": 214,
+   "slug": "imabari-toyo",
+   "name": "今治・東予",
+   "parent": 74
+  },
+  {
+   "id": 72,
+   "slug": "kagawa",
+   "name": "香川",
+   "parent": 71
+  },
+  {
+   "id": 355,
+   "slug": "tatsuno-aioi-ako-shi",
+   "name": "たつの市・相生市・赤穂市",
+   "parent": 342
+  },
+  {
+   "id": 356,
+   "slug": "toyooka-asago-yabu",
+   "name": "豊岡市・朝来市・養父市",
+   "parent": 343
+  },
+  {
+   "id": 94,
+   "slug": "motobu-nakijin",
+   "name": "本部町・今帰仁",
+   "parent": 86
+  },
+  {
+   "id": 325,
+   "slug": "shingu-nachikatsuura",
+   "name": "新宮市・那智勝浦町",
+   "parent": 317
+  },
+  {
+   "id": 60,
+   "slug": "kyoto",
+   "name": "京都",
+   "parent": 57
+  },
+  {
+   "id": 361,
+   "slug": "sakai-senshu",
+   "name": "堺市・泉州",
+   "parent": 58
+  },
+  {
+   "id": 328,
+   "slug": "kashihara-takada-south",
+   "name": "橿原・高田（奈良盆地南部）",
+   "parent": 63
+  },
+  {
+   "id": 51,
+   "slug": "toyama",
+   "name": "富山",
+   "parent": 47
+  },
+  {
+   "id": 371,
+   "slug": "takatsuki-shimamoto",
+   "name": "高槻市・島本町",
+   "parent": 360
+  },
+  {
+   "id": 91,
+   "slug": "tomigusuku-south",
+   "name": "豊見城市・糸満市・南城市",
+   "parent": 85
+  },
+  {
+   "id": 68,
+   "slug": "shimane",
+   "name": "島根",
+   "parent": 65
+  },
+  {
+   "id": 350,
+   "slug": "amagasaki-itami-shi",
+   "name": "尼崎市・伊丹市",
+   "parent": 341
+  },
+  {
+   "id": 337,
+   "slug": "yoshino-oyodo-area",
+   "name": "吉野町・大淀町・下市町",
+   "parent": 329
+  },
+  {
+   "id": 335,
+   "slug": "shiki-takaichi-gun",
+   "name": "磯城郡・高市郡",
+   "parent": 328
+  },
+  {
+   "id": 78,
+   "slug": "saga",
+   "name": "佐賀",
+   "parent": 76
+  },
+  {
+   "id": 86,
+   "slug": "okinawa-north",
+   "name": "北部（国頭郡）",
+   "parent": 84
+  },
+  {
+   "id": 331,
+   "slug": "ikoma-gun",
+   "name": "生駒市・生駒郡",
+   "parent": 327
+  },
+  {
+   "id": 341,
+   "slug": "hanshin-hokusetu",
+   "name": "阪神間・北摂",
+   "parent": 59
+  },
+  {
+   "id": 321,
+   "slug": "arida-arida-gawa",
+   "name": "有田市・有田川町",
+   "parent": 316
+  },
+  {
+   "id": 32,
+   "slug": "tohoku",
+   "name": "東北",
+   "parent": 0
+  },
+  {
+   "id": 34,
+   "slug": "iwate",
+   "name": "岩手",
+   "parent": 32
+  },
+  {
+   "id": 106,
+   "slug": "kagoshima-shi",
+   "name": "鹿児島市",
+   "parent": 101
+  },
+  {
+   "id": 313,
+   "slug": "daisen-hoki",
+   "name": "大山・伯耆町",
+   "parent": 306
+  },
+  {
+   "id": 182,
+   "slug": "kurume-chikugo",
+   "name": "久留米・筑後",
+   "parent": 77
+  },
+  {
+   "id": 102,
+   "slug": "ibusuki-nansatsu",
+   "name": "指宿・南薩",
+   "parent": 83
+  },
+  {
+   "id": 99,
+   "slug": "ishigaki-yaeyama",
+   "name": "石垣島・八重山諸島",
+   "parent": 87
+  },
+  {
+   "id": 108,
+   "slug": "ibusuki-minamikyushu",
+   "name": "指宿市・南九州市",
+   "parent": 102
+  },
+  {
+   "id": 319,
+   "slug": "kinokawa-iwade-shi",
+   "name": "紀の川市・岩出市",
+   "parent": 315
+  },
+  {
+   "id": 310,
+   "slug": "misasa-yurihama",
+   "name": "三朝・湯梨浜",
+   "parent": 305
+  },
+  {
+   "id": 41,
+   "slug": "kanagawa",
+   "name": "神奈川",
+   "parent": 39
+  },
+  {
+   "id": 181,
+   "slug": "fukuoka-urban-area",
+   "name": "福岡都市圏周辺",
+   "parent": 77
+  },
+  {
+   "id": 764,
+   "slug": "tokyo-23ku",
+   "name": "東京23区",
+   "parent": 40
+  },
+  {
+   "id": 75,
+   "slug": "kochi",
+   "name": "高知",
+   "parent": 71
+  },
+  {
+   "id": 611,
+   "slug": "akita-city-central",
+   "name": "秋田市・県央",
+   "parent": 35
+  },
+  {
+   "id": 489,
+   "slug": "suwa-chino-okaya-shi",
+   "name": "諏訪市・茅野市・岡谷市",
+   "parent": 478
+  },
+  {
+   "id": 35,
+   "slug": "akita",
+   "name": "秋田",
+   "parent": 32
+  },
+  {
+   "id": 187,
+   "slug": "kokura-kita-minami-ku",
+   "name": "小倉北区・南区",
+   "parent": 180
+  },
+  {
+   "id": 605,
+   "slug": "matsushima-higashimatsushima",
+   "name": "松島・東松島市・宮城郡",
+   "parent": 598
+  },
+  {
+   "id": 758,
+   "slug": "fujisawa-chigasaki-samukawa",
+   "name": "藤沢市・茅ヶ崎市・寒川町",
+   "parent": 740
+  },
+  {
+   "id": 571,
+   "slug": "aomori-tsugaru-west",
+   "name": "青森・津軽地方",
+   "parent": 33
+  },
+  {
+   "id": 615,
+   "slug": "yurihonjo-nikaho-shi",
+   "name": "由利本荘市・にかほ市",
+   "parent": 611
+  },
+  {
+   "id": 174,
+   "slug": "kanzaki-area",
+   "name": "神埼市・神埼郡",
+   "parent": 169
+  },
+  {
+   "id": 213,
+   "slug": "matsuyama-chuyo",
+   "name": "松山・中予周辺",
+   "parent": 74
+  },
+  {
+   "id": 609,
+   "slug": "ishinomaki-onagawa",
+   "name": "石巻市・女川町",
+   "parent": 599
+  },
+  {
+   "id": 69,
+   "slug": "tottori",
+   "name": "鳥取",
+   "parent": 65
+  },
+  {
+   "id": 597,
+   "slug": "sendai-city",
+   "name": "仙台市",
+   "parent": 36
+  },
+  {
+   "id": 769,
+   "slug": "minato-ku",
+   "name": "港区",
+   "parent": 764
+  },
+  {
+   "id": 725,
+   "slug": "funabashi-narashino-kamagaya",
+   "name": "船橋市・習志野市・鎌ケ谷市",
+   "parent": 720
+  },
+  {
+   "id": 600,
+   "slug": "aoba-izumi-ku",
+   "name": "青葉区・泉区",
+   "parent": 597
+  },
+  {
+   "id": 590,
+   "slug": "oshu-kanegasaki",
+   "name": "奥州市・金ケ崎町",
+   "parent": 584
+  },
+  {
+   "id": 52,
+   "slug": "ishikawa",
+   "name": "石川",
+   "parent": 47
+  },
+  {
+   "id": 578,
+   "slug": "hachinohe-hashikami",
+   "name": "八戸市・階上町",
+   "parent": 572
+  },
+  {
+   "id": 39,
+   "slug": "kanto",
+   "name": "関東",
+   "parent": 0
+  },
+  {
+   "id": 204,
+   "slug": "nangoku-tosa-area",
+   "name": "南国市・香美市・土佐市",
+   "parent": 200
+  },
+  {
+   "id": 587,
+   "slug": "hanamaki-kitakami-shi",
+   "name": "花巻市・北上市",
+   "parent": 583
+  },
+  {
+   "id": 200,
+   "slug": "kochi-city-central",
+   "name": "高知市・嶺北・仁淀川",
+   "parent": 75
+  },
+  {
+   "id": 584,
+   "slug": "oshu-ichinoseki-south",
+   "name": "奥州・一関（内陸南部）",
+   "parent": 34
+  },
+  {
+   "id": 681,
+   "slug": "tochigi-mibu-cho",
+   "name": "栃木市・壬生町",
+   "parent": 672
+  },
+  {
+   "id": 196,
+   "slug": "okawa-yanagawa",
+   "name": "大川市・柳川市",
+   "parent": 182
+  },
+  {
+   "id": 797,
+   "slug": "higashikurume-nishitokyo",
+   "name": "東久留米・清瀬・西東京",
+   "parent": 765
+  },
+  {
+   "id": 211,
+   "slug": "susaki-nakatosa",
+   "name": "須崎市・中土佐町",
+   "parent": 202
+  },
+  {
+   "id": 199,
+   "slug": "yukuhashi-buzen-shi",
+   "name": "行橋市・豊前市",
+   "parent": 183
+  },
+  {
+   "id": 575,
+   "slug": "hirosaki-hirakawa-shi",
+   "name": "弘前市・平川市",
+   "parent": 571
+  },
+  {
+   "id": 596,
+   "slug": "shimohei-gun",
+   "name": "下閉伊郡",
+   "parent": 585
+  },
+  {
+   "id": 191,
+   "slug": "dazaifu-chikushino",
+   "name": "太宰府市・筑紫野市",
+   "parent": 181
+  },
+  {
+   "id": 63,
+   "slug": "nara",
+   "name": "奈良",
+   "parent": 57
+  },
+  {
+   "id": 804,
+   "slug": "miyakejima-mikurajima",
+   "name": "三宅島・御蔵島",
+   "parent": 766
+  },
+  {
+   "id": 44,
+   "slug": "ibaraki",
+   "name": "茨城",
+   "parent": 39
+  },
+  {
+   "id": 755,
+   "slug": "sagamihara-midori-aikawa",
+   "name": "相模原市（緑区）・愛川町",
+   "parent": 739
+  },
+  {
+   "id": 688,
+   "slug": "takasaki-annaka-shi",
+   "name": "高崎市・安中市",
+   "parent": 684
+  },
+  {
+   "id": 130,
+   "slug": "oita-beppu",
+   "name": "大分市・別府",
+   "parent": 81
+  },
+  {
+   "id": 664,
+   "slug": "toride-moriya-ushiku-shi",
+   "name": "取手市・守谷市・牛久市",
+   "parent": 655
+  },
+  {
+   "id": 700,
+   "slug": "kawagoe-tokorozawa-west",
+   "name": "川越・所沢（県西）",
+   "parent": 43
+  },
+  {
+   "id": 707,
+   "slug": "soka-yashio-misato-shi",
+   "name": "草加市・八潮市・三郷市",
+   "parent": 699
+  },
+  {
+   "id": 133,
+   "slug": "oita-shi",
+   "name": "大分市",
+   "parent": 130
+  },
+  {
+   "id": 659,
+   "slug": "hitachi-takahagi-kitaibaraki",
+   "name": "日立市・高萩市・北茨城市",
+   "parent": 654
+  },
+  {
+   "id": 712,
+   "slug": "asaka-shiki-wako-niiza",
+   "name": "朝霞市・志木市・和光市・新座市",
+   "parent": 700
+  },
+  {
+   "id": 656,
+   "slug": "kashima-hokou-coastal",
+   "name": "鹿嶋・鹿行地方",
+   "parent": 44
+  },
+  {
+   "id": 229,
+   "slug": "takamatsu-shi",
+   "name": "高松市",
+   "parent": 226
+  },
+  {
+   "id": 136,
+   "slug": "nakatsu-shi",
+   "name": "中津市",
+   "parent": 131
+  },
+  {
+   "id": 98,
+   "slug": "miyako-jima",
+   "name": "宮古島",
+   "parent": 87
+  },
+  {
+   "id": 667,
+   "slug": "kashima-kamisu-shi",
+   "name": "鹿嶋市・神栖市",
+   "parent": 656
+  },
+  {
+   "id": 128,
+   "slug": "kobayashi-ebino",
+   "name": "小林市・えびの市",
+   "parent": 119
+  },
+  {
+   "id": 684,
+   "slug": "maebashi-takasaki-central",
+   "name": "前橋・高崎（中央）",
+   "parent": 46
+  },
+  {
+   "id": 114,
+   "slug": "amami-oshima",
+   "name": "奄美市・奄美大島周辺",
+   "parent": 105
+  },
+  {
+   "id": 692,
+   "slug": "isesaki-tamamura-cho",
+   "name": "伊勢崎市・玉村町",
+   "parent": 685
+  },
+  {
+   "id": 678,
+   "slug": "nasu-nakagawa-cho",
+   "name": "那須町・那珂川町",
+   "parent": 671
+  },
+  {
+   "id": 695,
+   "slug": "numata-tone-gun",
+   "name": "沼田市・利根郡",
+   "parent": 686
+  },
+  {
+   "id": 103,
+   "slug": "kirishima-aira-isa",
+   "name": "霧島・姶良・伊佐",
+   "parent": 83
+  },
+  {
+   "id": 117,
+   "slug": "miyazaki-city-central",
+   "name": "宮崎市・県央主要",
+   "parent": 82
+  },
+  {
+   "id": 673,
+   "slug": "utsunomiya-shi",
+   "name": "宇都宮市",
+   "parent": 670
+  },
+  {
+   "id": 124,
+   "slug": "takachiho-nishiusuki",
+   "name": "高千穂・西臼杵",
+   "parent": 118
+  },
+  {
+   "id": 670,
+   "slug": "utsunomiya-central",
+   "name": "宇都宮・県央",
+   "parent": 45
+  },
+  {
+   "id": 653,
+   "slug": "futaba-gun",
+   "name": "双葉郡",
+   "parent": 641
+  },
+  {
+   "id": 141,
+   "slug": "saiki-shi",
+   "name": "佐伯市",
+   "parent": 132
+  },
+  {
+   "id": 729,
+   "slug": "matsudo-nagareyama-shi",
+   "name": "松戸市・流山市",
+   "parent": 721
+  },
+  {
+   "id": 734,
+   "slug": "choshi-asahi-sosa-katori",
+   "name": "銚子市・旭市・匝瑳市・香取市",
+   "parent": 722
+  },
+  {
+   "id": 163,
+   "slug": "sasebo-shi",
+   "name": "佐世保市",
+   "parent": 159
+  },
+  {
+   "id": 90,
+   "slug": "urasoe-ginowan-shi",
+   "name": "浦添市・宜野湾市",
+   "parent": 85
+  },
+  {
+   "id": 625,
+   "slug": "yonezawa-okitama-south",
+   "name": "米沢・置賜地方",
+   "parent": 37
+  },
+  {
+   "id": 79,
+   "slug": "nagasaki",
+   "name": "長崎",
+   "parent": 76
+  },
+  {
+   "id": 166,
+   "slug": "unzen-minami-shimabara",
+   "name": "雲仙市・南島原市",
+   "parent": 160
+  },
+  {
+   "id": 621,
+   "slug": "yokote-yuzawa-shi",
+   "name": "横手市・湯沢市",
+   "parent": 613
+  },
+  {
+   "id": 741,
+   "slug": "yokosuka-miura-peninsula",
+   "name": "横須賀・三浦半島",
+   "parent": 41
+  },
+  {
+   "id": 169,
+   "slug": "saga-tosu-area",
+   "name": "佐賀市・鳥栖周辺",
+   "parent": 78
+  },
+  {
+   "id": 158,
+   "slug": "nagasaki-city-area",
+   "name": "長崎市・周辺",
+   "parent": 79
+  },
+  {
+   "id": 630,
+   "slug": "sagae-nishimurayama-gun",
+   "name": "寒河江市・西村山郡",
+   "parent": 624
+  },
+  {
+   "id": 85,
+   "slug": "okinawa-main-cities",
+   "name": "那覇主要11市",
+   "parent": 84
+  },
+  {
+   "id": 648,
+   "slug": "aizuwakamatsu-kitakata-shi",
+   "name": "会津若松市・喜多方市",
+   "parent": 640
+  },
+  {
+   "id": 93,
+   "slug": "onna-son",
+   "name": "恩納村",
+   "parent": 86
+  },
+  {
+   "id": 717,
+   "slug": "higashimatsuyama-hiki-gun",
+   "name": "東松山市・比企郡",
+   "parent": 701
+  },
+  {
+   "id": 646,
+   "slug": "shirakawa-nishishirakawa",
+   "name": "白河市・西白河郡",
+   "parent": 639
+  },
+  {
+   "id": 145,
+   "slug": "aso-kikuchi-area",
+   "name": "阿蘇・山鹿・菊池",
+   "parent": 80
+  },
+  {
+   "id": 639,
+   "slug": "nakadori-central",
+   "name": "中通り（福島・郡山）",
+   "parent": 38
+  },
+  {
+   "id": 150,
+   "slug": "uto-uki",
+   "name": "宇土市・宇城市",
+   "parent": 144
+  },
+  {
+   "id": 636,
+   "slug": "tsuruoka-mikawa-cho",
+   "name": "鶴岡市・三川町",
+   "parent": 627
+  },
+  {
+   "id": 720,
+   "slug": "chiba-katsunan-central",
+   "name": "千葉市・葛南（中央）",
+   "parent": 42
+  },
+  {
+   "id": 632,
+   "slug": "nagai-nishiokitama-gun",
+   "name": "長井市・西置賜郡",
+   "parent": 625
+  },
+  {
+   "id": 618,
+   "slug": "odate-kazuno-shi",
+   "name": "大館市・鹿角市",
+   "parent": 612
+  },
+  {
+   "id": 257,
+   "slug": "hagi-nagato",
+   "name": "萩市・長門市",
+   "parent": 250
+  },
+  {
+   "id": 274,
+   "slug": "higashihiroshima-takehara",
+   "name": "東広島市・竹原市",
+   "parent": 264
+  },
+  {
+   "id": 277,
+   "slug": "okayama-city-area",
+   "name": "岡山市・周辺",
+   "parent": 66
+  },
+  {
+   "id": 486,
+   "slug": "azumino-omachi-shi",
+   "name": "安曇野市・大町市",
+   "parent": 477
+  },
+  {
+   "id": 412,
+   "slug": "ise-shima-nankishu",
+   "name": "伊勢・志摩・東紀州（南勢）",
+   "parent": 64
+  },
+  {
+   "id": 413,
+   "slug": "kuwana-inabe-shi",
+   "name": "桑名市・いなべ市",
+   "parent": 410
+  },
+  {
+   "id": 330,
+   "slug": "nara-shi",
+   "name": "奈良市",
+   "parent": 327
+  },
+  {
+   "id": 484,
+   "slug": "chikuma-sakaki",
+   "name": "千曲市・坂城町",
+   "parent": 476
+  },
+  {
+   "id": 416,
+   "slug": "tsu-shi",
+   "name": "津市",
+   "parent": 411
+  },
+  {
+   "id": 281,
+   "slug": "higashi-minami-ku",
+   "name": "東区・南区",
+   "parent": 277
+  },
+  {
+   "id": 327,
+   "slug": "nara-ikoma-north",
+   "name": "奈良市・生駒周辺",
+   "parent": 63
+  },
+  {
+   "id": 334,
+   "slug": "yamatotakada-kashiba",
+   "name": "大和高田市・香芝市・葛城市",
+   "parent": 328
+  },
+  {
+   "id": 271,
+   "slug": "onomichi-mihara-shi",
+   "name": "尾道市・三原市",
+   "parent": 263
+  },
+  {
+   "id": 510,
+   "slug": "tsuruga-shi",
+   "name": "敦賀市",
+   "parent": 504
+  },
+  {
+   "id": 401,
+   "slug": "kusatsu-ritto-shi",
+   "name": "草津市・栗東市",
+   "parent": 397
+  },
+  {
+   "id": 507,
+   "slug": "echizen-sabae-shi",
+   "name": "越前市・鯖江市",
+   "parent": 503
+  },
+  {
+   "id": 259,
+   "slug": "iwakuni-waki",
+   "name": "岩国市・和木町",
+   "parent": 251
+  },
+  {
+   "id": 262,
+   "slug": "hiroshima-city-area",
+   "name": "広島市・周辺",
+   "parent": 67
+  },
+  {
+   "id": 265,
+   "slug": "naka-minami-ku",
+   "name": "中区・南区",
+   "parent": 262
+  },
+  {
+   "id": 500,
+   "slug": "fujiyoshida-kawaguchiko",
+   "name": "富士吉田市・富士河口湖町",
+   "parent": 493
+  },
+  {
+   "id": 461,
+   "slug": "gifu-seino-west",
+   "name": "岐阜市・西濃",
+   "parent": 56
+  },
+  {
+   "id": 405,
+   "slug": "higashiomi-shi",
+   "name": "東近江市",
+   "parent": 398
+  },
+  {
+   "id": 339,
+   "slug": "totsukawa-okuyoshino",
+   "name": "十津川・奥吉野",
+   "parent": 329
+  },
+  {
+   "id": 479,
+   "slug": "nagano-shi",
+   "name": "長野市",
+   "parent": 475
+  },
+  {
+   "id": 285,
+   "slug": "soja-hayashima",
+   "name": "総社市・早島町",
+   "parent": 278
+  },
+  {
+   "id": 296,
+   "slug": "izumo-shi",
+   "name": "出雲市",
+   "parent": 292
+  },
+  {
+   "id": 438,
+   "slug": "okazaki-kota",
+   "name": "岡崎市・幸田町",
+   "parent": 425
+  },
+  {
+   "id": 458,
+   "slug": "gotenba-susono",
+   "name": "御殿場市・裾野市・小山町",
+   "parent": 447
+  },
+  {
+   "id": 299,
+   "slug": "hamada-gozu-shi",
+   "name": "浜田市・江津市",
+   "parent": 293
+  },
+  {
+   "id": 453,
+   "slug": "shimizu-ku",
+   "name": "清水区",
+   "parent": 446
+  },
+  {
+   "id": 317,
+   "slug": "tanabe-shingu-south",
+   "name": "田辺・新宮（紀南）",
+   "parent": 62
+  },
+  {
+   "id": 304,
+   "slug": "tottori-inaba-east",
+   "name": "鳥取市・東部（因幡）",
+   "parent": 69
+  },
+  {
+   "id": 449,
+   "slug": "hamamatsu-hamana-tenryu",
+   "name": "浜松市浜名区・天竜区",
+   "parent": 445
+  },
+  {
+   "id": 447,
+   "slug": "fuji-izu-east",
+   "name": "富士・伊豆（東部）",
+   "parent": 49
+  },
+  {
+   "id": 309,
+   "slug": "kurayoshi-shi",
+   "name": "倉吉市",
+   "parent": 305
+  },
+  {
+   "id": 435,
+   "slug": "seto-owariasahi",
+   "name": "瀬戸市・尾張旭市",
+   "parent": 424
+  },
+  {
+   "id": 318,
+   "slug": "wakayama-kainan-shi",
+   "name": "和歌山市・海南市",
+   "parent": 315
+  },
+  {
+   "id": 476,
+   "slug": "saku-ueda-toshin-east",
+   "name": "佐久・上田（東信）",
+   "parent": 55
+  },
+  {
+   "id": 420,
+   "slug": "shima-watarai-gun",
+   "name": "志摩市・度会郡",
+   "parent": 412
+  },
+  {
+   "id": 324,
+   "slug": "kamitonda-inami",
+   "name": "上富田町・印南町",
+   "parent": 317
+  },
+  {
+   "id": 312,
+   "slug": "yonago-sakaiminato",
+   "name": "米子市・境港市",
+   "parent": 306
+  },
+  {
+   "id": 472,
+   "slug": "takayama-hida-shirakawa",
+   "name": "高山市・飛騨市・白川村",
+   "parent": 463
+  },
+  {
+   "id": 289,
+   "slug": "maniwa-shinjo",
+   "name": "真庭市・新庄村",
+   "parent": 279
+  },
+  {
+   "id": 469,
+   "slug": "tajimi-toki-mizunami",
+   "name": "多治見市・土岐市・瑞浪市",
+   "parent": 462
+  },
+  {
+   "id": 294,
+   "slug": "oki-shoto",
+   "name": "隠岐諸島",
+   "parent": 68
+  },
+  {
+   "id": 465,
+   "slug": "kakamigahara-hashima-gun",
+   "name": "各務原市・羽島郡",
+   "parent": 461
+  },
+  {
+   "id": 424,
+   "slug": "owari-north-west",
+   "name": "尾張北部・西部",
+   "parent": 48
+  },
+  {
+   "id": 442,
+   "slug": "gamagori-toyokawa-shinshiro",
+   "name": "蒲郡市・豊川市・新城市",
+   "parent": 426
+  },
+  {
+   "id": 344,
+   "slug": "awaji-shima",
+   "name": "淡路島",
+   "parent": 59
+  },
+  {
+   "id": 554,
+   "slug": "dounan-douhoku",
+   "name": "道南・道北",
+   "parent": 31
+  },
+  {
+   "id": 370,
+   "slug": "suita-settsu",
+   "name": "吹田市・摂津市",
+   "parent": 360
+  },
+  {
+   "id": 237,
+   "slug": "tokushima-naruto-area",
+   "name": "徳島市・鳴門・周辺",
+   "parent": 73
+  },
+  {
+   "id": 390,
+   "slug": "uji-kumiyama",
+   "name": "宇治市・久御山町",
+   "parent": 383
+  },
+  {
+   "id": 535,
+   "slug": "nagaoka-chuetsu-central",
+   "name": "長岡・中越",
+   "parent": 50
+  },
+  {
+   "id": 354,
+   "slug": "nishiwaki-ono-kato-shi",
+   "name": "西脇市・小野市・加東市",
+   "parent": 342
+  },
+  {
+   "id": 382,
+   "slug": "kyoto-city",
+   "name": "京都市",
+   "parent": 60
+  },
+  {
+   "id": 497,
+   "slug": "yamanashi-koshu-fuefuki",
+   "name": "山梨市・甲州市・笛吹市",
+   "parent": 492
+  },
+  {
+   "id": 240,
+   "slug": "tokushima-shi",
+   "name": "徳島市",
+   "parent": 237
+  },
+  {
+   "id": 558,
+   "slug": "sapporo-west",
+   "name": "札幌市西部（手稲・西区・厚別区）",
+   "parent": 553
+  },
+  {
+   "id": 379,
+   "slug": "hirakata-neyagawa",
+   "name": "枚方市・寝屋川市",
+   "parent": 362
+  },
+  {
+   "id": 533,
+   "slug": "himi-shi",
+   "name": "氷見市",
+   "parent": 525
+  },
+  {
+   "id": 221,
+   "slug": "shikokuchuo-shi",
+   "name": "四国中央市",
+   "parent": 214
+  },
+  {
+   "id": 224,
+   "slug": "seiyo-ikata",
+   "name": "西予市・伊方町",
+   "parent": 215
+  },
+  {
+   "id": 360,
+   "slug": "hokusetu-north",
+   "name": "北摂（北部）",
+   "parent": 58
+  },
+  {
+   "id": 226,
+   "slug": "takamatsu-tosan",
+   "name": "高松・東讃",
+   "parent": 72
+  },
+  {
+   "id": 544,
+   "slug": "uonuma-minamiuonuma-yuzawa",
+   "name": "魚沼市・南魚沼市・湯沢町",
+   "parent": 535
+  },
+  {
+   "id": 232,
+   "slug": "marugame-zentsuji",
+   "name": "丸亀市・善通寺市",
+   "parent": 227
+  },
+  {
+   "id": 539,
+   "slug": "nishi-nishikan-yahiko",
+   "name": "西区・西蒲区・弥彦村",
+   "parent": 534
+  },
+  {
+   "id": 526,
+   "slug": "toyama-shi",
+   "name": "富山市",
+   "parent": 524
+  },
+  {
+   "id": 349,
+   "slug": "nishinomiya-ashiya-shi",
+   "name": "西宮市・芦屋市",
+   "parent": 341
+  },
+  {
+   "id": 249,
+   "slug": "shimonoseki-ube-west",
+   "name": "下関・宇部（西部）",
+   "parent": 70
+  },
+  {
+   "id": 247,
+   "slug": "naka-kaiyo",
+   "name": "那賀町・海陽町",
+   "parent": 239
+  },
+  {
+   "id": 216,
+   "slug": "matsuyama-shi",
+   "name": "松山市",
+   "parent": 213
+  },
+  {
+   "id": 564,
+   "slug": "asahikawa-kamikawa",
+   "name": "旭川市・上川中部",
+   "parent": 554
+  },
+  {
+   "id": 374,
+   "slug": "naka-higashi-mihara-ku",
+   "name": "中区・東区・美原区",
+   "parent": 361
+  },
+  {
+   "id": 252,
+   "slug": "shimonoseki-shi",
+   "name": "下関市",
+   "parent": 249
+  },
+  {
+   "id": 394,
+   "slug": "maizuru-miyazu-shi",
+   "name": "舞鶴市・宮津市",
+   "parent": 384
+  },
+  {
+   "id": 397,
+   "slug": "otsu-kusatsu-konan",
+   "name": "大津・草津（湖南）",
+   "parent": 61
+  },
+  {
+   "id": 568,
+   "slug": "kushiro-akan",
+   "name": "釧路市・阿寒",
+   "parent": 555
+  },
+  {
+   "id": 517,
+   "slug": "kahoku-kahoku-gun",
+   "name": "かほく市・河北郡",
+   "parent": 513
+  },
+  {
+   "id": 245,
+   "slug": "miyoshi-higashimiyoshi",
+   "name": "三好市・東みよし町",
+   "parent": 238
+  },
+  {
+   "id": 521,
+   "slug": "hakui-shika-cho",
+   "name": "羽咋市・志賀町",
+   "parent": 514
+  },
+  {
+   "id": 373,
+   "slug": "sakai-kita-ku",
+   "name": "堺区・北区",
+   "parent": 361
+  },
+  {
+   "id": 323,
+   "slug": "tanabe-shirahama",
+   "name": "田辺市・白浜町",
+   "parent": 317
+  },
+  {
+   "id": 711,
+   "slug": "tokorozawa-iruma-shi",
+   "name": "所沢市・入間市",
+   "parent": 700
+  },
+  {
+   "id": 701,
+   "slug": "kumagaya-chichibu-north",
+   "name": "熊谷・秩父（県北）",
+   "parent": 43
+  },
+  {
+   "id": 441,
+   "slug": "toyohashi-tahara",
+   "name": "豊橋市・田原市",
+   "parent": 426
+  },
+  {
+   "id": 369,
+   "slug": "toyonaka-minoo",
+   "name": "豊中市・箕面市",
+   "parent": 360
+  },
+  {
+   "id": 378,
+   "slug": "yao-kashiwara",
+   "name": "八尾市・柏原市",
+   "parent": 362
+  },
+  {
+   "id": 45,
+   "slug": "tochigi",
+   "name": "栃木",
+   "parent": 39
+  },
+  {
+   "id": 105,
+   "slug": "remote-islands-kagoshima",
+   "name": "種子島・屋久島・奄美・離島",
+   "parent": 83
+  },
+  {
+   "id": 437,
+   "slug": "toyota-miyoshi",
+   "name": "豊田市・みよし市",
+   "parent": 425
+  },
+  {
+   "id": 754,
+   "slug": "sagamihara-chuo-minami",
+   "name": "相模原市（中央区・南区）",
+   "parent": 739
+  },
+  {
+   "id": 47,
+   "slug": "chubu",
+   "name": "中部",
+   "parent": 0
+  },
+  {
+   "id": 691,
+   "slug": "ota-tatebayashi-shi",
+   "name": "太田市・館林市",
+   "parent": 685
+  },
+  {
+   "id": 36,
+   "slug": "miyagi",
+   "name": "宮城",
+   "parent": 32
+  },
+  {
+   "id": 706,
+   "slug": "kawaguchi-warabi-toda-shi",
+   "name": "川口市・蕨市・戸田市",
+   "parent": 699
+  },
+  {
+   "id": 393,
+   "slug": "fukuchiyama-ayabe",
+   "name": "福知山市・綾部市",
+   "parent": 384
+  },
+  {
+   "id": 733,
+   "slug": "tateyama-kamogawa-minamiboso",
+   "name": "館山市・鴨川市・南房総市",
+   "parent": 722
+  },
+  {
+   "id": 81,
+   "slug": "oita",
+   "name": "大分",
+   "parent": 76
+  },
+  {
+   "id": 64,
+   "slug": "mie",
+   "name": "三重",
+   "parent": 57
+  },
+  {
+   "id": 740,
+   "slug": "shonan-area",
+   "name": "湘南",
+   "parent": 41
+  },
+  {
+   "id": 404,
+   "slug": "omihachiman-shi",
+   "name": "近江八幡市",
+   "parent": 398
+  },
+  {
+   "id": 67,
+   "slug": "hiroshima",
+   "name": "広島",
+   "parent": 65
+  },
+  {
+   "id": 353,
+   "slug": "akashi-kakogawa-takasago",
+   "name": "明石市・加古川市・高砂市",
+   "parent": 342
+  },
+  {
+   "id": 343,
+   "slug": "tajima-tanba",
+   "name": "但馬・丹波",
+   "parent": 59
+  },
+  {
+   "id": 400,
+   "slug": "otsu-shi",
+   "name": "大津市",
+   "parent": 397
+  },
+  {
+   "id": 726,
+   "slug": "ichikawa-urayasu-shi",
+   "name": "市川市・浦安市",
+   "parent": 720
+  },
+  {
+   "id": 779,
+   "slug": "shinjuku-ku",
+   "name": "新宿区",
+   "parent": 764
+  },
+  {
+   "id": 423,
+   "slug": "nagoya-city",
+   "name": "名古屋市",
+   "parent": 48
+  },
+  {
+   "id": 53,
+   "slug": "fukui",
+   "name": "福井",
+   "parent": 47
+  },
+  {
+   "id": 97,
+   "slug": "nakagusuku-nishihara",
+   "name": "中城村・西原町",
+   "parent": 87
+  },
+  {
+   "id": 359,
+   "slug": "osaka-city",
+   "name": "大阪市",
+   "parent": 58
+  },
+  {
+   "id": 419,
+   "slug": "ise-toba-shi",
+   "name": "伊勢市・鳥羽市",
+   "parent": 412
+  },
+  {
+   "id": 803,
+   "slug": "niijima-kozushima-toshima",
+   "name": "新島・神津島・利島",
+   "parent": 766
+  },
+  {
+   "id": 716,
+   "slug": "ageo-okegawa-kitamoto-konosu",
+   "name": "上尾市・桶川市・北本市・鴻巣市",
+   "parent": 701
+  },
+  {
+   "id": 796,
+   "slug": "akishima-fussa-hamura",
+   "name": "昭島・福生・羽村",
+   "parent": 765
+  },
+  {
+   "id": 89,
+   "slug": "okinawa-shi",
+   "name": "沖縄市",
+   "parent": 85
+  },
+  {
+   "id": 333,
+   "slug": "kashihara-sakurai",
+   "name": "橿原市・桜井市",
+   "parent": 328
+  },
+  {
+   "id": 73,
+   "slug": "tokushima",
+   "name": "徳島",
+   "parent": 71
+  },
+  {
+   "id": 608,
+   "slug": "tome-kurihara-shi",
+   "name": "登米市・栗原市",
+   "parent": 599
+  },
+  {
+   "id": 496,
+   "slug": "minami-alps-ichikawamisato",
+   "name": "南アルプス市・市川三郷町",
+   "parent": 492
+  },
+  {
+   "id": 538,
+   "slug": "chuo-higashi-kita-ku",
+   "name": "中央区・東区・北区",
+   "parent": 534
+  },
+  {
+   "id": 543,
+   "slug": "sanjo-tsubame-kamo",
+   "name": "三条市・燕市・加茂市",
+   "parent": 535
+  },
+  {
+   "id": 151,
+   "slug": "tamana-arao",
+   "name": "玉名市・荒尾市",
+   "parent": 144
+  },
+  {
+   "id": 586,
+   "slug": "morioka-takizawa-shi",
+   "name": "盛岡市・滝沢市",
+   "parent": 583
+  },
+  {
+   "id": 273,
+   "slug": "kure-etajima",
+   "name": "呉市・江田島市",
+   "parent": 264
+  },
+  {
+   "id": 223,
+   "slug": "ozu-yawatahama",
+   "name": "大洲市・八幡浜市",
+   "parent": 215
+  },
+  {
+   "id": 436,
+   "slug": "tsushima-aisai-yatomi",
+   "name": "津島市・愛西市・弥富市",
+   "parent": 424
+  },
+  {
+   "id": 203,
+   "slug": "kochi-shi",
+   "name": "高知市",
+   "parent": 200
+  },
+  {
+   "id": 144,
+   "slug": "kumamoto-city-area",
+   "name": "熊本市・周辺",
+   "parent": 80
+  },
+  {
+   "id": 581,
+   "slug": "sannohe-gun",
+   "name": "三戸郡",
+   "parent": 572
+  },
+  {
+   "id": 595,
+   "slug": "kuji-ninohe-shi",
+   "name": "久慈市・二戸市",
+   "parent": 585
+  },
+  {
+   "id": 534,
+   "slug": "niigata-city-kaetsu",
+   "name": "新潟市（下越）",
+   "parent": 50
+  },
+  {
+   "id": 532,
+   "slug": "nanto-shi",
+   "name": "南砺市",
+   "parent": 525
+  },
+  {
+   "id": 520,
+   "slug": "nanao-nakanoto",
+   "name": "七尾市・中能登町",
+   "parent": 514
+  },
+  {
+   "id": 614,
+   "slug": "akita-shi",
+   "name": "秋田市",
+   "parent": 611
+  },
+  {
+   "id": 516,
+   "slug": "nonoichi-hakusan-shi",
+   "name": "野々市市・白山市",
+   "parent": 513
+  },
+  {
+   "id": 606,
+   "slug": "shiroishi-kakuda-sennan",
+   "name": "白石市・角田市・仙南郡",
+   "parent": 598
+  },
+  {
+   "id": 180,
+   "slug": "kitakyushu-city",
+   "name": "北九州市",
+   "parent": 77
+  },
+  {
+   "id": 258,
+   "slug": "shunan-kudamatsu-hikari",
+   "name": "周南市・下松市・光市",
+   "parent": 251
+  },
+  {
+   "id": 509,
+   "slug": "ono-katsuyama-shi",
+   "name": "大野市・勝山市",
+   "parent": 503
+  },
+  {
+   "id": 529,
+   "slug": "nyuzen-asahi-cho",
+   "name": "入善町・朝日町",
+   "parent": 524
+  },
+  {
+   "id": 624,
+   "slug": "yamagata-murayama-central",
+   "name": "山形・村山地方",
+   "parent": 37
+  },
+  {
+   "id": 268,
+   "slug": "aki-saeki-ku",
+   "name": "安芸区・佐伯区",
+   "parent": 262
+  },
+  {
+   "id": 190,
+   "slug": "kasuga-onojo-shi",
+   "name": "春日市・大野城市",
+   "parent": 181
+  },
+  {
+   "id": 559,
+   "slug": "otaru-yoichi-shakotan",
+   "name": "小樽・余市・積丹",
+   "parent": 553
+  },
+  {
+   "id": 645,
+   "slug": "nihonmatsu-adachi-gun",
+   "name": "二本松市・安達郡",
+   "parent": 639
+  },
+  {
+   "id": 728,
+   "slug": "kashiwa-abiko-shi",
+   "name": "柏市・我孫子市",
+   "parent": 721
+  },
+  {
+   "id": 567,
+   "slug": "obihiro-tokachi-central",
+   "name": "帯広市・十勝中部",
+   "parent": 555
+  },
+  {
+   "id": 574,
+   "slug": "aomori-higashitsugaru",
+   "name": "青森市・東津軽郡",
+   "parent": 571
+  },
+  {
+   "id": 459,
+   "slug": "izu-north-area",
+   "name": "伊豆半島北部",
+   "parent": 447
+  },
+  {
+   "id": 288,
+   "slug": "tsuyama-kagamino",
+   "name": "津山市・鏡野町",
+   "parent": 279
+  },
+  {
+   "id": 563,
+   "slug": "hakodate-hokuto-matsumae",
+   "name": "函館市・北斗市・松前",
+   "parent": 554
+  },
+  {
+   "id": 663,
+   "slug": "tsuchiura-kasumigaura-shi",
+   "name": "土浦市・かすみがうら市",
+   "parent": 655
+  },
+  {
+   "id": 468,
+   "slug": "seki-mino-shi",
+   "name": "関市・美濃市",
+   "parent": 462
+  },
+  {
+   "id": 464,
+   "slug": "gifu-shi",
+   "name": "岐阜市",
+   "parent": 461
+  },
+  {
+   "id": 125,
+   "slug": "higashiusuki-gun",
+   "name": "東臼杵郡",
+   "parent": 118
+  },
+  {
+   "id": 127,
+   "slug": "nichinan-kushima",
+   "name": "日南市・串間市",
+   "parent": 119
+  },
+  {
+   "id": 658,
+   "slug": "hitachinaka-naka-shi",
+   "name": "ひたちなか市・那珂市",
+   "parent": 654
+  },
+  {
+   "id": 679,
+   "slug": "nasukarasuyama-shioya",
+   "name": "那須烏山市・塩谷町",
+   "parent": 671
+  },
+  {
+   "id": 485,
+   "slug": "matsumoto-shiojiri-shi",
+   "name": "松本市・塩尻市",
+   "parent": 477
+  },
+  {
+   "id": 280,
+   "slug": "kita-naka-ku",
+   "name": "北区・中区",
+   "parent": 277
+  },
+  {
+   "id": 140,
+   "slug": "hita-kusu",
+   "name": "日田市・玖珠郡",
+   "parent": 132
+  },
+  {
+   "id": 687,
+   "slug": "maebashi-kitagunma",
+   "name": "前橋市・北群馬郡",
+   "parent": 684
+  },
+  {
+   "id": 210,
+   "slug": "sukumo-tosashimizu",
+   "name": "宿毛市・土佐清水市",
+   "parent": 202
+  },
+  {
+   "id": 284,
+   "slug": "kurashiki-shi",
+   "name": "倉敷市",
+   "parent": 278
+  },
+  {
+   "id": 448,
+   "slug": "hamamatsu-chuo-ku",
+   "name": "浜松市中央区",
+   "parent": 445
+  },
+  {
+   "id": 475,
+   "slug": "nagano-hokushin-north",
+   "name": "長野・北信",
+   "parent": 55
+  },
+  {
+   "id": 452,
+   "slug": "aoi-suruga-ku",
+   "name": "葵区・駿河区",
+   "parent": 446
+  },
+  {
+   "id": 680,
+   "slug": "oyama-shimotsuke-shi",
+   "name": "小山市・下野市",
+   "parent": 672
+  },
+  {
+   "id": 295,
+   "slug": "matsue-shi",
+   "name": "松江市",
+   "parent": 292
+  },
+  {
+   "id": 780,
+   "slug": "bunkyo-ku",
+   "name": "文京区",
+   "parent": 764
+  },
+  {
+   "id": 795,
+   "slug": "tama-hino-shi",
+   "name": "多摩市・日野市",
+   "parent": 765
+  },
+  {
+   "id": 377,
+   "slug": "higashiosaka-daito-kadoma",
+   "name": "東大阪市・大東市・門真市",
+   "parent": 362
+  },
+  {
+   "id": 54,
+   "slug": "yamanashi",
+   "name": "山梨",
+   "parent": 47
+  },
+  {
+   "id": 57,
+   "slug": "kinki",
+   "name": "近畿",
+   "parent": 0
+  },
+  {
+   "id": 37,
+   "slug": "yamagata",
+   "name": "山形",
+   "parent": 32
+  },
+  {
+   "id": 61,
+   "slug": "shiga",
+   "name": "滋賀",
+   "parent": 57
+  },
+  {
+   "id": 562,
+   "slug": "niseko-toyako-area",
+   "name": "ニセコ・洞爺湖周辺",
+   "parent": 553
+  },
+  {
+   "id": 802,
+   "slug": "izu-oshima-machi",
+   "name": "伊豆大島",
+   "parent": 766
+  },
+  {
+   "id": 46,
+   "slug": "gunma",
+   "name": "群馬",
+   "parent": 39
+  },
+  {
+   "id": 179,
+   "slug": "fukuoka-city",
+   "name": "福岡市",
+   "parent": 77
+  },
+  {
+   "id": 715,
+   "slug": "kumagaya-fukaya-shi",
+   "name": "熊谷市・深谷市",
+   "parent": 701
+  },
+  {
+   "id": 662,
+   "slug": "tsukuba-tsukubamirai-shi",
+   "name": "つくば市・つくばみらい市",
+   "parent": 655
+  },
+  {
+   "id": 727,
+   "slug": "ichihara-yotsukaido-shi",
+   "name": "市原市・四街道市",
+   "parent": 720
+  },
+  {
+   "id": 88,
+   "slug": "naha-shi",
+   "name": "那覇市",
+   "parent": 85
+  },
+  {
+   "id": 495,
+   "slug": "kai-nirasaki-shi",
+   "name": "甲斐市・韮崎市",
+   "parent": 492
+  },
+  {
+   "id": 739,
+   "slug": "sagamihara-kenou",
+   "name": "相模原・県央",
+   "parent": 41
+  },
+  {
+   "id": 269,
+   "slug": "hatsukaichi-aki-gun",
+   "name": "廿日市市・安芸郡",
+   "parent": 262
+  },
+  {
+   "id": 644,
+   "slug": "sukagawa-tamura-shi",
+   "name": "須賀川市・田村市",
+   "parent": 639
+  },
+  {
+   "id": 342,
+   "slug": "harima",
+   "name": "播磨",
+   "parent": 59
+  },
+  {
+   "id": 139,
+   "slug": "yufu-shi",
+   "name": "由布市",
+   "parent": 132
+  },
+  {
+   "id": 508,
+   "slug": "echizen-minamiechizen",
+   "name": "越前町・南越前町",
+   "parent": 503
+  },
+  {
+   "id": 515,
+   "slug": "kanazawa-shi",
+   "name": "金沢市",
+   "parent": 513
+  },
+  {
+   "id": 80,
+   "slug": "kumamoto",
+   "name": "熊本",
+   "parent": 76
+  },
+  {
+   "id": 66,
+   "slug": "okayama",
+   "name": "岡山",
+   "parent": 65
+  },
+  {
+   "id": 104,
+   "slug": "osumi-peninsula",
+   "name": "大隅・曽於（半島側）",
+   "parent": 83
+  },
+  {
+   "id": 460,
+   "slug": "izu-south-area",
+   "name": "伊豆半島南部",
+   "parent": 447
+  },
+  {
+   "id": 96,
+   "slug": "chatan-kadena",
+   "name": "北谷町・嘉手納町",
+   "parent": 87
+  },
+  {
+   "id": 710,
+   "slug": "kawagoe-kawajima-cho",
+   "name": "川越市・川島町",
+   "parent": 700
+  },
+  {
+   "id": 657,
+   "slug": "mito-kasama-shi",
+   "name": "水戸市・笠間市",
+   "parent": 654
+  },
+  {
+   "id": 732,
+   "slug": "kisarazu-futtsu-sodegaura",
+   "name": "木更津市・富津市・袖ケ浦市",
+   "parent": 722
+  },
+  {
+   "id": 494,
+   "slug": "kofu-chuo-shi",
+   "name": "甲府市・中央市",
+   "parent": 492
+  },
+  {
+   "id": 82,
+   "slug": "miyazaki",
+   "name": "宮崎",
+   "parent": 76
+  },
+  {
+   "id": 55,
+   "slug": "nagano",
+   "name": "長野",
+   "parent": 47
+  },
+  {
+   "id": 794,
+   "slug": "machida-inagi-shi",
+   "name": "町田市・稲城市",
+   "parent": 765
+  },
+  {
+   "id": 62,
+   "slug": "wakayama",
+   "name": "和歌山",
+   "parent": 57
+  },
+  {
+   "id": 781,
+   "slug": "taito-ku",
+   "name": "台東区",
+   "parent": 764
+  },
+  {
+   "id": 38,
+   "slug": "fukushima",
+   "name": "福島",
+   "parent": 32
+  },
+  {
+   "id": 43,
+   "slug": "saitama",
+   "name": "埼玉",
+   "parent": 39
+  },
+  {
+   "id": 561,
+   "slug": "chitose-tomakomai-hidaka",
+   "name": "千歳・苫小牧・日高",
+   "parent": 553
+  },
+  {
+   "id": 738,
+   "slug": "kawasaki-city",
+   "name": "川崎市",
+   "parent": 41
+  },
+  {
+   "id": 643,
+   "slug": "koriyama-motomiya-shi",
+   "name": "郡山市・本宮市",
+   "parent": 639
+  },
+  {
+   "id": 65,
+   "slug": "chugoku",
+   "name": "中国",
+   "parent": 0
+  },
+  {
+   "id": 71,
+   "slug": "shikoku",
+   "name": "四国",
+   "parent": 0
+  },
+  {
+   "id": 59,
+   "slug": "hyogo",
+   "name": "兵庫",
+   "parent": 57
+  },
+  {
+   "id": 56,
+   "slug": "gifu",
+   "name": "岐阜",
+   "parent": 47
+  },
+  {
+   "id": 42,
+   "slug": "chiba",
+   "name": "千葉",
+   "parent": 39
+  },
+  {
+   "id": 83,
+   "slug": "kagoshima",
+   "name": "鹿児島",
+   "parent": 76
+  },
+  {
+   "id": 782,
+   "slug": "sumida-ku",
+   "name": "墨田区",
+   "parent": 764
+  },
+  {
+   "id": 560,
+   "slug": "iwamizawa-takikawa-sorachi",
+   "name": "岩見沢・滝川（空知地方）",
+   "parent": 553
+  },
+  {
+   "id": 793,
+   "slug": "fuchu-chofu-komae",
+   "name": "府中・調布・狛江",
+   "parent": 765
+  },
+  {
+   "id": 49,
+   "slug": "shizuoka",
+   "name": "静岡",
+   "parent": 47
+  },
+  {
+   "id": 84,
+   "slug": "okinawa",
+   "name": "沖縄",
+   "parent": 76
+  },
+  {
+   "id": 76,
+   "slug": "kyushu",
+   "name": "九州",
+   "parent": 0
+  },
+  {
+   "id": 783,
+   "slug": "koto-ku",
+   "name": "江東区",
+   "parent": 764
+  },
+  {
+   "id": 792,
+   "slug": "musashino-mitaka-shi",
+   "name": "武蔵野市・三鷹市",
+   "parent": 765
+  },
+  {
+   "id": 771,
+   "slug": "shinagawa-ku",
+   "name": "品川区",
+   "parent": 764
+  },
+  {
+   "id": 48,
+   "slug": "aichi",
+   "name": "愛知",
+   "parent": 47
+  },
+  {
+   "id": 791,
+   "slug": "tachikawa-kokubunji",
+   "name": "立川・国分寺・国立",
+   "parent": 765
+  },
+  {
+   "id": 790,
+   "slug": "hachioji-shi",
+   "name": "八王子市",
+   "parent": 765
+  },
+  {
+   "id": 772,
+   "slug": "meguro-ku",
+   "name": "目黒区",
+   "parent": 764
+  },
+  {
+   "id": 800,
+   "slug": "koganei-shi",
+   "name": "小金井市",
+   "parent": 765
+  },
+  {
+   "id": 784,
+   "slug": "ota-ku",
+   "name": "大田区",
+   "parent": 764
+  },
+  {
+   "id": 801,
+   "slug": "nishitama-gun",
+   "name": "西多摩郡",
+   "parent": 765
+  },
+  {
+   "id": 773,
+   "slug": "setagaya-ku",
+   "name": "世田谷区",
+   "parent": 764
+  },
+  {
+   "id": 770,
+   "slug": "shibuya-ku",
+   "name": "渋谷区",
+   "parent": 764
+  },
+  {
+   "id": 774,
+   "slug": "nakano-ku",
+   "name": "中野区",
+   "parent": 764
+  },
+  {
+   "id": 775,
+   "slug": "suginami-ku",
+   "name": "杉並区",
+   "parent": 764
+  },
+  {
+   "id": 785,
+   "slug": "toshima-ku",
+   "name": "豊島区",
+   "parent": 764
+  },
+  {
+   "id": 786,
+   "slug": "kita-ku",
+   "name": "北区",
+   "parent": 764
+  },
+  {
+   "id": 787,
+   "slug": "arakawa-ku",
+   "name": "荒川区",
+   "parent": 764
+  },
+  {
+   "id": 776,
+   "slug": "itabashi-ku",
+   "name": "板橋区",
+   "parent": 764
+  },
+  {
+   "id": 788,
+   "slug": "nerima-ku",
+   "name": "練馬区",
+   "parent": 764
+  },
+  {
+   "id": 777,
+   "slug": "adachi-ku",
+   "name": "足立区",
+   "parent": 764
+  },
+  {
+   "id": 789,
+   "slug": "katsushika-ku",
+   "name": "葛飾区",
+   "parent": 764
+  },
+  {
+   "id": 778,
+   "slug": "edogawa-ku",
+   "name": "江戸川区",
+   "parent": 764
+  }
+ ]
+}
