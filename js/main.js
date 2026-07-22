@@ -82,7 +82,7 @@ async function handleSearch() {
   try {
     const result = await searchPlace(query);
     if (!result) {
-      setStatus("その地名が見つかりませんでした");
+      setStatus("見つかりませんでした。地名・駅名で検索してください(番地までの住所は対応していません)");
       return;
     }
     setOrigin(result.lat, result.lng, result.displayName);
