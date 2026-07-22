@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>散歩コースメーカー</title>
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>散歩コースメーカー</h1>
+    </header>
+
+    <section class="search-panel">
+      <button id="geolocate-btn" type="button">現在地から探す</button>
+      <div class="place-search">
+        <input
+          id="place-input"
+          type="text"
+          placeholder="地名・駅名を入力"
+          autocomplete="off"
+        />
+        <button id="search-btn" type="button">検索</button>
+      </div>
+      <p id="origin-status" aria-live="polite"></p>
+    </section>
+
+    <main>
+      <div id="map"></div>
+      <section id="results" class="results"></section>
+    </main>
+
+    <footer class="app-footer">
+      <p>
+        店舗データ提供:
+        <a href="https://dognavi.com/" target="_blank" rel="noopener">わんグル</a>
+      </p>
+    </footer>
+
+    <script src="vendor/leaflet/leaflet.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

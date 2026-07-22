@@ -1,0 +1,162 @@
+import { estimateWalkingMinutes } from "./route.js";
+
+const DEFAULT_RADIUS_KM = 2;
+
+let courseLayerGroup = null;
+
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (ch) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[ch],
+  );
+}
+
+function formatKm(km) {
+  return km.toFixed(2);
+}
+
+function formatMinutes(minutes) {
+  return Math.round(minutes);
+}
+
+function createOriginIcon() {
+  return L.divIcon({
+    className: "origin-pin",
+    html: '<span class="origin-pin-dot"></span>',
+    iconSize: [22, 22],
+    iconAnchor: [11, 11],
+  });
+}
+
+function createNumberedIcon(number) {
+  return L.divIcon({
+    className: "shop-pin",
+    html: `<span>${number}</span>`,
+    iconSize: [30, 30],
+    iconAnchor: [15, 15],
+  });
+}
+
+export function clearCourseLayers(map) {
+  if (courseLayerGroup) {
+    map.removeLayer(courseLayerGroup);
+    courseLayerGroup = null;
+  }
+}
+
+export function renderCourseOnMap(map, result, origin) {
+  clearCourseLayers(map);
+  const layerGroup = L.layerGroup().addTo(map);
+  courseLayerGroup = layerGroup;
+
+  const originMarker = L.marker([origin.lat, origin.lng], { icon: createOriginIcon() });
+  originMarker.bindPopup("出発地点");
+  originMarker.addTo(layerGroup);
+
+  if (result.status === "course") {
+    const latlngs = [[origin.lat, origin.lng]];
+    result.stops.forEach((stop, index) => {
+      const marker = L.marker([stop.shop.lat, stop.shop.lng], {
+        icon: createNumberedIcon(index + 1),
+      });
+      marker.bindPopup(escapeHtml(stop.shop.name));
+      marker.addTo(layerGroup);
+      latlngs.push([stop.shop.lat, stop.shop.lng]);
+    });
+
+    // 「実際の道ではなく回る順番を示す線」であることはUI文言(disclaimer)で伝える。
+    // 線自体は店同士のつながりがはっきり見えることを優先し、太さ・不透明度は変えない
+    L.polyline(latlngs, {
+      color: "#3d8f63",
+      weight: 3,
+      dashArray: "6 6",
+    }).addTo(layerGroup);
+    map.fitBounds(L.latLngBounds(latlngs), { padding: [40, 40] });
+  } else if (result.status === "single") {
+    const marker = L.marker([result.shop.lat, result.shop.lng], {
+      icon: createNumberedIcon(1),
+    });
+    marker.bindPopup(escapeHtml(result.shop.name));
+    marker.addTo(layerGroup);
+    map.fitBounds(
+      L.latLngBounds([
+        [origin.lat, origin.lng],
+        [result.shop.lat, result.shop.lng],
+      ]),
+      { padding: [40, 40] },
+    );
+  } else {
+    map.setView([origin.lat, origin.lng], 14);
+  }
+}
+
+function nearbyDuplicatesHtml(duplicates) {
+  if (!duplicates || duplicates.length === 0) return "";
+  const items = duplicates
+    .map(
+      (dup) =>
+        `<li><a href="${escapeHtml(dup.url)}" target="_blank" rel="noopener">${escapeHtml(dup.name)}</a></li>`,
+    )
+    .join("");
+  return `<div class="shop-card-duplicates"><p>同じ場所にこんな店も</p><ul>${items}</ul></div>`;
+}
+
+function shopCardHtml(shop, distanceKm, minutes, number, duplicates) {
+  return `
+    <li class="shop-card">
+      <div class="shop-card-number">${number}</div>
+      <div class="shop-card-body">
+        <h3>${escapeHtml(shop.name)}</h3>
+        <p class="shop-card-meta">${escapeHtml(shop.genre || "")}</p>
+        <p class="shop-card-meta">最寄り: ${escapeHtml(shop.access || "-")}</p>
+        <p class="shop-card-meta">${formatKm(distanceKm)}km・約${formatMinutes(minutes)}分(目安)</p>
+        <a class="shop-card-link" href="${escapeHtml(shop.url)}" target="_blank" rel="noopener">詳しくは→わんグル</a>
+        ${nearbyDuplicatesHtml(duplicates)}
+      </div>
+    </li>
+  `;
+}
+
+function radiusNoticeHtml(radiusUsedKm) {
+  if (radiusUsedKm <= DEFAULT_RADIUS_KM) return "";
+  return `<p class="radius-notice">近くに見つからなかったため、探す範囲を${radiusUsedKm}kmまで広げました</p>`;
+}
+
+const DISCLAIMER_HTML = `<p class="disclaimer">距離・時間は直線距離をもとにした目安です。実際の道のりはこれより長くなります。店同士は直線で結んでいるだけで、実際の道ではありません。</p>`;
+
+export function renderCourseCards(container, result) {
+  if (result.status === "none") {
+    container.innerHTML = `<p class="status-message">この周辺には、わんグル掲載の犬同伴OK店が見つかりませんでした。別の場所で試してみてください。</p>`;
+    return;
+  }
+
+  if (result.status === "single") {
+    container.innerHTML = `
+      <p class="status-message">コースは作れませんが、近くにこのお店があります</p>
+      ${radiusNoticeHtml(result.radiusUsedKm)}
+      <ul class="shop-card-list">
+        ${shopCardHtml(result.shop, result.distanceKm, result.minutes, 1, result.nearbyDuplicates)}
+      </ul>
+      ${DISCLAIMER_HTML}
+    `;
+    return;
+  }
+
+  const cards = result.stops
+    .map((stop, index) =>
+      shopCardHtml(
+        stop.shop,
+        stop.distanceFromPrevKm,
+        estimateWalkingMinutes(stop.distanceFromPrevKm),
+        index + 1,
+        stop.nearbyDuplicates,
+      ),
+    )
+    .join("");
+
+  container.innerHTML = `
+    ${radiusNoticeHtml(result.radiusUsedKm)}
+    <ul class="shop-card-list">${cards}</ul>
+    <p class="course-summary">コース合計: 約${formatKm(result.totalDistanceKm)}km・約${formatMinutes(result.totalMinutes)}分(目安)</p>
+    ${DISCLAIMER_HTML}
+  `;
+}
