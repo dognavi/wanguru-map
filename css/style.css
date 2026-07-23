@@ -1,5 +1,7 @@
 :root {
   --color-accent: #3d8f63;
+  --color-park: #c08552;
+  --color-caution: #a8571f;
   --color-bg: #fdf8f2;
   --radius-card: 16px;
   --radius-pill: 999px;
@@ -173,14 +175,22 @@ main.has-results .results {
   border-radius: var(--radius-card);
   padding: 0.75rem;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid transparent;
+}
+
+/* カードの見た目でも種類が分かるよう、地図ピンと同じ色を左端のアクセントに使う */
+.shop-card--shop {
+  border-left-color: var(--color-accent);
+}
+
+.shop-card--park {
+  border-left-color: var(--color-park);
 }
 
 .shop-card-number {
   flex: 0 0 auto;
   width: 1.75rem;
   height: 1.75rem;
-  border-radius: 50%;
-  background: var(--color-accent);
   color: #fff;
   display: flex;
   align-items: center;
@@ -189,15 +199,55 @@ main.has-results .results {
   font-size: 0.9rem;
 }
 
+/* 番号バッジも地図ピンと同じ形(店舗=丸/公園=角丸四角)・色にする */
+.shop-card-number--shop {
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.shop-card-number--park {
+  border-radius: 6px;
+  background: var(--color-park);
+}
+
 .shop-card-body h3 {
   margin: 0 0 0.25rem;
   font-size: 1rem;
+}
+
+.shop-card-badge {
+  display: inline-block;
+  margin: 0 0 0.35rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+/* 店舗(わんグルで同伴OKを確認済み)と公園(犬の可否は未確認)で、
+   情報の確からしさが違うことを一目で伝える。過小警告にならないよう、
+   未確認バッジは注意を引く色にする */
+.shop-card-badge--verified {
+  background: rgba(61, 143, 99, 0.15);
+  color: var(--color-accent);
+}
+
+.shop-card-badge--unverified {
+  background: rgba(168, 87, 31, 0.15);
+  color: var(--color-caution);
 }
 
 .shop-card-meta {
   margin: 0.1rem 0;
   font-size: 0.85rem;
   color: #555;
+}
+
+.park-card-notice {
+  margin: 0.4rem 0 0;
+  font-size: 0.8rem;
+  color: var(--color-caution);
+  font-weight: bold;
 }
 
 .shop-card-link {
@@ -220,7 +270,8 @@ main.has-results .results {
 
 /* Leafletの divIcon はデフォルトの枠線・背景が付くため明示的に解除する */
 .origin-pin,
-.shop-pin {
+.shop-pin,
+.park-pin {
   background: transparent;
   border: none;
 }
@@ -235,19 +286,30 @@ main.has-results .results {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
-.shop-pin span {
+/* 店舗=丸・公園=角丸四角で形を変える(色だけに頼らない区別)。
+   色も変える(店舗=緑/公園=テラコッタ)ことで、色を判別できる人にはより速く見分けられるようにする */
+.shop-pin span,
+.park-pin span {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 28px;
   height: 28px;
-  border-radius: 50%;
-  background: var(--color-accent);
   color: #fff;
   font-weight: bold;
   font-size: 0.9rem;
   border: 2px solid #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.shop-pin span {
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.park-pin span {
+  border-radius: 8px;
+  background: var(--color-park);
 }
 
 .app-footer {

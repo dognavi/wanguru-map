@@ -27,9 +27,12 @@ function createOriginIcon() {
   });
 }
 
-function createNumberedIcon(number) {
+function createNumberedIcon(number, type) {
+  // 色だけでなく形でも区別する(店舗=丸/公園=角丸四角)。色覚多様性への配慮のため、
+  // 色の違いだけに頼らない設計にしている
+  const className = type === "park" ? "park-pin" : "shop-pin";
   return L.divIcon({
-    className: "shop-pin",
+    className,
     html: `<span>${number}</span>`,
     iconSize: [30, 30],
     iconAnchor: [15, 15],
@@ -56,7 +59,7 @@ export function renderCourseOnMap(map, result, origin) {
     const latlngs = [[origin.lat, origin.lng]];
     result.stops.forEach((stop, index) => {
       const marker = L.marker([stop.shop.lat, stop.shop.lng], {
-        icon: createNumberedIcon(index + 1),
+        icon: createNumberedIcon(index + 1, stop.shop.type),
       });
       marker.bindPopup(escapeHtml(stop.shop.name));
       marker.addTo(layerGroup);
@@ -73,7 +76,7 @@ export function renderCourseOnMap(map, result, origin) {
     map.fitBounds(L.latLngBounds(latlngs), { padding: [40, 40] });
   } else if (result.status === "single") {
     const marker = L.marker([result.shop.lat, result.shop.lng], {
-      icon: createNumberedIcon(1),
+      icon: createNumberedIcon(1, result.shop.type),
     });
     marker.bindPopup(escapeHtml(result.shop.name));
     marker.addTo(layerGroup);
@@ -102,10 +105,11 @@ function nearbyDuplicatesHtml(duplicates) {
 
 function shopCardHtml(shop, distanceKm, minutes, number, duplicates) {
   return `
-    <li class="shop-card">
-      <div class="shop-card-number">${number}</div>
+    <li class="shop-card shop-card--shop">
+      <div class="shop-card-number shop-card-number--shop">${number}</div>
       <div class="shop-card-body">
         <h3>${escapeHtml(shop.name)}</h3>
+        <p class="shop-card-badge shop-card-badge--verified">わんグル確認済み</p>
         <p class="shop-card-meta">${escapeHtml(shop.genre || "")}</p>
         <p class="shop-card-meta">最寄り: ${escapeHtml(shop.access || "-")}</p>
         <p class="shop-card-meta">${formatKm(distanceKm)}km・約${formatMinutes(minutes)}分(目安)</p>
@@ -114,6 +118,33 @@ function shopCardHtml(shop, distanceKm, minutes, number, duplicates) {
       </div>
     </li>
   `;
+}
+
+function formatAreaHa(areaHa) {
+  return typeof areaHa === "number" ? `約${areaHa.toFixed(1)}ha` : "面積不明";
+}
+
+function parkCardHtml(park, distanceKm, minutes, number) {
+  const osmUrl = `https://www.openstreetmap.org/${park.id}`;
+  return `
+    <li class="shop-card shop-card--park">
+      <div class="shop-card-number shop-card-number--park">${number}</div>
+      <div class="shop-card-body">
+        <h3>${escapeHtml(park.name)}</h3>
+        <p class="shop-card-badge shop-card-badge--unverified">犬の同伴可否 未確認</p>
+        <p class="shop-card-meta">面積: ${formatAreaHa(park.areaHa)}</p>
+        <p class="shop-card-meta">${formatKm(distanceKm)}km・約${formatMinutes(minutes)}分(目安)</p>
+        <p class="park-card-notice">犬の同伴可否は各公園にご確認ください</p>
+        <a class="shop-card-link" href="${escapeHtml(osmUrl)}" target="_blank" rel="noopener">OpenStreetMapで見る</a>
+      </div>
+    </li>
+  `;
+}
+
+function locationCardHtml(location, distanceKm, minutes, number, duplicates) {
+  return location.type === "park"
+    ? parkCardHtml(location, distanceKm, minutes, number)
+    : shopCardHtml(location, distanceKm, minutes, number, duplicates);
 }
 
 function radiusNoticeHtml(radiusUsedKm) {
@@ -134,7 +165,7 @@ export function renderCourseCards(container, result) {
       <p class="status-message">コースは作れませんが、近くにこのお店があります</p>
       ${radiusNoticeHtml(result.radiusUsedKm)}
       <ul class="shop-card-list">
-        ${shopCardHtml(result.shop, result.distanceKm, result.minutes, 1, result.nearbyDuplicates)}
+        ${locationCardHtml(result.shop, result.distanceKm, result.minutes, 1, result.nearbyDuplicates)}
       </ul>
       ${DISCLAIMER_HTML}
     `;
@@ -143,7 +174,7 @@ export function renderCourseCards(container, result) {
 
   const cards = result.stops
     .map((stop, index) =>
-      shopCardHtml(
+      locationCardHtml(
         stop.shop,
         stop.distanceFromPrevKm,
         estimateWalkingMinutes(stop.distanceFromPrevKm),

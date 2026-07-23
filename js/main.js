@@ -5,21 +5,48 @@ import { renderCourseOnMap, renderCourseCards } from "./render.js";
 
 let map;
 let currentOrigin = null;
-let shops = [];
+let locations = [];
 
 async function loadJson(path) {
   const response = await fetch(path);
+  if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
   return response.json();
 }
 
-async function loadShopsAndAreas() {
-  const [shopsData, areasData] = await Promise.all([
+async function loadLocationsAndAreas() {
+  const [shopsResult, areasResult, parksResult] = await Promise.allSettled([
     loadJson("data/shops.json"),
     loadJson("data/areas.json"),
+    loadJson("data/parks.json"),
   ]);
-  console.log(`shops: ${shopsData.shops.length}件`);
-  console.log(`areas: ${areasData.areas.length}件`);
-  return { shops: shopsData.shops, areas: areasData.areas };
+
+  // 店舗データはアプリの根幹機能なので、失敗したら致命的エラーとして呼び出し元に伝える
+  if (shopsResult.status === "rejected") {
+    console.error("shops.jsonの読み込みに失敗しました", shopsResult.reason);
+    return { locations: [], areas: [], shopsFailed: true };
+  }
+  const shops = shopsResult.value.shops.map((s) => ({ ...s, type: "shop" }));
+  console.log(`shops: ${shops.length}件`);
+
+  // areas.jsonはv1では未使用のため、失敗しても機能に影響しない
+  let areas = [];
+  if (areasResult.status === "fulfilled") {
+    areas = areasResult.value.areas;
+    console.log(`areas: ${areas.length}件`);
+  } else {
+    console.warn("areas.jsonの読み込みに失敗しました(v1では未使用のため影響なし)", areasResult.reason);
+  }
+
+  // 公園データは「あれば嬉しい追加機能」の緩い保証なので、失敗しても店舗だけで続行する
+  let parks = [];
+  if (parksResult.status === "fulfilled") {
+    parks = parksResult.value.map((p) => ({ ...p, type: "park" }));
+    console.log(`parks: ${parks.length}件`);
+  } else {
+    console.warn("parks.jsonの読み込みに失敗しました。店舗のみでコースを生成します", parksResult.reason);
+  }
+
+  return { locations: [...shops, ...parks], areas, shopsFailed: false };
 }
 
 function initMap() {
@@ -44,7 +71,7 @@ function setOrigin(lat, lng, label) {
   currentOrigin = { lat, lng };
   setStatus(`出発地点: ${label}(${lat.toFixed(5)}, ${lng.toFixed(5)})`);
 
-  const result = generateWalkCourse(currentOrigin, shops);
+  const result = generateWalkCourse(currentOrigin, locations);
   document.querySelector("main").classList.add("has-results");
   renderCourseOnMap(map, result, currentOrigin);
   renderCourseCards(document.getElementById("results"), result);
@@ -127,8 +154,12 @@ async function main() {
   initResizeHandling();
   setSearchUIEnabled(false);
   setStatus("データを読み込み中...");
-  const loaded = await loadShopsAndAreas();
-  shops = loaded.shops;
+  const loaded = await loadLocationsAndAreas();
+  if (loaded.shopsFailed) {
+    setStatus("店舗データの読み込みに失敗しました。ページを再読み込みしてください");
+    return;
+  }
+  locations = loaded.locations;
   setSearchUIEnabled(true);
   setStatus("");
 }

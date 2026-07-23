@@ -5,7 +5,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
   haversineDistanceKm,
-  sanitizeShops,
+  sanitizeLocations,
   dedupeByExactCoordinate,
   findShopsWithAutoExpandingRadius,
   buildNearestNeighborCourse,
@@ -18,6 +18,11 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 function loadRealShops() {
   const raw = readFileSync(path.join(__dirname, "..", "data", "shops.json"), "utf-8");
   return JSON.parse(raw).shops;
+}
+
+function loadRealParks() {
+  const raw = readFileSync(path.join(__dirname, "..", "data", "parks.json"), "utf-8");
+  return JSON.parse(raw);
 }
 
 describe("haversineDistanceKm", () => {
@@ -55,7 +60,7 @@ describe("haversineDistanceKm", () => {
   });
 });
 
-describe("sanitizeShops", () => {
+describe("sanitizeLocations", () => {
   test("NaN・範囲外座標の店を除外し、正常な店だけ残す", () => {
     const shops = [
       { id: 1, lat: 35.0, lng: 139.0 },
@@ -64,14 +69,20 @@ describe("sanitizeShops", () => {
       { id: 4, lat: 91, lng: 139.0 },
       { id: 5, lat: -35.0, lng: -139.0 },
     ];
-    const result = sanitizeShops(shops);
+    const result = sanitizeLocations(shops);
     assert.deepEqual(result.map((s) => s.id), [1, 5]);
   });
 
   test("実データ(data/shops.json)は全件が有効な座標を持つ(欠損0件を確認済み)", () => {
     const shops = loadRealShops();
-    const result = sanitizeShops(shops);
+    const result = sanitizeLocations(shops);
     assert.equal(result.length, shops.length);
+  });
+
+  test("実データ(data/parks.json)は全件が有効な座標を持つ(欠損0件を確認済み)", () => {
+    const parks = loadRealParks();
+    const result = sanitizeLocations(parks);
+    assert.equal(result.length, parks.length);
   });
 });
 
@@ -93,6 +104,33 @@ describe("dedupeByExactCoordinate", () => {
     assert.equal(shops.length, 2085);
     const { representatives } = dedupeByExactCoordinate(shops);
     assert.equal(representatives.length, 2048);
+  });
+
+  test("実データ(parks.json)で重複除外後の件数が5607件→5576件になる(31組=62件の重複を確認済み)", () => {
+    const parks = loadRealParks();
+    assert.equal(parks.length, 5607);
+    const { representatives } = dedupeByExactCoordinate(parks);
+    assert.equal(representatives.length, 5576);
+  });
+
+  test("店舗(数値id)と公園(文字列id)が混在していても、タイブレークが決定的に働く", () => {
+    const mixed = [
+      { id: "way/999", lat: 35.0, lng: 139.0 },
+      { id: 5, lat: 35.0, lng: 139.0 },
+    ];
+    const { representatives, duplicatesByRepId } = dedupeByExactCoordinate(mixed);
+    // compareIds は数値・文字列混在時に文字列として比較する("5" < "way/999")
+    assert.deepEqual(representatives.map((r) => r.id), [5]);
+    assert.deepEqual(duplicatesByRepId.get(5).map((r) => r.id), ["way/999"]);
+  });
+
+  test("店舗2085件+公園5607件を統合しても、それぞれの重複除外が正しく効く(店舗と公園で座標が重なる例は実データに無いことを確認済み)", () => {
+    const shops = loadRealShops();
+    const parks = loadRealParks();
+    const { representatives } = dedupeByExactCoordinate([...shops, ...parks]);
+    // 2048(店舗) + 5576(公園) = 7624。店舗と公園をまたぐ重複が実データに存在しないため、
+    // 単純な合算と一致するはず
+    assert.equal(representatives.length, 2048 + 5576);
   });
 });
 
@@ -130,6 +168,19 @@ describe("findShopsWithAutoExpandingRadius", () => {
     assert.equal(found.length, 1);
   });
 
+  test("店舗(数値id)と公園(文字列id)が同距離でも、タイブレークがエラーにならず決定的に働く", () => {
+    const origin = { lat: 0, lng: 0 };
+    const mixed = [
+      { id: "way/1", lat: 0.01, lng: 0 },
+      { id: 5, lat: 0.01, lng: 0 }, // 同一距離
+    ];
+    const { shops: found } = findShopsWithAutoExpandingRadius(origin, mixed);
+    assert.deepEqual(
+      found.map((entry) => entry.shop.id),
+      [5, "way/1"],
+    );
+  });
+
   test("10km圏内にも1件も無ければ0件で返す", () => {
     const origin = { lat: 35.0, lng: 139.0 };
     const shops = [{ id: 1, lat: 36.0, lng: 140.0 }]; // 遠く離れた店
@@ -155,6 +206,14 @@ describe("buildNearestNeighborCourse", () => {
     const shopB = { id: 3, lat: 0.01, lng: 0 }; // shopAと同一距離、idはこちらが小さい
     const stops = buildNearestNeighborCourse(origin, [shopA, shopB]);
     assert.equal(stops[0].shop.id, 3);
+  });
+
+  test("店舗(数値id)と公園(文字列id)が同距離でタイになっても、エラーにならず決定的に選ばれる", () => {
+    const origin = { lat: 0, lng: 0 };
+    const park = { id: "way/1", lat: 0.01, lng: 0 };
+    const shop = { id: 5, lat: 0.01, lng: 0 }; // 同一距離
+    const stops = buildNearestNeighborCourse(origin, [park, shop]);
+    assert.equal(stops[0].shop.id, 5);
   });
 
   test("候補が5件以上あっても最大4件で打ち切られる", () => {
@@ -195,6 +254,92 @@ describe("buildNearestNeighborCourse", () => {
     const origin = { lat: 0, lng: 0 };
     assert.deepEqual(buildNearestNeighborCourse(origin, []), []);
   });
+
+  describe("requiredTypes(最後の1枠だけ型を強制)", () => {
+    test("店舗4件だけだと全部店舗で埋まる候補でも、公園が候補にあれば最後の1枠が公園に強制される", () => {
+      const origin = { lat: 0, lng: 0 };
+      const shops = [1, 2, 3, 4].map((n) => ({
+        id: n,
+        type: "shop",
+        lat: 0.001 * n,
+        lng: 0,
+      }));
+      const park = { id: "way/1", type: "park", lat: 0.005, lng: 0 }; // 4店より少し遠いが十分近い
+      const stops = buildNearestNeighborCourse(origin, [...shops, park], {
+        requiredTypes: ["shop", "park"],
+      });
+      assert.equal(stops.length, 4);
+      assert.deepEqual(
+        stops.map((s) => s.shop.id),
+        [1, 2, 3, "way/1"],
+      );
+      assert.deepEqual(
+        stops.map((s) => s.shop.type),
+        ["shop", "shop", "shop", "park"],
+      );
+    });
+
+    test("公園が候補に無ければ、無理に入れず通常どおり店舗だけで埋まる(緩い保証)", () => {
+      const origin = { lat: 0, lng: 0 };
+      const shops = [1, 2, 3, 4].map((n) => ({
+        id: n,
+        type: "shop",
+        lat: 0.001 * n,
+        lng: 0,
+      }));
+      const stops = buildNearestNeighborCourse(origin, shops, {
+        requiredTypes: ["shop", "park"],
+      });
+      assert.equal(stops.length, 4);
+      assert.deepEqual(
+        stops.map((s) => s.shop.id),
+        [1, 2, 3, 4],
+      );
+    });
+
+    test("最後の1枠を型強制した際、候補までのホップ距離が閾値を超えていれば無理に入れず、コースが短くなる", () => {
+      const origin = { lat: 0, lng: 0 };
+      const shops = [1, 2, 3].map((n) => ({
+        id: n,
+        type: "shop",
+        lat: 0.001 * n,
+        lng: 0,
+      }));
+      // shop3(約0.33km)から公園までは約10.8km離れており、既定のホップ閾値(5km)を超える
+      const farPark = { id: "way/1", type: "park", lat: 0.1, lng: 0 };
+      const stops = buildNearestNeighborCourse(origin, [...shops, farPark], {
+        requiredTypes: ["shop", "park"],
+      });
+      assert.equal(stops.length, 3);
+      assert.deepEqual(
+        stops.map((s) => s.shop.id),
+        [1, 2, 3],
+      );
+    });
+
+    test("同じ入力なら何度実行しても同じコースになる(決定性)", () => {
+      const origin = { lat: 0, lng: 0 };
+      const shops = [1, 2, 3, 4].map((n) => ({
+        id: n,
+        type: "shop",
+        lat: 0.001 * n,
+        lng: 0,
+      }));
+      const park = { id: "way/1", type: "park", lat: 0.005, lng: 0 };
+      const options = { requiredTypes: ["shop", "park"] };
+      const run1 = buildNearestNeighborCourse(origin, [...shops, park], options);
+      const run2 = buildNearestNeighborCourse(origin, [...shops, park], options);
+      const run3 = buildNearestNeighborCourse(origin, [park, ...shops].reverse(), options);
+      assert.deepEqual(
+        run1.map((s) => s.shop.id),
+        run2.map((s) => s.shop.id),
+      );
+      assert.deepEqual(
+        run1.map((s) => s.shop.id),
+        run3.map((s) => s.shop.id),
+      );
+    });
+  });
 });
 
 describe("estimateWalkingMinutes", () => {
@@ -233,6 +378,36 @@ describe("generateWalkCourse", () => {
     const result = generateWalkCourse(origin, shops);
     assert.equal(result.status, "course");
     assert.ok(result.stops.length >= 2 && result.stops.length <= 4);
+  });
+
+  test("店舗のみでも公園のみでも候補があれば、generateWalkCourseは既定でrequiredTypes=['shop','park']を適用する", () => {
+    const origin = { lat: 0, lng: 0 };
+    const shops = [1, 2, 3, 4].map((n) => ({
+      id: n,
+      type: "shop",
+      lat: 0.001 * n,
+      lng: 0,
+    }));
+    const park = { id: "way/1", type: "park", lat: 0.005, lng: 0 };
+    const result = generateWalkCourse(origin, [...shops, park]);
+    assert.equal(result.status, "course");
+    assert.deepEqual(
+      result.stops.map((s) => s.shop.type),
+      ["shop", "shop", "shop", "park"],
+    );
+  });
+
+  test("公園データが無ければ、店舗だけで通常どおりコースが組まれる(緩い保証)", () => {
+    const origin = { lat: 0, lng: 0 };
+    const shops = [1, 2, 3].map((n) => ({
+      id: n,
+      type: "shop",
+      lat: 0.001 * n,
+      lng: 0,
+    }));
+    const result = generateWalkCourse(origin, shops);
+    assert.equal(result.status, "course");
+    assert.equal(result.stops.length, 3);
   });
 
   test("ホップ距離が離れすぎている場合はcourseではなくsingleに切り詰められる(既定値5km)", () => {
