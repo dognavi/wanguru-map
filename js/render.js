@@ -103,6 +103,11 @@ function nearbyDuplicatesHtml(duplicates) {
   return `<div class="shop-card-duplicates"><p>同じ場所にこんな店も</p><ul>${items}</ul></div>`;
 }
 
+function googleMapsSearchUrl(name, address) {
+  const query = `${name} ${address ?? ""}`.trim();
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+}
+
 function shopCardHtml(shop, distanceKm, minutes, number, duplicates) {
   return `
     <li class="shop-card shop-card--shop">
@@ -113,7 +118,10 @@ function shopCardHtml(shop, distanceKm, minutes, number, duplicates) {
         <p class="shop-card-meta">${escapeHtml(shop.genre || "")}</p>
         <p class="shop-card-meta">最寄り: ${escapeHtml(shop.access || "-")}</p>
         <p class="shop-card-meta">${formatKm(distanceKm)}km・約${formatMinutes(minutes)}分(目安)</p>
-        <a class="shop-card-link" href="${escapeHtml(shop.url)}" target="_blank" rel="noopener">詳しくは→わんグル</a>
+        <div class="shop-card-links">
+          <a class="shop-card-link" href="${escapeHtml(shop.url)}" target="_blank" rel="noopener">詳しくは→わんグル</a>
+          <a class="shop-card-link shop-card-link--secondary" href="${escapeHtml(googleMapsSearchUrl(shop.name, shop.address))}" target="_blank" rel="noopener">Googleマップで開く</a>
+        </div>
         ${nearbyDuplicatesHtml(duplicates)}
       </div>
     </li>
@@ -152,7 +160,7 @@ function radiusNoticeHtml(radiusUsedKm) {
   return `<p class="radius-notice">近くに見つからなかったため、探す範囲を${radiusUsedKm}kmまで広げました</p>`;
 }
 
-const DISCLAIMER_HTML = `<p class="disclaimer">距離・時間は直線距離をもとにした目安です。実際の道のりはこれより長くなります。店同士は直線で結んでいるだけで、実際の道ではありません。</p>`;
+const DISCLAIMER_HTML = `<p class="disclaimer">距離・時間は直線距離をもとにした目安です。実際の道のりはこれより長くなります。店同士は直線で結んでいるだけで、実際の道ではありません。店舗の位置は目安です。正確な場所は各店舗のページやGoogleマップでご確認ください。</p>`;
 
 export function renderCourseCards(container, result) {
   if (result.status === "none") {

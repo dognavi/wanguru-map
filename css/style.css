@@ -66,6 +66,7 @@ main {
   background: var(--color-accent);
   color: #fff;
   padding: 0.5rem 1rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -78,6 +79,9 @@ main {
   border: 1px solid #ccc;
   border-radius: var(--radius-pill);
   padding: 0.5rem 1rem;
+  /* iOS Safariはfont-sizeが16px未満の入力欄にフォーカスすると自動ズームするため、
+     16px(1rem)以上を明示する */
+  font-size: 1rem;
 }
 
 #origin-status {
@@ -250,11 +254,24 @@ main.has-results .results {
   font-weight: bold;
 }
 
+.shop-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-top: 0.4rem;
+}
+
 .shop-card-link {
   display: inline-block;
-  margin-top: 0.4rem;
   color: var(--color-accent);
   font-size: 0.85rem;
+}
+
+/* わんグルへの導線が主、Googleマップは位置確認用の補助リンクなので控えめにする */
+.shop-card-link--secondary {
+  color: #777;
+  font-size: 0.8rem;
 }
 
 .shop-card-duplicates {
