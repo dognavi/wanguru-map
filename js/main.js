@@ -1,11 +1,12 @@
 import { getCurrentPosition, describeGeolocationError } from "./geolocation.js";
 import { searchPlace, NominatimTimeoutError } from "./nominatim.js";
-import { generateWalkCourse } from "./route.js";
-import { renderCourseOnMap, renderCourseCards } from "./render.js";
+import { findNearbyShops } from "./route.js";
+import { renderShopsOnMap, renderShopCards } from "./render.js";
 
 let map;
 let currentOrigin = null;
-let locations = [];
+let shops = [];
+let currentMarkersByShopId = new Map();
 
 async function loadJson(path) {
   const response = await fetch(path);
@@ -13,19 +14,18 @@ async function loadJson(path) {
   return response.json();
 }
 
-async function loadLocationsAndAreas() {
-  const [shopsResult, areasResult, parksResult] = await Promise.allSettled([
+async function loadShopsAndAreas() {
+  const [shopsResult, areasResult] = await Promise.allSettled([
     loadJson("data/shops.json"),
     loadJson("data/areas.json"),
-    loadJson("data/parks.json"),
   ]);
 
   // 店舗データはアプリの根幹機能なので、失敗したら致命的エラーとして呼び出し元に伝える
   if (shopsResult.status === "rejected") {
     console.error("shops.jsonの読み込みに失敗しました", shopsResult.reason);
-    return { locations: [], areas: [], shopsFailed: true };
+    return { shops: [], areas: [], shopsFailed: true };
   }
-  const shops = shopsResult.value.shops.map((s) => ({ ...s, type: "shop" }));
+  const shops = shopsResult.value.shops;
   console.log(`shops: ${shops.length}件`);
 
   // areas.jsonはv1では未使用のため、失敗しても機能に影響しない
@@ -37,16 +37,7 @@ async function loadLocationsAndAreas() {
     console.warn("areas.jsonの読み込みに失敗しました(v1では未使用のため影響なし)", areasResult.reason);
   }
 
-  // 公園データは「あれば嬉しい追加機能」の緩い保証なので、失敗しても店舗だけで続行する
-  let parks = [];
-  if (parksResult.status === "fulfilled") {
-    parks = parksResult.value.map((p) => ({ ...p, type: "park" }));
-    console.log(`parks: ${parks.length}件`);
-  } else {
-    console.warn("parks.jsonの読み込みに失敗しました。店舗のみでコースを生成します", parksResult.reason);
-  }
-
-  return { locations: [...shops, ...parks], areas, shopsFailed: false };
+  return { shops, areas, shopsFailed: false };
 }
 
 function initMap() {
@@ -67,18 +58,41 @@ function setSearchUIEnabled(enabled) {
   document.getElementById("place-input").disabled = !enabled;
 }
 
+function highlightCard(shopId) {
+  document.querySelectorAll(".shop-card").forEach((card) => {
+    card.classList.toggle("shop-card--active", Number(card.dataset.shopId) === shopId);
+  });
+  const target = document.querySelector(`.shop-card[data-shop-id="${shopId}"]`);
+  if (target) target.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+// 一覧とピンの紐付けはshop.idで行う。カード・ピンとも検索のたびに作り直されるため、
+// 一覧側のクリック監視だけは常設(#results)にし、対象のマーカーは
+// currentMarkersByShopIdを都度差し替えて参照する。
+function initResultsInteraction() {
+  document.getElementById("results").addEventListener("click", (event) => {
+    const card = event.target.closest(".shop-card");
+    if (!card) return;
+    const shopId = Number(card.dataset.shopId);
+    const marker = currentMarkersByShopId.get(shopId);
+    if (!marker) return;
+    map.panTo(marker.getLatLng());
+    marker.openPopup();
+    highlightCard(shopId);
+  });
+}
+
 function setOrigin(lat, lng, label) {
   currentOrigin = { lat, lng };
   setStatus(`出発地点: ${label}(${lat.toFixed(5)}, ${lng.toFixed(5)})`);
 
-  const result = generateWalkCourse(currentOrigin, locations);
+  const result = findNearbyShops(currentOrigin, shops);
+  currentMarkersByShopId = renderShopsOnMap(map, result, currentOrigin);
+  currentMarkersByShopId.forEach((marker, shopId) => {
+    marker.on("click", () => highlightCard(shopId));
+  });
+  renderShopCards(document.getElementById("results"), result);
   document.querySelector("main").classList.add("has-results");
-  renderCourseOnMap(map, result, currentOrigin);
-  renderCourseCards(document.getElementById("results"), result);
-
-  // has-resultsクラスの付与でmap要素のサイズがCSS上変わるため、
-  // Leafletに再計測させないとタイル表示がずれる
-  requestAnimationFrame(() => map.invalidateSize());
 }
 
 async function handleGeolocate() {
@@ -152,14 +166,15 @@ async function main() {
   map = initMap();
   initSearchUI();
   initResizeHandling();
+  initResultsInteraction();
   setSearchUIEnabled(false);
   setStatus("データを読み込み中...");
-  const loaded = await loadLocationsAndAreas();
+  const loaded = await loadShopsAndAreas();
   if (loaded.shopsFailed) {
     setStatus("店舗データの読み込みに失敗しました。ページを再読み込みしてください");
     return;
   }
-  locations = loaded.locations;
+  shops = loaded.shops;
   setSearchUIEnabled(true);
   setStatus("");
 }

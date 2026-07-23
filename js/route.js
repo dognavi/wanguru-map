@@ -1,24 +1,11 @@
 const EARTH_RADIUS_KM = 6371;
-const DEFAULT_RADII_KM = [2, 5, 10];
-const DEFAULT_MIN_COUNT = 2;
-const DEFAULT_MAX_STOPS = 4;
-const DEFAULT_MAX_HOP_DISTANCE_KM = 5;
+const DEFAULT_RADII_KM = [2, 5, 10, 20, 50, 100];
+const DEFAULT_MIN_COUNT = 1;
+const DEFAULT_MAX_RESULTS = 20;
 const WALKING_SPEED_M_PER_MIN = 80;
-const DEFAULT_REQUIRED_TYPES = ["shop", "park"];
 
 function toRadians(degrees) {
   return (degrees * Math.PI) / 180;
-}
-
-// 店舗id(数値)・公園id(例: "way/18622557"の文字列)が混在するため、
-// 両方とも数値のときだけ数値比較し、それ以外は文字列として比較する
-function compareIds(a, b) {
-  if (typeof a === "number" && typeof b === "number") return a - b;
-  const sa = String(a);
-  const sb = String(b);
-  if (sa < sb) return -1;
-  if (sa > sb) return 1;
-  return 0;
 }
 
 export function haversineDistanceKm(a, b) {
@@ -63,7 +50,7 @@ export function dedupeByExactCoordinate(shops) {
 
   for (const group of groups.values()) {
     // 代表は id 最小に固定し、結果を決定的にする
-    const sorted = [...group].sort((x, y) => compareIds(x.id, y.id));
+    const sorted = [...group].sort((x, y) => x.id - y.id);
     const [representative, ...duplicates] = sorted;
     representatives.push(representative);
     if (duplicates.length > 0) {
@@ -71,7 +58,7 @@ export function dedupeByExactCoordinate(shops) {
     }
   }
 
-  representatives.sort((a, b) => compareIds(a.id, b.id));
+  representatives.sort((a, b) => a.id - b.id);
 
   return { representatives, duplicatesByRepId };
 }
@@ -83,7 +70,7 @@ export function findShopsWithAutoExpandingRadius(
 ) {
   const withDistance = shops
     .map((shop) => ({ shop, distanceKm: haversineDistanceKm(origin, shop) }))
-    .sort((a, b) => a.distanceKm - b.distanceKm || compareIds(a.shop.id, b.shop.id));
+    .sort((a, b) => a.distanceKm - b.distanceKm || a.shop.id - b.shop.id);
 
   for (const radiusKm of radiiKm) {
     const within = withDistance.filter((entry) => entry.distanceKm <= radiusKm);
@@ -99,70 +86,13 @@ export function findShopsWithAutoExpandingRadius(
   };
 }
 
-export function buildNearestNeighborCourse(
-  origin,
-  candidateShops,
-  {
-    maxStops = DEFAULT_MAX_STOPS,
-    maxHopDistanceKm = DEFAULT_MAX_HOP_DISTANCE_KM,
-    requiredTypes = [],
-  } = {},
-) {
-  const remaining = [...candidateShops];
-  const stops = [];
-  let currentPoint = origin;
-  let cumulativeDistanceKm = 0;
-  const satisfiedTypes = new Set();
-
-  while (stops.length < maxStops && remaining.length > 0) {
-    // 最後の1枠になった時点で、まだ揃っていない種類が候補に残っていれば、
-    // その枠だけ候補をその種類に絞る(緩い保証: 候補に無ければ無理はしない)
-    const isFinalSlot = stops.length === maxStops - 1;
-    const missingTypes = isFinalSlot
-      ? requiredTypes.filter(
-          (type) => !satisfiedTypes.has(type) && remaining.some((item) => item.type === type),
-        )
-      : [];
-    const pool =
-      missingTypes.length > 0 ? remaining.filter((item) => item.type === missingTypes[0]) : remaining;
-
-    let nearestItem = null;
-    let nearestDistanceKm = Infinity;
-
-    for (const item of pool) {
-      const distanceKm = haversineDistanceKm(currentPoint, item);
-      const isCloser = distanceKm < nearestDistanceKm;
-      const isTieButLowerId =
-        distanceKm === nearestDistanceKm && nearestItem !== null && compareIds(item.id, nearestItem.id) < 0;
-
-      if (isCloser || isTieButLowerId) {
-        nearestDistanceKm = distanceKm;
-        nearestItem = item;
-      }
-    }
-
-    if (nearestItem === null || nearestDistanceKm > maxHopDistanceKm) break;
-
-    cumulativeDistanceKm += nearestDistanceKm;
-    stops.push({
-      shop: nearestItem,
-      distanceFromPrevKm: nearestDistanceKm,
-      cumulativeDistanceKm,
-    });
-
-    remaining.splice(remaining.indexOf(nearestItem), 1);
-    if (nearestItem.type) satisfiedTypes.add(nearestItem.type);
-    currentPoint = { lat: nearestItem.lat, lng: nearestItem.lng };
-  }
-
-  return stops;
-}
-
 export function estimateWalkingMinutes(distanceKm) {
   return (distanceKm * 1000) / WALKING_SPEED_M_PER_MIN;
 }
 
-export function generateWalkCourse(origin, allShops, options = {}) {
+// 「近くの店」一覧を返す。数珠つなぎのコースは組まず、近い順に最大 maxResults 件を返すだけ。
+// 半径内に1件でも見つかればそこで打ち切る(緩い保証: 無理に数を確保しにいかない)。
+export function findNearbyShops(origin, allShops, options = {}) {
   const sanitized = sanitizeLocations(allShops);
   const { representatives, duplicatesByRepId } = dedupeByExactCoordinate(sanitized);
 
@@ -171,36 +101,14 @@ export function generateWalkCourse(origin, allShops, options = {}) {
     representatives,
     options.radius,
   );
-  const candidateShops = withinRadius.map((entry) => entry.shop);
 
-  const courseOptions = { requiredTypes: DEFAULT_REQUIRED_TYPES, ...options.course };
-  const stops = buildNearestNeighborCourse(origin, candidateShops, courseOptions).map((stop) => ({
-    ...stop,
-    nearbyDuplicates: duplicatesByRepId.get(stop.shop.id) || [],
+  const maxResults = options.maxResults ?? DEFAULT_MAX_RESULTS;
+  const shops = withinRadius.slice(0, maxResults).map((entry) => ({
+    shop: entry.shop,
+    distanceKm: entry.distanceKm,
+    minutes: estimateWalkingMinutes(entry.distanceKm),
+    nearbyDuplicates: duplicatesByRepId.get(entry.shop.id) || [],
   }));
 
-  if (stops.length >= 2) {
-    const last = stops[stops.length - 1];
-    return {
-      status: "course",
-      stops,
-      totalDistanceKm: last.cumulativeDistanceKm,
-      totalMinutes: estimateWalkingMinutes(last.cumulativeDistanceKm),
-      radiusUsedKm,
-    };
-  }
-
-  if (stops.length === 1) {
-    const [stop] = stops;
-    return {
-      status: "single",
-      shop: stop.shop,
-      distanceKm: stop.distanceFromPrevKm,
-      minutes: estimateWalkingMinutes(stop.distanceFromPrevKm),
-      nearbyDuplicates: stop.nearbyDuplicates,
-      radiusUsedKm,
-    };
-  }
-
-  return { status: "none", radiusUsedKm };
+  return { shops, radiusUsedKm, totalFound: withinRadius.length };
 }
