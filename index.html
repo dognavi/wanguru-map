@@ -4,16 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>わんグルマップ</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+
+    <meta property="og:title" content="わんグルマップ" />
+    <meta
+      property="og:description"
+      content="現在地や地名の周辺で、犬と一緒に入れるお店を近い順に地図で探せます。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dognavi.github.io/wanguru-map/" />
+    <meta property="og:image" content="https://dognavi.github.io/wanguru-map/img/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="app-header">
-      <h1>わんグルマップ</h1>
+      <div class="brand">
+        <img
+          src="img/mascot-dog.png"
+          alt=""
+          class="brand-mascot"
+          onerror="this.style.display='none'"
+        />
+        <h1>わんグル<span class="brand-title-accent">マップ</span></h1>
+      </div>
     </header>
 
     <section class="search-panel">
-      <button id="geolocate-btn" type="button">現在地から探す</button>
+      <button id="geolocate-btn" type="button">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 21s-7-5.686-7-11a7 7 0 0 1 14 0c0 5.314-7 11-7 11z" />
+          <circle cx="12" cy="10" r="2.5" />
+        </svg>
+        現在地から探す
+      </button>
       <div class="place-search">
         <input
           id="place-input"
@@ -21,13 +48,42 @@
           placeholder="地名・駅名で検索(番地の住所は非対応)"
           autocomplete="off"
         />
-        <button id="search-btn" type="button">検索</button>
+        <button id="search-btn" type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          検索
+        </button>
       </div>
       <p id="origin-status" aria-live="polite"></p>
     </section>
 
     <main>
-      <div id="map"></div>
+      <div class="map-area">
+        <div id="map"></div>
+        <div id="welcome-overlay" class="welcome-overlay">
+          <div class="welcome-card welcome-card--loading">
+            <img
+              src="img/mascot-dog.png"
+              alt=""
+              class="loading-illustration"
+              onerror="this.style.display='none'"
+            />
+            <p class="welcome-title">近くのお店を探す準備をしています</p>
+          </div>
+          <div class="welcome-card welcome-card--ready">
+            <img
+              src="img/welcome-illustration.png"
+              alt=""
+              class="welcome-illustration"
+              onerror="this.style.display='none'"
+            />
+            <p class="welcome-title">近くのワンちゃんOKのお店を探そう</p>
+            <p class="welcome-subtitle">現在地または地名でカンタン検索</p>
+          </div>
+        </div>
+      </div>
       <section id="results" class="results"></section>
     </main>
 

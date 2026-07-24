@@ -169,11 +169,23 @@ async function main() {
   initResultsInteraction();
   setSearchUIEnabled(false);
   setStatus("データを読み込み中...");
+
+  const welcomeOverlay = document.getElementById("welcome-overlay");
+  // 読み込みが一瞬で終わるときは何も見せず、300msを超えて時間がかかる場合だけ
+  // 「読み込み中」カードを出す(速いときにチラつくのを防ぐ)
+  const loadingCardTimer = setTimeout(() => {
+    welcomeOverlay.dataset.state = "loading";
+  }, 300);
+
   const loaded = await loadShopsAndAreas();
+  clearTimeout(loadingCardTimer);
+
   if (loaded.shopsFailed) {
+    welcomeOverlay.style.display = "none";
     setStatus("店舗データの読み込みに失敗しました。ページを再読み込みしてください");
     return;
   }
+  welcomeOverlay.dataset.state = "ready";
   shops = loaded.shops;
   setSearchUIEnabled(true);
   setStatus("");

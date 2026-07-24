@@ -25,10 +25,21 @@ export function shouldShowWalkingTime(distanceKm) {
   return distanceKm <= WALKING_TIME_DISPLAY_MAX_KM;
 }
 
+// genreは中黒(・)区切りの文字列(例:「居酒屋・ダイニングバー・イタリアン」)。
+// 実データ(2085件)に先頭/末尾中黒・連続中黒・スペース混在の表記ゆれは無かったが、
+// 将来のデータ更新に備えてtrim・空要素除去は防御的に行う。
+export function splitGenreTags(genre) {
+  if (!genre) return [];
+  return genre
+    .split("・")
+    .map((tag) => tag.trim())
+    .filter((tag) => tag.length > 0);
+}
+
 function createOriginIcon() {
   return L.divIcon({
     className: "origin-pin",
-    html: '<span class="origin-pin-dot"></span>',
+    html: '<span class="origin-pin-pulse"></span><span class="origin-pin-dot"></span>',
     iconSize: [22, 22],
     iconAnchor: [11, 11],
   });
@@ -108,23 +119,35 @@ function googleMapsSearchUrl(name, address) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
 }
 
-function walkingTimeHtml(distanceKm, minutes) {
-  return shouldShowWalkingTime(distanceKm)
-    ? `${formatKm(distanceKm)}km・約${formatMinutes(minutes)}分(目安)`
-    : `${formatKm(distanceKm)}km・徒歩圏外`;
+function walkingTimeText(distanceKm, minutes) {
+  return shouldShowWalkingTime(distanceKm) ? `約${formatMinutes(minutes)}分(目安)` : "徒歩圏外";
 }
+
+function genreTagsHtml(genre) {
+  const tags = splitGenreTags(genre);
+  if (tags.length === 0) return "";
+  const items = tags.map((tag) => `<span class="shop-card-tag">${escapeHtml(tag)}</span>`).join("");
+  return `<div class="shop-card-tags">${items}</div>`;
+}
+
+const ACCESS_ICON_SVG = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.686-7-11a7 7 0 0 1 14 0c0 5.314-7 11-7 11z" /><circle cx="12" cy="10" r="2.5" /></svg>`;
 
 function shopCardHtml(shop, distanceKm, minutes, number, duplicates) {
   return `
     <li class="shop-card" data-shop-id="${shop.id}">
       <div class="shop-card-number">${number}</div>
       <div class="shop-card-body">
-        <h3>${escapeHtml(shop.name)}</h3>
-        <p class="shop-card-meta">${escapeHtml(shop.genre || "")}</p>
-        <p class="shop-card-meta">最寄り: ${escapeHtml(shop.access || "-")}</p>
-        <p class="shop-card-meta">${walkingTimeHtml(distanceKm, minutes)}</p>
+        <div class="shop-card-header">
+          <h3>${escapeHtml(shop.name)}</h3>
+          <div class="shop-card-distance-cluster">
+            <span class="shop-card-distance">${formatKm(distanceKm)}km</span>
+            <p class="shop-card-time">${walkingTimeText(distanceKm, minutes)}</p>
+          </div>
+        </div>
+        ${genreTagsHtml(shop.genre)}
+        <p class="shop-card-access">${ACCESS_ICON_SVG}<span>${escapeHtml(shop.access || "-")}</span></p>
         <div class="shop-card-links">
-          <a class="shop-card-link" href="${escapeHtml(shop.url)}" target="_blank" rel="noopener">詳しくは→わんグル</a>
+          <a class="shop-card-link shop-card-link--primary" href="${escapeHtml(shop.url)}" target="_blank" rel="noopener">詳しくは→わんグル</a>
           <a class="shop-card-link shop-card-link--secondary" href="${escapeHtml(googleMapsSearchUrl(shop.name, shop.address))}" target="_blank" rel="noopener">Googleマップで開く</a>
         </div>
         ${nearbyDuplicatesHtml(duplicates)}

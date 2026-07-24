@@ -1,5 +1,11 @@
 :root {
   --color-accent: #3d8f63;
+  --color-accent-light: #5cae85;
+  --color-accent-dark: #2c6b49;
+  /* 地図の上に置くもの(店ピン)専用の暖色。地図の緑地・青の水域と競合しないよう、
+     地図以外のUI(ボタン・見出し等)の--color-accent(緑)とは役割を分ける */
+  --color-pin-light: #ed9a68;
+  --color-pin-dark: #b85a26;
   --color-bg: #fdf8f2;
   --radius-card: 16px;
   --radius-pill: 999px;
@@ -7,6 +13,12 @@
 
 * {
   box-sizing: border-box;
+}
+
+/* デフォルトの青いフォーカスリングを、ブランドカラーに統一する(キーボード操作時のみ表示) */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 
 html,
@@ -34,14 +46,34 @@ main {
 }
 
 .app-header {
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   text-align: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.brand-mascot {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  flex: 0 0 auto;
 }
 
 .app-header h1 {
   margin: 0;
   color: var(--color-accent);
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.brand-title-accent {
+  color: var(--color-accent-dark);
 }
 
 .search-panel {
@@ -59,6 +91,9 @@ main {
 }
 
 .search-panel button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   border: none;
   border-radius: var(--radius-pill);
   background: var(--color-accent);
@@ -66,6 +101,10 @@ main {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.search-panel button svg {
+  flex: 0 0 auto;
 }
 
 .search-panel button:disabled {
@@ -76,10 +115,15 @@ main {
 .search-panel input {
   border: 1px solid #ccc;
   border-radius: var(--radius-pill);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 2.25rem;
   /* iOS Safariはfont-sizeが16px未満の入力欄にフォーカスすると自動ズームするため、
      16px(1rem)以上を明示する */
   font-size: 1rem;
+  /* 検索欄であることを一目で伝える虫眼鏡アイコン(装飾のみ、画像ファイルは増やさない) */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23999999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0.8rem center;
+  background-size: 16px;
 }
 
 #origin-status {
@@ -88,11 +132,108 @@ main {
   font-size: 0.85rem;
 }
 
-/* 検索前: カードが無いので地図がmainの全高を使う(余白を残さない) */
-#map {
+/* 検索前: カードが無いので地図エリアがmainの全高を使う(余白を残さない) */
+.map-area {
+  position: relative;
   flex: 1 1 auto;
   min-height: 0;
+}
+
+/* Leafletがサイズを実測できるよう、#map自体は.map-areaいっぱいに絶対配置する */
+#map {
+  position: absolute;
+  inset: 0;
   width: 100%;
+  height: 100%;
+}
+
+/* 地図の彩度を落としてクリーム背景(#FDF8F2)と調和させ、オレンジのピン(#E07A3F系)を
+   際立たせるための配色調整。4候補(desaturate/セピア寄せ/色相シフト/グレースケール)を
+   実機で比較した結果、セピア寄せが採用された(地図が「サイトの一部」に見え、緑地も
+   識別できる)。.leaflet-tile-pane(タイル画像のペイン)にのみ適用し、.leaflet-marker-pane
+   (ピン)や帰属表示とは兄弟要素のため影響しない */
+.leaflet-tile-pane {
+  filter: saturate(0.5) sepia(0.25) brightness(1.03);
+}
+
+/* 検索前だけ地図に重ねて表示するウェルカムカード。地図自体の操作は妨げない */
+.welcome-overlay {
+  position: absolute;
+  inset: 16px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+main.has-results .welcome-overlay {
+  display: none;
+}
+
+.welcome-card {
+  pointer-events: auto;
+  max-width: 280px;
+  background: var(--color-bg);
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+}
+
+/* 読み込み中/準備完了の2状態。data-stateが一致する方だけ表示する。
+   既定(空)ではどちらも非表示にし、初回読み込みが速いときは何も見せずに
+   ready状態へ直接切り替わるようにする(ちらつき防止はjs/main.js側の300ms遅延と対) */
+.welcome-card--loading,
+.welcome-card--ready {
+  display: none;
+}
+
+.welcome-overlay[data-state="loading"] .welcome-card--loading {
+  display: block;
+}
+
+.welcome-overlay[data-state="ready"] .welcome-card--ready {
+  display: block;
+}
+
+.loading-illustration {
+  width: 72px;
+  height: 72px;
+  display: block;
+  margin: 0 auto 0.75rem;
+  animation: loading-bounce 1.2s ease-in-out infinite;
+}
+
+@keyframes loading-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* 元画像は900x729(横長)。widthのみ固定しheight:autoで縦横比を保つ(歪み防止) */
+.welcome-illustration {
+  width: 180px;
+  height: auto;
+  margin: 0 auto 0.75rem;
+  display: block;
+}
+
+.welcome-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.welcome-subtitle {
+  margin: 0.25rem 0 0;
+  font-size: 0.8rem;
+  color: #888;
 }
 
 .results {
@@ -103,7 +244,7 @@ main {
 }
 
 /* 検索後: 地図とカードで高さを分け合う(スマホ=縦積み) */
-main.has-results #map {
+main.has-results .map-area {
   flex: 0 0 48%;
 }
 
@@ -118,7 +259,7 @@ main.has-results .results {
     flex-direction: row;
   }
 
-  #map {
+  .map-area {
     flex: 1 1 auto;
     height: 100%;
   }
@@ -129,13 +270,37 @@ main.has-results .results {
     height: 100%;
   }
 
-  main.has-results #map {
+  main.has-results .map-area {
     flex: 1 1 auto;
   }
 
   main.has-results .results {
     flex: 0 0 380px;
     width: 380px;
+  }
+
+  /* スマホは文字だけだと十分な見出しになるが、PCは横幅に余裕があるため
+     ヘッダーを大きくしてブランドらしさを出す(地図を圧迫しない範囲で) */
+  .app-header {
+    padding: 1rem 1.5rem;
+  }
+
+  .brand-mascot {
+    width: 52px;
+    height: 52px;
+  }
+
+  .app-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .welcome-card {
+    max-width: 360px;
+    padding: 1.75rem 2rem;
+  }
+
+  .welcome-illustration {
+    width: 260px;
   }
 }
 
@@ -175,9 +340,21 @@ main.has-results .results {
   background: #fff;
   border-radius: var(--radius-card);
   padding: 0.75rem;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  border-left: 4px solid var(--color-accent);
+  /* 接触影(輪郭のはっきりした影)+浮遊影(広く柔らかい影)の二層で立体感を出す */
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    0 6px 16px rgba(0, 0, 0, 0.07);
   scroll-margin: 0.75rem;
+  cursor: pointer;
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
+}
+
+/* タップした瞬間に少し沈む反応をつけ、押した実感を出す */
+.shop-card:active {
+  transform: scale(0.98);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
 /* ピンタップ・一覧タップの連動先を示すハイライト */
@@ -197,38 +374,123 @@ main.has-results .results {
   font-weight: bold;
   font-size: 0.9rem;
   border-radius: 50%;
-  background: var(--color-accent);
+  background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent-dark));
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-.shop-card-body h3 {
-  margin: 0 0 0.25rem;
+.shop-card-body {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.shop-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.shop-card-header h3 {
+  margin: 0;
   font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
 }
 
-.shop-card-meta {
-  margin: 0.1rem 0;
-  font-size: 0.85rem;
-  color: #555;
+/* 距離+徒歩時間は「当ツールが検索地点から計算した数字」というひとまとまりとして
+   店名の右上にまとめる。access内の「分」表記と隣接させないための配置 */
+.shop-card-distance-cluster {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.shop-card-distance {
+  background: rgba(61, 143, 99, 0.12);
+  color: var(--color-accent-dark);
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+
+.shop-card-time {
+  margin: 0.2rem 0 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-accent-dark);
+  white-space: nowrap;
+}
+
+/* ジャンルはタグ化。距離(緑)・ピン(オレンジ)とは別の暖色系ニュートラルにして
+   「分類ラベルであって数値情報ではない」ことを色でも示す。白いカード上で
+   埋もれないよう、淡い塗り+境界線の両方で輪郭を作る */
+.shop-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+}
+
+.shop-card-tag {
+  background: #f2ead9;
+  /* 淡い塗りだけでは白いカード上でのコントラスト比が1.2程度しかなく埋もれることが
+     実測で分かったため、境界線を濃くして輪郭を作る(境界線のコントラスト比: 約3.5) */
+  border: 1px solid #a6875c;
+  color: #6b5638;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-pill);
+}
+
+/* 最寄り駅・アクセスは店舗ページ由来の生の案内文であり、当ツールの計算値ではない
+   ことを示すため、視覚的に一段弱いブロックとして切り離す(全文表示・省略なし) */
+.shop-card-access {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.3rem;
+  margin: 0.5rem 0 0;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #888;
+}
+
+.shop-card-access svg {
+  flex: 0 0 auto;
+  margin-top: 0.15rem;
+  color: #aaa;
 }
 
 .shop-card-links {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.75rem;
-  margin-top: 0.4rem;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
+/* わんグルへの導線が主目的のリンクなので塗りのピルボタンにし、Googleマップは
+   位置確認用の補助リンクとして枠線のみの控えめなボタンにする(優先順位の視覚化) */
 .shop-card-link {
   display: inline-block;
-  color: var(--color-accent);
-  font-size: 0.85rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  text-decoration: none;
 }
 
-/* わんグルへの導線が主、Googleマップは位置確認用の補助リンクなので控えめにする */
+.shop-card-link--primary {
+  background: var(--color-accent);
+  color: #fff;
+}
+
 .shop-card-link--secondary {
+  border: 1px solid #ccc;
   color: #777;
-  font-size: 0.8rem;
 }
 
 .shop-card-duplicates {
@@ -249,7 +511,29 @@ main.has-results .results {
   border: none;
 }
 
+/* 「ここが出発地点」と分かるよう、サイズは変えずに背後で広がって消えるリングを添える */
+.origin-pin-pulse {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: rgba(217, 83, 79, 0.35);
+  animation: origin-pulse 2s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes origin-pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
 .origin-pin-dot {
+  position: relative;
   display: block;
   width: 18px;
   height: 18px;
@@ -259,6 +543,8 @@ main.has-results .results {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
+/* サイズ(28px)・枠線太さ(2px)はタップ精度の実測に基づく値のため変更しない。
+   色は地図の緑地・水域と同化しないよう暖色(--color-pin-*)にし、質感はグラデーション・影で立体感を出す */
 .shop-pin span {
   display: flex;
   align-items: center;
@@ -269,9 +555,11 @@ main.has-results .results {
   font-weight: bold;
   font-size: 0.9rem;
   border: 2px solid #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.5);
   border-radius: 50%;
-  background: var(--color-accent);
+  background: linear-gradient(135deg, var(--color-pin-light), var(--color-pin-dark));
 }
 
 .app-footer {
